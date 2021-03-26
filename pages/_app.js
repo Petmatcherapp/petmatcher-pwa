@@ -1,7 +1,13 @@
 import '../styles/globals.css'
+import MetaData from "../Components/global/MetaData"
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function PetmatcherApp({ Component, pageProps }) {
+  return (
+    <>
+    <MetaData />
+    <Component {...pageProps} />
+    </>
+  )
 }
 
-export default MyApp
+export default PetmatcherApp
