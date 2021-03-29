@@ -1,11 +1,13 @@
 {
   "name": "petmatcher-pwa",
   "version": "0.1.0",
+  "main": "function.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "npm run build && cross-env NODE_ENV=production firebase deploy --only functions,hosting"
   },
   "dependencies": {
     "next": "10.0.9",
