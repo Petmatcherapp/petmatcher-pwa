@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css'
+import { version } from "../package.json"
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
           <h2>This is the blank canvas of the next generation of web applications</h2>
         </div>
         <small>This is a test with a small element</small>
-        <small>This line is to test auto deployment, blah #2</small>
+        <small>This line is to test auto deployment</small>
+        <small>package: {version}</small>
       </main>
     </div>
   )
