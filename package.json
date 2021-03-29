@@ -5,10 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && firebase deploy",
     "start": "next start",
-    "lint": "./node_modules/.bin/tslint -p tslint.json",
-    "deploy": "firebase deploy --only functions,hosting"
+    "lint": "./node_modules/.bin/tslint -p tslint.json"
   },
   "dependencies": {
     "firebase-admin": "^9.5.0",
