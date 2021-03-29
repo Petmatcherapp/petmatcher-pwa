@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import MetaData from "../Components/global/MetaData"
+import MetaData from "../Components/Global/MetaData"
 
 function PetmatcherApp({ Component, pageProps }) {
   return (
