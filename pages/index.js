@@ -13,7 +13,7 @@ export default function Home() {
           <h2>This is the blank canvas of the next generation of web applications</h2>
         </div>
         <small>This is a test with a small element</small>
-        <small>This line is to test auto deployment, blah</small>
+        <small>This line is to test auto deployment, blah #2</small>
       </main>
     </div>
   )
