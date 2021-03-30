@@ -1,13 +1,14 @@
 {
   "name": "petmatcher-pwa",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "function.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && firebase deploy",
+    "build": "next build",
     "start": "next start",
-    "lint": "./node_modules/.bin/tslint -p tslint.json"
+    "lint": "./node_modules/.bin/tslint -p tslint.json",
+    "deploy": "next build && firebase deploy"
   },
   "dependencies": {
     "firebase-admin": "^9.5.0",
