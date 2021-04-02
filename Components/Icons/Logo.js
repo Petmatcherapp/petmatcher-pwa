@@ -8,6 +8,7 @@ export default function Logo() {
             src="/logos/LogoConcept2Large.svg"
             width={26}
             height={26}
+            alt="Petmatcher logo: paw with gradient background"
           /> 
         </span>
     )

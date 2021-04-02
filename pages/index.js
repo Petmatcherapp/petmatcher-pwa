@@ -16,9 +16,9 @@ export default function Home() {
         <h1 className="bottom-margin-medium">Internet Portal for Cuteness&nbsp;<CatSmile /></h1>
       </div>
       <div className="bottom-margin-large">
-        <h3 className="bottom-margin-medium">
+        <h2 className="bottom-margin-medium">
           Petmatcher is going through an overhaul at the moment... 🚀
-        </h3>
+        </h2>
       </div>
       <div className="bottom-margin-large">
         <p className="bottom-margin-small">
