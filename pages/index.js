@@ -7,6 +7,8 @@ import Insta from "../Components/SocialAnchor/Insta"
 import Twitter from "../Components/SocialAnchor/Twitter"
 import CatSmile from "../Components/Icons/CatSmile"
 import LoadingText from "../Components/Misc/LoadingText"
+import sissy from "../public/IMG_4353.jpeg"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -32,6 +34,8 @@ export default function Home() {
         <LoadingText />
         <Loading />
       </div>
+      <img width={100} src={sissy} alt="sissy the cat" />
+      <Image src={sissy} width={100} height={100} />
     </main>
   )
 }
