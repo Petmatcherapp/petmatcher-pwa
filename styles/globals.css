@@ -1,29 +1,164 @@
+/* Global Elements */
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  padding: 0.5em 0.3em 0.05em 0.25em;
 }
 
 * {
   box-sizing: border-box;
-  color: #3A3A3A
+  color: #3a3a3a;
 }
 
-
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2 {
   letter-spacing: 3px;
   font-weight: 500;
+  margin: 0;
 }
 
-p, small {
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: 1px;
+  font-weight: 500;
+  margin: 0;
 }
 
-p {
+p,
+small {
+  letter-spacing: 1px;
+  margin: 0 0 0.5em 0;
+}
+
+p,
+a {
   font-size: 20px;
 }
 
 small {
   font-size: 16px;
+}
+
+/* Color Variables */
+:root {
+  --color-1: #1fffd6;
+  --color-2: #37eeff;
+  --color-3: #557aff;
+  --color-4: #583eff;
+  --color-5: #d735ff;
+  --color-6: #ed29ff;
+
+  --discord-color: #2d4dff;
+  --insta-color: #d4407e;
+  --reddit-color: #e94517;
+  --twitch-color: #6416ff;
+  --twitter-color: #0a82eb;
+  --youtube-color: #e44d3f;
+}
+
+/* Gradients */
+.gradient-full-spectrum {
+  background: var(--color-4);
+  background: linear-gradient(
+    141deg,
+    var(--color-1) 5%,
+    var(--color-3) 35%,
+    var(--color-4) 65%,
+    var(--color-5) 85%,
+    var(--color-6) 100%
+  );
+}
+
+/* Global Classes - fonts */
+.weight-400 {
+  font-weight: 400;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Global Classes - layouts */
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-flex-row {
+  display: flex;
+}
+
+.display-inline-flex {
+  display: inline-flex;
+}
+
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.bottom-margin-small {
+  margin: 0 0 0.5em 0;
+}
+
+.bottom-margin-medium {
+  margin: 0 0 1em 0;
+}
+
+.bottom-margin-large {
+  margin: 0 0 2.5em 0;
 }

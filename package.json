@@ -11,6 +11,7 @@
     "deploy": "next build && firebase deploy"
   },
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
     "firebase-admin": "^9.5.0",
     "firebase-functions": "^3.13.2",
     "next": "10.0.9",

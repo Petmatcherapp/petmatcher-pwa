@@ -1,0 +1,40 @@
+.petmatcherLoading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+
+.petmatcherLoading span {
+  height: 14px;
+  width: 14px;
+  border-radius: 50px;
+  opacity: 0.8;
+  animation: petmatcherLoading 3s linear infinite;
+}
+.petmatcherLoading div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 100%;
+  animation: petmatcherLoading 1.4s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #3a3a3a transparent transparent transparent;
+}
+
+.petmatcherLoading div:nth-child(1) {
+  animation-delay: -0.73s;
+}
+
+@keyframes petmatcherLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

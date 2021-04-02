@@ -1,0 +1,18 @@
+.title {
+  font-size: 1.75em;
+  margin-bottom: 0;
+}
+
+.titleAnimation {
+  background-size: 300%;
+  animation: gradient-animation 5.75s infinite alternate;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
