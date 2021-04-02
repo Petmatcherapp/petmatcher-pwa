@@ -6,9 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "./node_modules/.bin/tslint -p tslint.json",
-    "deploy": "next build && firebase deploy"
+    "start": "next start"
   },
   "dependencies": {
     "firebase-admin": "^9.5.0",
