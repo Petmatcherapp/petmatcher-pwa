@@ -1,4 +1,12 @@
 // next.config.js
     
 const withImages = require('next-images')
-module.exports = withImages()
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
+
+module.exports = withImages(withPWA({
+  pwa: {
+    dest: 'public',
+    runtimeCaching,
+  }
+}))
