@@ -35,7 +35,7 @@ export default function Home() {
         <Loading />
       </div>
       <img width={100} src={sissy} alt="sissy the cat" />
-      <Image src={sissy} width={100} height={100} />
+      <Image src="/IMG_4353.jpeg" alt="sissy the cat" width={100} height={100} />
     </main>
   )
 }
