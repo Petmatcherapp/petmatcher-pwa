@@ -1,5 +1,5 @@
 .redditAnchor {
-  color: red !important;
+  color: var(--reddit-color) !important;
   text-decoration: none;
 }
 
