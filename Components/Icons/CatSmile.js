@@ -1,5 +1,5 @@
 import Image from "next/image"
-import catSmile from "../../public/reactions/pm-happy-reaction.svg"
+import catSmile from "../../public/reactions/smile-cat.png"
 import styles from "../../styles/components/icons/CatSmile.module.css"
 
 export default function CatSmile() {
@@ -8,7 +8,7 @@ export default function CatSmile() {
             <Image 
                 src={catSmile}
                 width={40}
-                height={40}
+                height={35}
                 alt="Smiling cat"
             />
         </span>

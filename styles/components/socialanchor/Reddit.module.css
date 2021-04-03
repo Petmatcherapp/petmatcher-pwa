@@ -1,4 +1,8 @@
 .redditAnchor {
-  color: var(--reddit-color);
+  color: red !important;
   text-decoration: none;
+}
+
+.redditSVG {
+  width: 1.75em;
 }

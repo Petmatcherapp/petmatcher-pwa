@@ -24,9 +24,9 @@ export default function Home() {
         <p className="bottom-margin-small">
           Follow us for sneak peeks, and maybe some P.M.G <Gold /> too 😉
         </p>
-        <p>
-          <Reddit /> &#xb7; <Insta /> &#xb7; <Twitter />
-        </p>
+        <span className="display-flex-row align-center">
+          <Reddit />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Twitter />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Insta />
+        </span>
       </div>
       <div className="display-flex-column align-center justify-center">
         <LoadingText />

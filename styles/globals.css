@@ -12,7 +12,6 @@ main {
 
 * {
   box-sizing: border-box;
-  color: #3a3a3a;
 }
 
 h1,
@@ -20,6 +19,7 @@ h2 {
   letter-spacing: 3px;
   font-weight: 500;
   margin: 0;
+  color: #3a3a3a;
 }
 
 h2 {
@@ -37,12 +37,17 @@ h6 {
   letter-spacing: 1px;
   font-weight: 500;
   margin: 0;
+  color: #3a3a3a;
 }
 
 p,
 small {
   letter-spacing: 1px;
   margin: 0 0 0.5em 0;
+}
+
+p {
+  color: #3a3a3a;
 }
 
 p,
@@ -52,6 +57,7 @@ a {
 
 small {
   font-size: 16px;
+  color: #3a3a3a;
 }
 
 /* Color Variables */
