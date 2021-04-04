@@ -1,14 +1,28 @@
 import Title from "../Components/Misc/Title"
-import Gold from "../Components/Icons/Gold"
+import Gold from "../Components/Images/Svgs/Gold"
 import Loading from "../Components/Misc/Loading"
 import styles from "../styles/pages/home.module.css"
 import Reddit from "../Components/SocialAnchor/Reddit"
 import Insta from "../Components/SocialAnchor/Insta"
 import Twitter from "../Components/SocialAnchor/Twitter"
-import CatSmile from "../Components/Icons/CatSmile"
+import CatSmile from "../Components/Images/CatSmile"
 import LoadingText from "../Components/Misc/LoadingText"
+// import { getTestData } from "../lib/firebase"
 
-export default function Home() {
+// export async function getServerSideProps() {
+//   const testDoc = await getTestData()
+
+//   // JSON serializable data
+//   const doc = null
+
+//   if (testDoc) doc = testDoc.data()
+
+//   return {
+//     props: { doc }
+//   }
+// }
+
+export default function Home(props) {
   return (
     <main className={`${styles.temporaryHomeClass} align-center justify-center`}>
       <div className="bottom-margin-large">

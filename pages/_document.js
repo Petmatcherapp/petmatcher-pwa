@@ -24,9 +24,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
-          <script defer src="/__/firebase/8.3.1/firebase-analytics.js"></script>
-          <script defer src="/__/firebase/init.js"></script>
         </body>
       </Html>
     )

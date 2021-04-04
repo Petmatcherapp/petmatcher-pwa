@@ -1,0 +1,9 @@
+.goldCoin {
+  position: relative;
+  top: 3px;
+}
+
+.goldCoinSVG {
+  width: 22px;
+  height: 22px;
+}
