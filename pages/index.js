@@ -7,22 +7,27 @@ import Insta from "../Components/SocialAnchor/Insta"
 import Twitter from "../Components/SocialAnchor/Twitter"
 import CatSmile from "../Components/Images/CatSmile"
 import LoadingText from "../Components/Misc/LoadingText"
-// import { getTestData } from "../lib/firebase"
+import { getTestData } from "../lib/firebase"
 
-// export async function getServerSideProps() {
-//   const testDoc = await getTestData()
+export async function getServerSideProps() {
+  const testDoc = await getTestData()
 
-//   // JSON serializable data
-//   const doc = null
+  // JSON serializable data
+  let doc = null
 
-//   if (testDoc) doc = testDoc.data()
+  if (testDoc) doc = testDoc.data()
 
-//   return {
-//     props: { doc }
-//   }
-// }
+  return {
+    props: { 
+      activeRoute: {
+        posts: true
+      },
+      doc 
+    }
+  }
+}
 
-export default function Home(props) {
+export default function Home({ doc }) {
   return (
     <main className={`${styles.temporaryHomeClass} align-center justify-center`}>
       <div className="bottom-margin-large">

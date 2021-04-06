@@ -1,16 +1,104 @@
 .desktopNav {
   position: fixed;
-  display: flex;
   left: 0;
-  border: 2px solid red;
-  width: 1em;
   height: 100vh;
+  border: 1px solid #ededed;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
+  background: rgb(252, 239, 255);
+  background: linear-gradient(
+    163deg,
+    rgba(252, 239, 255, 0.45281862745098034) 0%,
+    rgba(237, 250, 255, 0.4472163865546218) 85%
+  );
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 1em 0;
+}
+
+.navUl {
+  height: 60%;
+  list-style: none;
+  padding: 0 0 0 1em;
+  margin: 0;
+}
+
+.imageContainer {
+  width: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 1em;
+}
+
+.imageContainer small {
+  font-size: 14px;
+}
+
+.activeBar {
+  width: 3px;
+  height: 2.35em;
+  border-radius: 100px;
+  background-color: #d8d8d8;
+}
+
+.navTitleCover {
+  position: absolute;
+}
+
+#storyIcon {
+  width: 2.6em;
+}
+
+#postIcon {
+  height: 3.6em;
+}
+
+.color1 {
+  background-color: #fdf7fe;
+  color: #fdf7fe;
+}
+
+.color2 {
+  background-color: #fbf9fe;
+  color: #fbf9fe;
+}
+
+.color3 {
+  background-color: #fbfbff;
+  color: #fbfbff;
+}
+
+.color4 {
+  background-color: #f8fbff;
+  color: #f8fbff;
+}
+
+.color5 {
+  background-color: #f7fcff;
+  color: #f7fcff;
+}
+
+.hoverAnimation {
+  animation: removeCover 0.2s linear forwards;
+}
+
+@keyframes removeCover {
+  0% {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(150deg);
+  }
+
+  100% {
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(150deg);
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .desktopNav {
+  .navContainer {
     display: none;
   }
 }

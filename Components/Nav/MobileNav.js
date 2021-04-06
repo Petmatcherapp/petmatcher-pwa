@@ -1,4 +1,4 @@
-import styles from "../../styles/components/mav/MobileNav.module.css"
+import styles from "../../styles/components/nav/MobileNav.module.css"
 
 function MobileNav() {
     return (

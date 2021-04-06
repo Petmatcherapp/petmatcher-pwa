@@ -5,7 +5,7 @@ export default function Loading() {
         <span>
             <div className={`${styles.petmatcherLoading}`}>
                 <div></div>
-                <span className="gradient-full-spectrum"></span>
+                <span className="gradient-1"></span>
                 <div></div>
             </div>
         </span>

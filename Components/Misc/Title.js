@@ -5,7 +5,7 @@ export default function Title() {
     return (
         <div className="display-flex-row align-center bottom-margin-small">
           <Logo />
-          <p className={`${styles.title} ${styles.titleAnimation} weight-500 gradient-full-spectrum gradient-text`}>Petmatcher</p>
+          <p className={`${styles.title} ${styles.titleAnimation} weight-500 gradient-1 gradient-text`}>Petmatcher</p>
         </div>
     )
 }
