@@ -1,5 +1,21 @@
-.mobile-nav {
+.mobileNav {
   display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  border: 1px solid #ededed;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background: rgb(252, 239, 255);
+  background: linear-gradient(
+    163deg,
+    rgba(252, 239, 255, 0.45281862745098034) 0%,
+    rgba(237, 250, 255, 0.4472163865546218) 85%
+  );
+  z-index: 10;
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  padding: 0.65em 0;
 }
 
 @media screen and (max-width: 767px) {
