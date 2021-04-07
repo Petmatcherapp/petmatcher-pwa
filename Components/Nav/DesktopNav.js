@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import CreateIcon from "../../Components/Images/Svgs/Nav/CreateIcon"
 import AnimalIcon from "../../Components/Images/Svgs/Nav/AnimalIcon"
@@ -15,16 +16,15 @@ function DesktopNav({ activeRoute }) {
     const [storiesAnimation, setStoriesAnimation] = useState("")
     const [groupsAnimation, setGroupsAnimation] = useState("")
     const [storeAnimation, setStoreAnimation] = useState("")
+    const [settingsAnimation, setSettingsAnimation] = useState("")
 
     const handleState = (navType, remove) => {
         switch (navType) {
             case ("create"):
-                console.log("i made it to create")
                 remove ?
                 setCreateAnimation("")
                 :
                 setCreateAnimation(`${styles.hoverAnimation}`)
-                console.log(createAnimation)
                 break;
             case ("animals"):
                 remove ?
@@ -56,6 +56,11 @@ function DesktopNav({ activeRoute }) {
                 :
                 setStoreAnimation(`${styles.hoverAnimation}`)
                 break;
+            case ("settings"):
+                remove ?
+                setSettingsAnimation("")
+                :
+                setSettingsAnimation(`${styles.hoverAnimation}`)
         }
     }
 
@@ -76,12 +81,7 @@ function DesktopNav({ activeRoute }) {
                             <CreateIcon
                                 active={activeRoute?.create}
                             />
-                            <div className="display-flex-row align-center">
-                                <div className={`${createAnimation} ${styles.navTitleCover} ${styles.color1}`}>
-                                    <small className={`${styles.color1}`}>Create</small>
-                                </div>
-                                <small>Create</small>
-                            </div>
+                            <small className={`${createAnimation} ${styles.navTitleCover}`}>Create</small>
                         </li>
                     </Link>
                     <div className={`${activeRoute?.create ? styles.activeBar : ""}`}></div>
@@ -92,12 +92,7 @@ function DesktopNav({ activeRoute }) {
                             <AnimalIcon
                                 active={activeRoute?.animals}
                             />
-                            <div className="display-flex-row align-center">
-                                <div className={`${animalsAnimation} ${styles.navTitleCover} ${styles.color2}`}>
-                                    <small className={`${styles.color2}`}>Animals</small>
-                                </div>
-                                <small>Animals</small>
-                            </div>
+                            <small className={`${animalsAnimation} ${styles.navTitleCover}`}>Animals</small>
                         </li>
                     </Link>
                     <div className={`${activeRoute?.animals ? styles.activeBar : ""}`}></div>
@@ -108,12 +103,7 @@ function DesktopNav({ activeRoute }) {
                             <PostIcon
                                 active={activeRoute?.posts}
                             />
-                            <div className="display-flex-row align-center">
-                                <div className={`${postsAnimation} ${styles.navTitleCover} ${styles.color2}`}>
-                                    <small className={`${styles.color2}`}>Posts</small>
-                                </div>
-                                <small>Posts</small>
-                            </div>
+                            <small className={`${postsAnimation} ${styles.navTitleCover}`}>Posts</small>
                         </li>
                     </Link>
                     <div className={`${activeRoute?.posts ? styles.activeBar : ""}`}></div>
@@ -124,12 +114,7 @@ function DesktopNav({ activeRoute }) {
                             <StoryIcon
                                 active={activeRoute?.stories}
                             />
-                            <div className="display-flex-row align-center">
-                                <div className={`${storiesAnimation} ${styles.navTitleCover} ${styles.color3}`}>
-                                    <small className={`${styles.color3}`}>Stories</small>
-                                </div>
-                                <small>Stories</small>
-                            </div>
+                            <small className={`${storiesAnimation} ${styles.navTitleCover}`}>Stories</small>
                         </li>
                     </Link>
                     <div className={`${activeRoute?.stories ? styles.activeBar : ""}`}></div>
@@ -140,12 +125,7 @@ function DesktopNav({ activeRoute }) {
                             <GroupIcon
                                 active={activeRoute?.groups}
                             />
-                            <div className="display-flex-row align-center">
-                                <div className={`${groupsAnimation} ${styles.navTitleCover} ${styles.color4}`}>
-                                    <small className={`${styles.color4}`}>Groups</small>
-                                </div>
-                                <small>Groups</small>
-                            </div>
+                            <small className={`${groupsAnimation} ${styles.navTitleCover}`}>Groups</small>
                         </li>
                     </Link>
                     <div className={`${activeRoute?.groups ? styles.activeBar : ""}`}></div>
@@ -156,16 +136,24 @@ function DesktopNav({ activeRoute }) {
                             <StoreIcon
                                 active={activeRoute?.store}
                             />
-                            <div className="display-flex-row align-center">
-                                <div className={`${storeAnimation} ${styles.navTitleCover} ${styles.color5}`}>
-                                    <small className={`${styles.color5}`}>Store</small>
-                                </div>
-                                <small>Store</small>
-                            </div>
+                            <small className={`${storeAnimation} ${styles.navTitleCover}`}>Store</small>
                         </li>
                     </Link>
                     <div className={`${activeRoute?.store ? styles.activeBar : ""}`}></div>
                 </div>
+            </ul>
+            <ul className={`${styles.bottomNavUl}`}>
+                <li className={`${styles.imageContainer}`} onMouseEnter={() => handleMouseEnter("settings")} onMouseLeave={() => handleMouseLeave("settings")}>
+                    <div className={`${styles.settingsImageContainer}`}>
+                        <Image 
+                            src="/Screenshot 2021-02-11 at 5.12.16 PM.png"
+                            alt="Sissy the cat"
+                            width={30}
+                            height={30}
+                        />
+                    </div>
+                    <small className={`${settingsAnimation} ${styles.navTitleCover}`}>Settings</small>
+                </li>
             </ul>
         </nav>
     )
