@@ -15,11 +15,46 @@
   z-index: 10;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
-  padding: 0.65em 0;
+  padding: 0.25em 0 2vh 0;
+  max-height: 85vh;
 }
 
-@media screen and (max-width: 767px) {
-  .mobile-nav {
+.mobileNavMenuBar {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.dropMenu {
+  animation: dropMenu 0.15s cubic-bezier(1, -0.01, 0, 1) forwards;
+}
+
+.raiseMenu {
+  animation: raiseMenu 0.15s cubic-bezier(1, -0.01, 0, 1) forwards;
+}
+
+@keyframes dropMenu {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(85vh);
+  }
+}
+
+@keyframes raiseMenu {
+  0% {
+    transform: translateY(85vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobileNav {
     display: none;
   }
 }

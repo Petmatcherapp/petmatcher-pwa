@@ -29,7 +29,7 @@ export async function getServerSideProps() {
 
 export default function Home({ doc }) {
   return (
-    <main className={`${styles.temporaryHomeClass} align-center justify-center`}>
+    <main>
       <div className="bottom-margin-large">
         <Title />
         <h1 className="bottom-margin-medium">Internet Portal for Cuteness&nbsp;<CatSmile /></h1>
