@@ -17,8 +17,8 @@ main {
 .hr {
   width: 85%;
   height: 1px;
-  background-color: #d1d1d1;
-  margin: 0.6em 0;
+  background-color: #e6e6e6;
+  margin: 0.6em auto;
 }
 
 h1,
@@ -174,16 +174,20 @@ small {
   align-items: flex-end;
 }
 
+.bottom-margin-none {
+  margin-bottom: 0;
+}
+
 .bottom-margin-small {
-  margin: 0 0 0.5em 0;
+  margin-bottom: 0.5em;
 }
 
 .bottom-margin-medium {
-  margin: 0 0 1em 0;
+  margin-bottom: 1em;
 }
 
 .bottom-margin-large {
-  margin: 0 0 2.5em 0;
+  margin-bottom: 2.5em;
 }
 
 .width-100 {

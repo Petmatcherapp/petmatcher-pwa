@@ -1,12 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
-import CreateIcon from "../../Components/Images/Svgs/Nav/CreateIcon"
-import AnimalIcon from "../../Components/Images/Svgs/Nav/AnimalIcon"
-import PostIcon from "../../Components/Images/Svgs/Nav/PostIcon"
-import StoryIcon from "../../Components/Images/Svgs/Nav/StoryIcon"
-import GroupIcon from "../../Components/Images/Svgs/Nav/GroupIcon"
-import StoreIcon from "../../Components/Images/Svgs/Nav/StoreIcon"
+import CreateIcon from "../Images/Svgs/Nav/CreateIcon"
+import AnimalIcon from "../Images/Svgs/Nav/AnimalIcon"
+import PostIcon from "../Images/Svgs/Nav/PostIcon"
+import StoryIcon from "../Images/Svgs/Nav/StoryIcon"
+import GroupIcon from "../Images/Svgs/Nav/GroupIcon"
+import StoreIcon from "../Images/Svgs/Nav/StoreIcon"
 import styles from "../../styles/components/nav/DesktopNav.module.css"
 
 function DesktopNav({ activeRoute }) {
