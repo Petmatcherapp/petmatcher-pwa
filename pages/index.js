@@ -1,7 +1,6 @@
 import Title from "../Components/Misc/Title"
 import Gold from "../Components/Images/Svgs/Gold"
 import Loading from "../Components/Misc/Loading"
-import styles from "../styles/pages/home.module.css"
 import Reddit from "../Components/SocialAnchor/Reddit"
 import Insta from "../Components/SocialAnchor/Insta"
 import Twitter from "../Components/SocialAnchor/Twitter"
@@ -41,7 +40,7 @@ export default function Home({ doc }) {
       </div>
       <div className="bottom-margin-large">
         <p className="bottom-margin-small">
-          Follow us for sneak peeks, and maybe some P.M.G <Gold /> too 😉
+          Follow us for sneak peeks, and maybe some P.M.G <Gold width={22} /> too 😉
         </p>
         <span className="display-flex-row align-center">
           <Reddit />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Twitter />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Insta />

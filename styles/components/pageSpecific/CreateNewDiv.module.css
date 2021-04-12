@@ -1,0 +1,38 @@
+.outerCreateNewDiv {
+  padding: 0.12em;
+  cursor: pointer;
+  width: 100%;
+  max-width: 700px;
+}
+
+.innerCreateNewDiv {
+  background: white;
+  padding: 1em 3%;
+}
+
+.typeContainer {
+  padding-right: 6%;
+}
+
+.bonusDescription {
+  display: block;
+}
+
+.iconContainer {
+  width: 3.5em;
+  height: 3.5em;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+  .outerCreateNewDiv {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 581px) {
+  .bonusDescription {
+    display: none;
+  }
+}

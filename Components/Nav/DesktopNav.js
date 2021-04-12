@@ -75,7 +75,7 @@ function DesktopNav({ activeRoute }) {
     return (
         <nav className={`align-center justify-between ${styles.desktopNav}`}>
             <ul className={`${styles.navUl} display-flex-column align-center justify-between`}>
-                <div className="display-flex-row justify-between align-center">
+                <div className="display-flex-row justify-between">
                     <Link href="/create">
                         <li onMouseEnter={() => handleMouseEnter("create")} onMouseLeave={() => handleMouseLeave("create")} className={`${styles.imageContainer}`}>
                             <CreateIcon
@@ -110,7 +110,7 @@ function DesktopNav({ activeRoute }) {
                 </div>
                 <div className="display-flex-row justify-between">
                     <Link href="/stories">
-                        <li onMouseEnter={() => handleMouseEnter("stories")} onMouseLeave={() => handleMouseLeave("stories")} id={`${styles.storyIcon}`} className={`${styles.imageContainer}`}>
+                        <li onMouseEnter={() => handleMouseEnter("stories")} onMouseLeave={() => handleMouseLeave("stories")} className={`${styles.imageContainer}`}>
                             <StoryIcon
                                 active={activeRoute?.stories}
                             />

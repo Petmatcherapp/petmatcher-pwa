@@ -89,7 +89,7 @@ function MobileNav({ optionComponent, activeRoute }) {
                                         </li>
                                     </Link>
                                     <Link href="/stories">
-                                        <li id={`${styles.storyIcon}`} className={`${styles.imageContainer}`}>
+                                        <li className={`${styles.imageContainer}`}>
                                             <StoryIcon
                                                 active={activeRoute?.stories}
                                             />
