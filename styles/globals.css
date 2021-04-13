@@ -1,3 +1,22 @@
+/* Color Variables */
+:root {
+  --color-1: #1fffd6;
+  --color-2: #37eeff;
+  --color-3: #557aff;
+  --color-4: #583eff;
+  --color-5: #d735ff;
+  --color-6: #ed29ff;
+  --color-3a: #3a3a3a;
+  --color-white: #ffffff;
+
+  --discord-color: #2d4dff;
+  --insta-color: #d4407e;
+  --reddit-color: #e94517;
+  --twitch-color: #6416ff;
+  --twitter-color: #0a82eb;
+  --youtube-color: #e44d3f;
+}
+
 /* Global Elements */
 * {
   box-sizing: border-box;
@@ -28,7 +47,7 @@ h2 {
   letter-spacing: 3px;
   font-weight: 500;
   margin: 0;
-  color: #3a3a3a;
+  color: var(--color-3a);
 }
 
 h2 {
@@ -46,7 +65,7 @@ h6 {
   letter-spacing: 1px;
   font-weight: 500;
   margin: 0;
-  color: #3a3a3a;
+  color: var(--color-3a);
 }
 
 p,
@@ -56,34 +75,22 @@ small {
 }
 
 p {
-  color: #3a3a3a;
+  color: var(--color-3a);
 }
 
 p,
-a {
+a,
+input,
+button,
+textarea,
+select {
   font-size: 20px;
+  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 small {
   font-size: 16px;
-  color: #3a3a3a;
-}
-
-/* Color Variables */
-:root {
-  --color-1: #1fffd6;
-  --color-2: #37eeff;
-  --color-3: #557aff;
-  --color-4: #583eff;
-  --color-5: #d735ff;
-  --color-6: #ed29ff;
-
-  --discord-color: #2d4dff;
-  --insta-color: #d4407e;
-  --reddit-color: #e94517;
-  --twitch-color: #6416ff;
-  --twitter-color: #0a82eb;
-  --youtube-color: #e44d3f;
+  color: var(--color-3a);
 }
 
 /* Gradients */
@@ -156,7 +163,12 @@ small {
   );
 }
 
-/* Global Classes - fonts */
+/* backgrounds */
+.background-white {
+  background-color: var(--color-white);
+}
+
+/* fonts */
 .weight-400 {
   font-weight: 400;
 }
@@ -173,7 +185,7 @@ small {
   -webkit-text-fill-color: transparent;
 }
 
-/* Global Classes - layouts */
+/* layouts */
 .display-none {
   display: none;
 }
@@ -196,6 +208,11 @@ small {
 
 .display-flex-column {
   display: flex;
+  flex-direction: column;
+}
+
+.display-inline-flex-column {
+  display: inline-flex;
   flex-direction: column;
 }
 
@@ -223,8 +240,16 @@ small {
   align-items: flex-end;
 }
 
-/* Global Classes - bottom-margin */
+/* padding */
+.padding-2 {
+  padding: 2px;
+}
 
+.padding-5 {
+  padding: 5px;
+}
+
+/* gaps (used to seperate content) */
 .bottom-margin-none {
   margin-bottom: 0;
 }
@@ -241,8 +266,7 @@ small {
   margin-bottom: 2.5em;
 }
 
-/* Global Classes - width & height */
-
+/* width & height */
 .width-100 {
   width: 100%;
 }
@@ -259,9 +283,13 @@ small {
   height: 50%;
 }
 
-/* Global Classes - border-radius */
+/* border-radius */
 .border-radius-5 {
   border-radius: 5px;
+}
+
+.border-radius-8 {
+  border-radius: 8px;
 }
 
 .border-radius-10 {
@@ -272,16 +300,61 @@ small {
   border-radius: 20px;
 }
 
-/* Global Classes - shadows */
-.active-shadow {
-  box-shadow: 9px 9px 9px -3px rgba(117, 117, 117, 0.25);
-  -webkit-box-shadow: 9px 9px 9px -3px rgba(117, 117, 117, 0.25);
-  -moz-box-shadow: 9px 9px 9px -3px rgba(117, 117, 117, 0.25);
+/* shadows */
+.clickable-shadow {
+  box-shadow: 7px 7px 7px -1px rgba(117, 117, 117, 0.2);
+  -webkit-box-shadow: 7px 7px 7px -1px rgba(117, 117, 117, 0.2);
+  -moz-box-shadow: 7px 7px 7px -1px rgba(117, 117, 117, 0.2);
+  transition: box-shadow 0.3s, transform 0.2s;
+  transform: translate(0);
 }
 
-/* Global media queries */
+.clickable-shadow:hover {
+  box-shadow: 10px 10px 10px -1px rgba(78, 78, 78, 0.2);
+  -webkit-box-shadow: 10px 10px 10px -1px rgba(51, 51, 51, 0.2);
+  -moz-box-shadow: 10px 10px 10px -1px rgba(51, 51, 51, 0.2);
+  transition: box-shadow 0.3s, transform 0.2s;
+  transform: translateY(-1px);
+}
+
+.clickable-shadow:active {
+  transform: translateY(3px);
+}
+
+/* animations */
+.translateY-0 {
+  transform: translate(0);
+}
+
+/* global media queries */
 @media screen and (min-width: 768px) {
   main {
-    padding-left: 6em;
+    padding-left: 9em;
   }
+}
+
+/* remove default styles */
+button,
+input,
+optgroup,
+select,
+textarea,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button[disabled],
+html input[disabled],
+input[type="checkbox"],
+input[type="radio"],
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="search"],
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }

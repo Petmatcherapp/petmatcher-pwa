@@ -66,10 +66,10 @@
 }
 
 .hoverAnimation {
-  animation: removeCover 0.18s 0.35s linear forwards;
+  animation: reveal 0.2s 0.07s linear forwards;
 }
 
-@keyframes removeCover {
+@keyframes reveal {
   0% {
     transform: rotateY(90deg);
     -webkit-transform: rotateY(90deg);
