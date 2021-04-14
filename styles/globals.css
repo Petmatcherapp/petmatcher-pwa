@@ -302,7 +302,20 @@ small {
   padding-bottom: 10px;
 }
 
-/* gaps (used to seperate content) */
+/* margin */
+.margin-1 {
+  margin: 0.65em;
+}
+
+.margin-2 {
+  margin: 1em;
+}
+
+.margin-3 {
+  margin: 2em;
+}
+
+/* gaps (used to seperate components) */
 .bottom-margin-none {
   margin-bottom: 0;
 }
@@ -359,17 +372,17 @@ small {
 
 /* shadows */
 .clickable-shadow {
-  box-shadow: 7px 7px 7px -1px rgba(117, 117, 117, 0.2);
-  -webkit-box-shadow: 7px 7px 7px -1px rgba(117, 117, 117, 0.2);
-  -moz-box-shadow: 7px 7px 7px -1px rgba(117, 117, 117, 0.2);
+  box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.24);
   transition: box-shadow 0.3s, transform 0.2s;
   transform: translate(0);
 }
 
 .clickable-shadow:hover {
-  box-shadow: 10px 10px 10px -1px rgba(78, 78, 78, 0.2);
-  -webkit-box-shadow: 10px 10px 10px -1px rgba(51, 51, 51, 0.2);
-  -moz-box-shadow: 10px 10px 10px -1px rgba(51, 51, 51, 0.2);
+  box-shadow: 9px 9px 9px -1px rgba(78, 78, 78, 0.2);
+  -webkit-box-shadow: 9px 9px 9px -1px rgba(51, 51, 51, 0.2);
+  -moz-box-shadow: 9px 9px 9px -1px rgba(51, 51, 51, 0.2);
   transition: box-shadow 0.3s, transform 0.2s;
   transform: translateY(-1px);
 }
@@ -381,6 +394,14 @@ small {
 .clickable-shadow input,
 .clickable-shadow button {
   transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.clickable-shadow:disabled,
+.clickable-shadow button:disabled {
+  box-shadow: none;
+  filter: grayscale(50%);
+  cursor: initial;
+  transform: translate(0);
 }
 
 /* animations */
@@ -404,8 +425,6 @@ textarea,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"],
-button[disabled],
-html input[disabled],
 input[type="checkbox"],
 input[type="radio"],
 input[type="number"]::-webkit-inner-spin-button,
