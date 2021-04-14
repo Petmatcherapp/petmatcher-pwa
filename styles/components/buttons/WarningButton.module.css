@@ -1,0 +1,4 @@
+.warningButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #ff2f008c;
+}

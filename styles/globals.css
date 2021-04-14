@@ -9,6 +9,12 @@
   --color-3a: #3a3a3a;
   --color-white: #ffffff;
 
+  --color-green1: #97de81;
+  --color-green2: #00d48d;
+
+  --color-red1: #ff3c11;
+  --color-red2: #ff8660;
+
   --discord-color: #2d4dff;
   --insta-color: #d4407e;
   --reddit-color: #e94517;
@@ -163,12 +169,35 @@ small {
   );
 }
 
+.gradient-success {
+  background: var(--color-green2);
+  background: linear-gradient(
+    125deg,
+    rgba(151, 222, 129, 1) 0%,
+    rgba(0, 212, 141, 1) 50%
+  );
+}
+
+.gradient-warning {
+  background: var(--color-red1);
+  background: linear-gradient(
+    125deg,
+    rgba(255, 134, 96, 1) 0%,
+    rgba(255, 60, 17, 1) 100%
+  );
+}
+
+/* general */
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* backgrounds */
 .background-white {
   background-color: var(--color-white);
 }
 
-/* fonts */
+/* text */
 .weight-400 {
   font-weight: 400;
 }
@@ -183,6 +212,10 @@ small {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
+}
+
+.color-white {
+  color: var(--color-white);
 }
 
 /* layouts */
@@ -249,9 +282,33 @@ small {
   padding: 5px;
 }
 
+.padding-left-right-5 {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.padding-left-right-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.padding-top-bottom-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.padding-top-bottom-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 /* gaps (used to seperate content) */
 .bottom-margin-none {
   margin-bottom: 0;
+}
+
+.bottom-margin-extra-small {
+  margin-bottom: 0.25em;
 }
 
 .bottom-margin-small {
@@ -321,8 +378,13 @@ small {
   transform: translateY(3px);
 }
 
+.clickable-shadow input,
+.clickable-shadow button {
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
 /* animations */
-.translateY-0 {
+.translate-0 {
   transform: translate(0);
 }
 

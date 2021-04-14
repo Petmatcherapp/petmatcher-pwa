@@ -5,6 +5,9 @@ import GroupIcon from "../Components/Images/Svgs/Nav/GroupIcon"
 import CreateNewDiv from "../Components/PageSpecific/CreateNewDiv"
 import Gold from "../Components/Images/Svgs/Gold"
 import TextField from "../Components/Inputs/TextField"
+import ConfirmButton from "../Components/Buttons/ConfirmButton"
+import WarningButton from "../Components/Buttons/WarningButton"
+import Button from "../Components/Buttons/Button"
 
 export async function getStaticProps() {
   return {
@@ -56,6 +59,9 @@ export default function Create() {
           gradientNum={6}
         />
         <TextField id="email" />
+        <ConfirmButton buttonText="Checkout" />
+        <WarningButton buttonText="Cancel" />
+        <Button buttonText="Subcribe" gradientNum={1} />
     </main>
   )
 }
