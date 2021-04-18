@@ -5,8 +5,8 @@ export default function MetaData(props) {
         <Head>
             <link rel="manifest" href="/manifest.json" />
             <meta name="theme-color" content="#37eeff" />
-            <link rel="apple-touch-icon" href="/manifest-logo512x512.png" />
-            
+            <link rel="apple-touch-icon" href="/public/manifest-logo512x512.png" />
+
             <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1" />
             <meta name="description" content={props.description} />
             <title>{props.title} &#xb7; Petmatcher</title>
