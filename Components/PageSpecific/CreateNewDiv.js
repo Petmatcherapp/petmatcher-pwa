@@ -4,8 +4,8 @@ import styles from "../../styles/components/pageSpecific/CreateNewDiv.module.css
 export default function CreateNewDiv({ icon, type, description, link, gradientNum}) {
     return (
         <Link href={link}>
-            <div className={`${styles.outerCreateNewDiv} gradient-${gradientNum} border-radius-10 bottom-margin-large clickable-shadow padding-2 cursor-pointer`}>
-                    <div className={`${styles.innerCreateNewDiv} display-flex-row border-radius-8`}>
+            <div className={`${styles.outerCreateNewDiv} gradient-${gradientNum} border-radius-20 bottom-margin-large clickable-shadow padding-2 cursor-pointer`}>
+                    <div className={`${styles.innerCreateNewDiv} display-flex-row border-radius-18`}>
                         <div className={`${styles.typeContainer} display-flex-column align-center justify-center`}>
                             <div className={`${styles.iconContainer} bottom-margin-small`}>
                                 {icon}
