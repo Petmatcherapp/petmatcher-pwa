@@ -3,9 +3,9 @@ import Head from "next/head"
 export default function MetaData(props) {
     return (
         <Head>
-            <link rel="manifest" href="/manifest.json" />
+            {/* <link rel="manifest" href="/manifest.json" />
             <meta name="theme-color" content="#37eeff" />
-            <link rel="apple-touch-icon" href="/manifest/manifest-logo512x512.png" />
+            <link rel="apple-touch-icon" href="/manifest/manifest-logo512x512.png" /> */}
 
             <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1" />
             <meta name="description" content={props.description} />
