@@ -104,7 +104,7 @@ function MobileNav({ optionComponent, activeRoute }) {
                 </>
             }
             <div onClick={handleMobileNavClick} className={`${styles.mobileNavMenuBar}`}>
-                <small>{menuState}</small>
+                <p>{menuState}</p>
             </div>
         </nav>
     )

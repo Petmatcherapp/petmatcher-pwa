@@ -4,7 +4,7 @@ export default function Button({ buttonText, gradientNum, onClick, disabled }) {
 
     const handleClick = () => {
         window.navigator.vibrate(50)
-        onClick()
+        onClick
     }
 
     return (

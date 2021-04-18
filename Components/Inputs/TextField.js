@@ -8,7 +8,7 @@ export default function TextField({ value, id, type, onChange }) {
     }
 
     const handleChange = (e) => {
-        onChange(e)
+        onChange
     }
 
     return (
