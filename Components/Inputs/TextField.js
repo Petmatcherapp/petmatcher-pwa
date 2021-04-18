@@ -4,7 +4,7 @@ export default function TextField({ value, id, type, onChange }) {
     // valid types: text, email, url, & password
 
     const handleFocus = () => {
-        window.navigator.vibrate(100)
+        window.navigator.vibrate(50)
     }
 
     const handleChange = (e) => {
