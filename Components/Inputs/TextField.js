@@ -15,7 +15,7 @@ export default function TextField({ value, id, type, onChange }) {
         <div className="display-inline-flex-column">
             <label className="bottom-margin-extra-small" htmlFor={id}><small>{id}</small></label>
             <div className="gradient-2 padding-2 border-radius-12 display-inline-flex align-center clickable-shadow">
-                <input onChange={handleChange} onFocus={handleFocus} id={id} value={value} type={type} className={`${styles.textField} background-white border-radius-10 padding-5`} />
+                <input onChange={handleChange} onFocus={handleFocus} id={id} value={value} type={type} className={`${styles.textField} width-100 height-100 background-white border-radius-10 padding-5`} />
             </div>
         </div>
     )
