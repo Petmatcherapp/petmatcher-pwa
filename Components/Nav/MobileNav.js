@@ -7,6 +7,7 @@ import PostIcon from "../Images/Svgs/Nav/PostIcon"
 import StoryIcon from "../Images/Svgs/Nav/StoryIcon"
 import GroupIcon from "../Images/Svgs/Nav/GroupIcon"
 import StoreIcon from "../Images/Svgs/Nav/StoreIcon"
+import LineBreak from "../Misc/LineBreak"
 import styles from "../../styles/components/nav/MobileNav.module.css"
 
 function MobileNav({ optionComponent, activeRoute }) {
@@ -36,7 +37,7 @@ function MobileNav({ optionComponent, activeRoute }) {
                                     <small className="bottom-margin-none">Create</small>
                                 </li>
                             </Link>
-                            <div className="hr"></div>
+                            <LineBreak />
                         </ul>
                         <div>
                             <ul className={`${styles.navUl}`}>
@@ -100,7 +101,7 @@ function MobileNav({ optionComponent, activeRoute }) {
                             </ul>
                         </div>            
                     </div>
-                    <div className="hr" />
+                    <LineBreak />
                 </>
             }
             <div onClick={handleMobileNavClick} className={`${styles.mobileNavMenuBar}`}>

@@ -1,0 +1,9 @@
+.lineBreak {
+  width: 85%;
+  height: 1px;
+  margin: 0.6em auto;
+}
+
+.normal {
+  background-color: #e6e6e6;
+}

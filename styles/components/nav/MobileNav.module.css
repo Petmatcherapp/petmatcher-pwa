@@ -3,7 +3,7 @@
   flex-direction: column;
   position: fixed;
   bottom: 0;
-  border: 1px solid #ededed6b;
+  border: 1px solid #ededed;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   background: rgb(252, 239, 255);
@@ -15,7 +15,7 @@
   z-index: 10;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
-  padding: 0.25em 0 3.5vh 0;
+  padding: 0.25em 0 4vh 0;
   max-height: 85vh;
 }
 

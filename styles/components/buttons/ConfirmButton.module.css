@@ -1,4 +1,7 @@
 .confirmButton:focus {
   outline: none;
   box-shadow: 0 0 0 4px #00ffaa96;
+  -webkit-box-shadow: 0 0 0 4px #00ffaa96;
+  -moz-box-shadow: 0 0 0 4px #00ffaa96;
+  box-shadow: 0 0 0 4px #00ffaa96;
 }

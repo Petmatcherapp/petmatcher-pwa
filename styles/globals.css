@@ -41,13 +41,6 @@ main {
   max-width: 1920px;
 }
 
-.hr {
-  width: 85%;
-  height: 1px;
-  background-color: #e6e6e6;
-  margin: 0.6em auto;
-}
-
 h1,
 h2 {
   letter-spacing: 3px;
