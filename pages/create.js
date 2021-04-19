@@ -8,6 +8,8 @@ import TextField from "../Components/Inputs/TextField"
 import ConfirmButton from "../Components/Buttons/ConfirmButton"
 import WarningButton from "../Components/Buttons/WarningButton"
 import Button from "../Components/Buttons/Button"
+import Action from "../Components/Buttons/Action"
+import Select from "../Components/Inputs/Select"
 import GoldAmount from "../Components/Misc/GoldAmount"
 
 export async function getStaticProps() {
@@ -64,6 +66,8 @@ export default function Create() {
         <WarningButton buttonText="Cancel" />
         <Button buttonText="Subcribe" gradientNum={1} />
         <GoldAmount amount={42069} />
+        <Action text={"Copy Link"} />
+        <Select id={"Animal"} />
     </main>
   )
 }

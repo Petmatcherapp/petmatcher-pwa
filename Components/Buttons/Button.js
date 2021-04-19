@@ -8,10 +8,10 @@ export default function Button({ buttonText, gradientNum, onClick, disabled }) {
     }
 
     return (
-        <div onClick={handleClick} className={`clickable-shadow ${disabled ? `${styles.buttonDisabled}` : null} gradient-${gradientNum} padding-2 border-radius-12 cursor-pointer display-inline-flex align-center justify-center margin-1`}>
-            <button disabled={disabled} className={`${styles.button} width-100 height-100 border-radius-10 cursor-pointer background-white padding-5 padding-left-right-10`}>
+        <button onClick={handleClick} disabled={disabled} className={`clickable-shadow ${styles.button} gradient-${gradientNum} padding-2 border-radius-12 cursor-pointer display-inline-flex align-center justify-center`}>
+            <div className="width-100 height-100 border-radius-10 cursor-pointer background-white padding-5 padding-left-right-10">
                 {buttonText}
-            </button>
-        </div>
+            </div>
+        </button>
     )
 }

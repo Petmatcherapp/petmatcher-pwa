@@ -3,7 +3,7 @@ import Gold from "../Images/Svgs/Gold"
 export default function GoldAmount({ amount }) {
     return (
         <span>
-            <p className="gradient-5 gradient-text display-inline">
+            <p className="display-inline">
                 {amount}
             </p>
             &nbsp;
