@@ -8,6 +8,7 @@ import TextField from "../Components/Inputs/TextField"
 import ConfirmButton from "../Components/Buttons/ConfirmButton"
 import WarningButton from "../Components/Buttons/WarningButton"
 import Button from "../Components/Buttons/Button"
+import GoldAmount from "../Components/Misc/GoldAmount"
 
 export async function getStaticProps() {
   return {
@@ -62,6 +63,7 @@ export default function Create() {
         <ConfirmButton buttonText="Checkout" />
         <WarningButton buttonText="Cancel" />
         <Button buttonText="Subcribe" gradientNum={1} />
+        <GoldAmount amount={42069} />
     </main>
   )
 }
