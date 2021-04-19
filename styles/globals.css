@@ -368,7 +368,7 @@ small {
   box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.24);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.1s, transform 0.2s;
   transform: translate(0);
 }
 
@@ -377,7 +377,6 @@ small {
     box-shadow: 9px 9px 9px -1px rgba(78, 78, 78, 0.2);
     -webkit-box-shadow: 9px 9px 9px -1px rgba(51, 51, 51, 0.2);
     -moz-box-shadow: 9px 9px 9px -1px rgba(51, 51, 51, 0.2);
-    transition: box-shadow 0.2s, transform 0.2s;
     transform: translateY(-1px);
   }
 }
@@ -388,7 +387,7 @@ small {
 
 .clickable-shadow input,
 .clickable-shadow button {
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.1s, transform 0.2s;
 }
 
 .clickable-shadow:disabled,
