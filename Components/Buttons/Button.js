@@ -13,7 +13,7 @@ export default function Button({ buttonText, gradientNum, onClick, disabled }) {
     
     const handleClick = () => {
         // window.navigator.vibrate(50)
-        setSound(new Audio(clickSound))
+        // setSound(new Audio(clickSound))
         sound.play()
         onClick
     }
