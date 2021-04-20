@@ -8,12 +8,17 @@ export default function ConfirmButton({ buttonText, onClick, disabled }) {
     const [sound, setSound] = useState(null)
 
     useEffect(() => {
-        setSound(new Audio(clickSound))
+        const AudioContext = window.AudioContext || window.webkitAudioContext
+        const audioCtx = new AudioContext();
+        const audio = new Audio(clickSound)
+        const source = audioCtx.createMediaElementSource(audio)
+        source.connect(audioCtx.destination)
+        setSound(audio)
     }, [])
     
     const handleClick = () => {
         // window.navigator.vibrate(50)
-        // setSound(new Audio(clickSound))
+        setSound(new Audio(clickSound))
         sound.play()
         onClick
     }

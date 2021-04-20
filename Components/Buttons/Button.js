@@ -6,7 +6,7 @@ export default function Button({ buttonText, gradientNum, onClick, disabled }) {
 
     // set sound on server to null
     const [sound, setSound] = useState(null)
-
+    
     useEffect(() => {
         setSound(new Audio(clickSound))
     }, [])
