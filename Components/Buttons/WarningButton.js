@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import clickSound from "../../audio/buttonClick3.mp3"
 import styles from "../../styles/components/buttons/WarningButton.module.css"
 
@@ -6,14 +6,10 @@ export default function WarningButton({ buttonText, onClick, disabled }) {
 
     // set sound on server to null
     const [sound, setSound] = useState(null)
-
-    useEffect(() => {
-        // set and load audio on client
-        setSound(new Audio(clickSound))
-    }, [])
-
+    
     const handleClick = () => {
         window.navigator.vibrate(50)
+        setSound(new Audio(clickSound))
         sound.play()
         onClick
     }
