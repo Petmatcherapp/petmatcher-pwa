@@ -13,9 +13,7 @@ export default function WarningButton({ buttonText, onClick, disabled }) {
     }, [])
     
     const handleClick = () => {
-        setSound(new Audio(clickSound))
         sound.play()
-        // window.navigator.vibrate(50)
         onClick
     }
 

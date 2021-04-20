@@ -8,13 +8,11 @@ export default function Button({ buttonText, gradientNum, onClick, disabled }) {
     const [sound, setSound] = useState(null)
     
     useEffect(() => {
-        // set sound on client
         setSound(new Audio(clickSound))
     }, [])
     
     const handleClick = () => {
         sound.play()
-        // window.navigator.vibrate(50)
         onClick
     }
 
