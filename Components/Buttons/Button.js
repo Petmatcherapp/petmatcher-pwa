@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import clickSound from "../../audio/buttonClick1.mp3"
 import styles from "../../styles/components/buttons/Button.module.css"
 
@@ -6,9 +6,13 @@ export default function Button({ buttonText, gradientNum, onClick, disabled }) {
 
     // set sound on server to null
     const [sound, setSound] = useState(null)
+
+    useEffect(() => {
+        setSound(new Audio(clickSound))
+    }, [])
     
     const handleClick = () => {
-        window.navigator.vibrate(50)
+        // window.navigator.vibrate(50)
         setSound(new Audio(clickSound))
         sound.play()
         onClick
