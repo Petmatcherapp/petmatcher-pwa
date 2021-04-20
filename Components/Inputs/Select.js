@@ -18,7 +18,7 @@ export default function Select({ value, id, onChange }) {
             <div className="display-inline-flex-column">
                 <label className="bottom-margin-extra-small" htmlFor={id}><small>{id}</small></label>
                 <div className="display-inline-flex gradient-2 padding-2 border-radius-12 clickable-shadow">
-                    <select size={5} value={value} onChange={handleChange} onFocus={handleFocus} id={id} className={`${styles.select} width-100 height-100 background-white border-radius-10 padding-5 padding-left-right-10`}>
+                    <select value={value} onChange={handleChange} onFocus={handleFocus} id={id} className={`${styles.select} width-100 height-100 background-white border-radius-10 padding-5 padding-left-right-10`}>
                         <optgroup label="common pets">
                             <option value="dog">Dog</option>
                             <option value="cat">Cat</option>
