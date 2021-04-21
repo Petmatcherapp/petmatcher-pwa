@@ -3,17 +3,12 @@ import clickSound from "../../audio/buttonClick2.mp3"
 import styles from "../../styles/components/buttons/ConfirmButton.module.css"
 
 export default function ConfirmButton({ buttonText, onClick, disabled }) {
-
-    // set sound on server to null
+    // set sound on server
     const [sound, setSound] = useState(null)
 
     useEffect(() => {
-        const AudioContext = window.AudioContext || window.webkitAudioContext
-        const audioCtx = new AudioContext();
-        const audio = new Audio(clickSound)
-        const source = audioCtx.createMediaElementSource(audio)
-        source.connect(audioCtx.destination)
-        setSound(audio)
+        // set sound on client
+        setSound(new Audio(clickSound))
     }, [])
     
     const handleClick = () => {
