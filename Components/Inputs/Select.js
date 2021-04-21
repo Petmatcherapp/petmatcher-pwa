@@ -4,12 +4,10 @@ import styles from "../../styles/components/inputs/Select.module.css"
 export default function Select({ value, id, onChange }) {
 
     const handleFocus = (e) => {
-        e.preventDefault()
-        window.navigator.vibrate(50)
+
     }
 
     const handleChange = (e) => {
-        e.preventDefault()
         onChange
     }
 

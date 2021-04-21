@@ -11,7 +11,8 @@ export default function Button({ buttonText, gradientNum, onClick, disabled }) {
         setSound(new Audio(clickSound))
     }, [])
     
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault()
         sound.play()
         onClick
     }
