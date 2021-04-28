@@ -50,9 +50,12 @@ p {
   color: #3a3a3a;
 }
 
-p,
-a {
+p {
   font-size: 20px;
+}
+
+a {
+  text-decoration: none;
 }
 
 small {
