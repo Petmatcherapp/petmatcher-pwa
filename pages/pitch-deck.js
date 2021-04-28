@@ -1,6 +1,12 @@
 function pitchDeck() {
     return (
-        <embed style={{position: "absolute", top: "0", left: "0", width: "100%", height: "100%"}} src="../petmatcher-pitch-deck-compressed.pdf"></embed>
+        <div style={{height: "100vh"}} className="display-flex-row justify-center align-center">
+            <h1 className="display-flex-row align-center">
+                <a className="gradient-text gradient-3" href="/petmatcher-pitch-deck-compressed.pdf">View the Petmatcher pitch deck</a>
+                &nbsp;
+                <span>😸</span>
+            </h1>
+        </div>
     )
 }
 

@@ -90,6 +90,42 @@ small {
   );
 }
 
+.gradient-1 {
+  background: var(--color-4);
+  background: linear-gradient(
+    141deg,
+    var(--color-1) 5%,
+    var(--color-3) 35%,
+    var(--color-4) 65%,
+    var(--color-5) 85%,
+    var(--color-6) 100%
+  );
+}
+
+.gradient-2 {
+  background: var(--color-2);
+  background: linear-gradient(
+    132deg,
+    rgba(55, 238, 255, 1) 0%,
+    rgba(85, 122, 255, 1) 25%,
+    rgba(88, 62, 255, 1) 50%,
+    rgba(215, 53, 255, 1) 75%,
+    rgba(237, 41, 255, 1) 100%
+  );
+}
+
+.gradient-3 {
+  background: var(--color-5);
+  background: linear-gradient(
+    132deg,
+    rgba(237, 41, 255, 1) 0%,
+    rgba(215, 53, 255, 1) 25%,
+    rgba(88, 62, 255, 1) 50%,
+    rgba(85, 122, 255, 1) 75%,
+    rgba(55, 238, 255, 1) 100%
+  );
+}
+
 /* Global Classes - fonts */
 .weight-400 {
   font-weight: 400;
