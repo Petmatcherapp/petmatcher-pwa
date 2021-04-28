@@ -1,8 +1,6 @@
 function pitchDeck() {
     return (
-        <div style={{height: "100vh"}}>
-            <embed src="../petmatcher-pitch-deck.pdf" width="100%" height="100%"></embed>
-        </div>
+        <embed style={{position: "absolute", top: "0", left: "0", width: "100%", height: "100%"}} src="../petmatcher-pitch-deck-compressed.pdf"></embed>
     )
 }
 
