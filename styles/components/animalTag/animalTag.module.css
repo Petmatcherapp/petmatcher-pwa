@@ -1,0 +1,10 @@
+.animalAvatarContainer {
+  border-radius: 55px;
+  position: relative;
+  width: 3em;
+  height: 3em;
+}
+
+.animalAvatarContainer img {
+  border-radius: 55px;
+}

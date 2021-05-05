@@ -4,8 +4,11 @@
         "srcType": "image",
         "description": "Meet my new boy Max! ",
         "animal": {
-            "name": "Max the dog",
-            "avatar": "postMocImages/Screenshot 2021-05-02 at 6.20.01 PM.png"
+            "name": "Max",
+            "type": "dog",
+            "alias": "Maxaroo",
+            "gender": "male",
+            "avatar": "/postMocImages/Screenshot 2021-05-02 at 6.20.01 PM.png"
         },
         "tags": "",
         "id": "1"
@@ -15,7 +18,10 @@
         "srcType": "image",
         "description": "Louie be like... ",
         "animal": {
-            "name": "Louie the cat",
+            "name": "Louie",
+            "type": "cat",
+            "alias": "LouieBoy",
+            "gender": "male",
             "avatar": "/postMocImages/IMG_0366.jpeg"
         },
         "tags": "#Sister the cat",
@@ -26,7 +32,10 @@
         "srcType": "image",
         "description": "Peekaboo, I see youuu 🥺 🥰",
         "animal": {
-            "name": "Ddang the cat",
+            "name": "Ddang",
+            "type": "cat",
+            "alias": "Ddang",
+            "gender": "male",
             "avatar": "/postMocImages/Screenshot 2021-05-02 at 6.26.31 PM.png"
         },
         "tags": "",
@@ -37,7 +46,10 @@
         "srcType": "video",
         "description": "🙀",
         "animal": {
-            "name": "Sister the cat",
+            "name": "Sister",
+            "type": "cat",
+            "alias": "SissyLaLa",
+            "gender": "female",
             "avatar": "/postMocImages/Screenshot 2021-02-11 at 5.12.16 PM.png"
         },
         "tags": "",

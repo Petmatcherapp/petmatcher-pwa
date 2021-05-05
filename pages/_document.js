@@ -19,7 +19,7 @@ class MyDocument extends Document {
             <meta name='apple-mobile-web-app-title' content='Petmatcher' />
             <link rel="apple-touch-icon" href="/manifest/manifest-logo512x512.png" />
 
-            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet" /> 
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" /> 
         </Head>
         <body>
           <Main />
