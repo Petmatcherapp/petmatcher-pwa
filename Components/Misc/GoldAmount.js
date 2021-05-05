@@ -1,4 +1,4 @@
-import Gold from "../Images/Svgs/Gold"
+import Gold from "../Images/Svgs/Misc/Gold"
 
 export default function GoldAmount({ amount }) {
     return (

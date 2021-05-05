@@ -1,0 +1,9 @@
+.postContainer {
+  position: relative;
+  margin-bottom: 5em;
+}
+
+.postUiOverlay {
+  position: absolute;
+  z-index: 1;
+}
