@@ -1,5 +1,5 @@
 import PostHeader from "./PostHeader"
-// import PostActions from "./PostActions"
+import PostActions from "./PostActions"
 import styles from "../../styles/components/post/post.module.css"
 
 export default function Post({ postData }) {
@@ -11,9 +11,11 @@ export default function Post({ postData }) {
             <img className={`${styles.image} border-radius-20 width-100`} src={postData.src} alt={postData.description}></img>}
             <div className={`${styles.postUiOverlay} display-flex-column justify-between height-100 width-100 padding-5 padding-top-bottom-10`}>
                 <PostHeader animal={postData.animal} />
-                {/* <PostActions /> */}
-                <div className={`${styles.postActionsContainer}`}>
+                <div>
                     <small className="color-white weight-500 text-shadow-black">{postData.description}</small>
+                    <div className={`${styles.postActionsContainer}`}>
+                        <PostActions />
+                    </div>
                 </div>
             </div>
         </div>

@@ -3,9 +3,9 @@ import MaleSymbol from "../Images/Svgs/Icons/MaleSymbol"
 import FemaleSymbol from "../Images/Svgs/Icons/FemaleSymbol"
 import styles from "../../styles/components/animalTag/animalTag.module.css"
 
-export default function AnimalTag({ avatar, name, type, alias, gender, textColor }) {
+export default function AnimalTag({ avatar, name, type, alias, gender }) {
     return (
-        <div className="display-flex-row">
+        <div className="display-flex-row align-center">
             <div className={`${styles.animalAvatarContainer} margin-right-small`}>
                 <Image 
                     src={`${avatar}`}

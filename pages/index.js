@@ -22,7 +22,7 @@ export async function getServerSideProps() {
 
 export default function Home({ doc }) {
   return (
-    <main className="padding-top-bottom-10">
+    <main className="padding-0 padding-top-bottom-10">
       {
         postData.map(post => 
           <Post postData={post} key={post.id} />

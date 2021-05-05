@@ -8,7 +8,7 @@
   --color-6: #ed29ff;
   --color-3a: #3a3a3a;
   --color-white: #f3f3f3;
-  --color-grey: #9e9e9e;
+  --color-grey: #747474;
 
   --color-green1: #97de81;
   --color-green2: #00d48d;
@@ -209,11 +209,11 @@ small {
 }
 
 .text-shadow-black {
-  text-shadow: 1px 1px 0px var(--color-3a);
+  text-shadow: 1.75px 0.75px 0px var(--color-3a);
 }
 
 .text-shadow-white {
-  text-shadow: 2px 1px 0px var(--color-white);
+  text-shadow: 1.75px 0.5px 0px var(--color-white);
 }
 
 .gradient-text {
@@ -447,7 +447,8 @@ small {
 /* global media queries */
 @media screen and (min-width: 768px) {
   main {
-    padding-left: 9em;
+    margin-left: 9em;
+    width: 35em;
   }
 }
 
