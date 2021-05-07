@@ -52,7 +52,7 @@ export default function PostActions({ postMetaData }) {
                 </div>
             </div>
             <div className="padding-left-right-10 absolute">
-                <p className="text-shadow-black color-white">here</p>
+                {/* <p className="text-shadow-black color-white">here</p> */}
             </div>
         </div>
     )
