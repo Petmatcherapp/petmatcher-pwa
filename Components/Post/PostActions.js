@@ -1,7 +1,7 @@
 import { useState } from "react"
 import CatLove from "../Images/Misc/CatLove"
 import CatLaugh from "../Images/Misc/CatLaugh"
-import styles from "../../styles/components/post/postActions.module.css"
+import styles from "../../styles/components/post/postAction.module.css"
 
 export default function PostActions({ postMetaData }) {
     const [love, setLove] = useState(`${styles.reactionLoveHover} ${styles.translateLoveStart} cursor-pointer ${styles.backAndForth}`)
