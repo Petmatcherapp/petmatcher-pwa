@@ -4,8 +4,8 @@ import CatLaugh from "../Images/Misc/CatLaugh"
 import styles from "../../styles/components/post/postActions.module.css"
 
 export default function PostActions({ postMetaData }) {
-    const [love, setLove] = useState(`${styles.reactionLoveHover} ${styles.translateLoveStart}`)
-    const [laugh, setLaugh] = useState(`${styles.reactionLaughHover} ${styles.translateLaughStart}`)
+    const [love, setLove] = useState(`${styles.reactionLoveHover} ${styles.translateLoveStart} cursor-pointer ${styles.backAndForth}`)
+    const [laugh, setLaugh] = useState(`${styles.reactionLaughHover} ${styles.translateLaughStart} cursor-pointer ${styles.backAndForth}`)
 
     const [disableLove, setDisableLove] = useState(false)
     const [disableLaugh, setDisableLaugh] = useState(false)
@@ -31,17 +31,17 @@ export default function PostActions({ postMetaData }) {
     }
 
     return (
-        <div className="display-flex-column justify-between height-100 width-100">
+        <div className="display-flex-column justify-between height-100 width-100 padding-5 padding-top-bottom-10">
             <div className="display-flex-row align-center justify-around text-shadow-black height-100 width-100 relative">
-                <button disabled={disableLove} className={`${styles.catLoveContainer} ${love} cursor-pointer absolute`} onClick={handleLoveClick}>
+                <button disabled={disableLove} className={`${styles.catLoveContainer} ${love} absolute`} onClick={handleLoveClick}>
                     <CatLove width={80} height={70} />
                 </button>
-                <button disabled={disableLaugh} className={`${styles.catLaughContainer} ${laugh} cursor-pointer absolute`} onClick={handleLaughClick}>
+                <button disabled={disableLaugh} className={`${styles.catLaughContainer} ${laugh} absolute`} onClick={handleLaughClick}>
                     <CatLaugh width={80} height={70} />
                 </button>
             </div>
-            <div>
-
+            <div className="padding-left-right-10 absolute">
+                <p className="text-shadow-black color-white">here</p>
             </div>
         </div>
     )

@@ -15,10 +15,10 @@ export default function PostHeader({ animal }) {
             />
             <div className={`display-flex-column align-center justify-center ${styles.treatContainer} cursor-pointer`}>
                 <span className={`${styles.treatItem}`}>
-                    <AwardBackground height={40} />
+                    <AwardBackground height={44} />
                 </span>
                 <span id={`${styles.treat}`} className={`${styles.treatItem}`}>
-                    <Treat height={32} />
+                    <Treat height={36} />
                 </span>
             </div>
         </div>
