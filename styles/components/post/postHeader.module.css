@@ -1,0 +1,12 @@
+.treatContainer {
+  display: grid;
+}
+
+.treatItem {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+#treat {
+  position: relative;
+  left: 0.25em;
+}

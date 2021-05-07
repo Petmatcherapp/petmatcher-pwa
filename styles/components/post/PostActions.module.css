@@ -1,0 +1,31 @@
+.catLaughContainer,
+.catLoveContainer {
+  transition: transform 0.25s cubic-bezier(0.5, -0.6, 0.5, 1.6), opacity 0.35s,
+    right 0.5s, left 0.5s;
+}
+
+.translateLoveStart {
+  transform: translateX(-100%);
+}
+
+.translateLaughStart {
+  transform: translateX(100%);
+}
+
+.reactionLoveHover:hover {
+  transform: translateX(-100%) scale(1.2);
+}
+
+.reactionLaughHover:hover {
+  transform: translateX(100%) scale(1.2);
+}
+
+.translateLoveEnd {
+  transform: translateX(50%) scale(1.5);
+  right: 50%;
+}
+
+.translateLaughEnd {
+  transform: translateX(-50%) scale(1.5);
+  left: 50%;
+}

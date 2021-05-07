@@ -1,6 +1,7 @@
 import Post from "../Components/Post/Post"
 import postData from "../Components/Post/tempPostData.json"
 import { getTestData } from "../lib/firebase"
+import styles from "../styles/pages/index.module.css"
 
 export async function getServerSideProps() {
   const testDoc = await getTestData()
@@ -23,11 +24,13 @@ export async function getServerSideProps() {
 export default function Home({ doc }) {
   return (
     <main className="padding-0 padding-top-bottom-10">
-      {
-        postData.map(post => 
-          <Post postData={post} key={post.id} />
-        )
-      }
+      <section className={`${styles.feedContainer}`}>
+        {
+          postData.map(post => 
+            <Post postData={post} key={post.id} />
+          )
+        }
+      </section>
     </main>
   )
 }

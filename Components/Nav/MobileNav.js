@@ -17,7 +17,7 @@ function MobileNav({ optionComponent, activeRoute }) {
     const handleMobileNavClick = () => {
         setDynamicClasses(`${styles.dropMenu}`)
         setTimeout(() => {
-            setMenuState(menuState === "Menu" ? "close" : "Menu")
+            setMenuState(menuState === "Menu" ? "Close" : "Menu")
             setDynamicClasses(`${styles.raiseMenu}`)
         }, 300)
     }
@@ -105,7 +105,12 @@ function MobileNav({ optionComponent, activeRoute }) {
                 </>
             }
             <div onClick={handleMobileNavClick} className={`${styles.mobileNavMenuBar}`}>
-                <small className="color-grey">{menuState}</small>
+                {
+                menuState === "Close" ?
+                <p>Close</p>
+                : 
+                <div id={`${styles.menuBar}`} className="color-3a border-radius-10"></div>
+                }
             </div>
         </nav>
     )

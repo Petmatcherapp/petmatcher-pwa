@@ -7,8 +7,8 @@
   --color-5: #d735ff;
   --color-6: #ed29ff;
   --color-3a: #3a3a3a;
-  --color-white: #f3f3f3;
-  --color-grey: #747474;
+  --color-white: #ffffff;
+  --color-grey: #5c5c5c;
 
   --color-green1: #97de81;
   --color-green2: #00d48d;
@@ -186,6 +186,14 @@ small {
   cursor: pointer;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 /* backgrounds */
 .background-white {
   background-color: var(--color-white);
@@ -209,11 +217,19 @@ small {
 }
 
 .text-shadow-black {
-  text-shadow: 1.75px 0.75px 0px var(--color-3a);
+  text-shadow: 1.75px 1px 0px var(--color-3a);
 }
 
 .text-shadow-white {
-  text-shadow: 1.75px 0.5px 0px var(--color-white);
+  text-shadow: 1.75px 1px 0px var(--color-white);
+}
+
+.text-shadow-black-reverse {
+  text-shadow: -1.75px -1px 0px var(--color-3a);
+}
+
+.text-shadow-white-reverse {
+  text-shadow: -1.75px -1px 0px var(--color-white);
 }
 
 .gradient-text {
@@ -404,12 +420,26 @@ small {
   border-radius: 20px;
 }
 
+.border-circle {
+  border-radius: 55px;
+}
+
 /* shadows */
+.normal-shadow {
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.24);
+}
+
 .clickable-shadow {
   box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.24);
   transition: box-shadow 0.1s, transform 0.2s;
+  -webkit-transition: box-shadow 0.1s, transform 0.2s;
+  -moz-transition: box-shadow 0.1s, transform 0.2s;
+  -ms-transition: box-shadow 0.1s, transform 0.2s;
+  -o-transition: box-shadow 0.1s, transform 0.2s;
   transform: translate(0);
 }
 
@@ -429,6 +459,10 @@ small {
 .clickable-shadow input,
 .clickable-shadow button {
   transition: box-shadow 0.1s, transform 0.2s;
+  -webkit-transition: box-shadow 0.1s, transform 0.2s;
+  -moz-transition: box-shadow 0.1s, transform 0.2s;
+  -ms-transition: box-shadow 0.1s, transform 0.2s;
+  -o-transition: box-shadow 0.1s, transform 0.2s;
 }
 
 .clickable-shadow:disabled,
@@ -444,11 +478,34 @@ small {
   transform: translate(0);
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.scale-50 {
+  transform: scale(0.5);
+}
+
+.scale-100 {
+  transform: scale(1);
+}
+
+.scale-150 {
+  transform: scale(1.5);
+}
+
 /* global media queries */
 @media screen and (min-width: 768px) {
   main {
     margin-left: 9em;
-    width: 35em;
   }
 }
 
