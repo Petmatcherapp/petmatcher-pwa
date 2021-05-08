@@ -1,19 +1,26 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import CatLove from "../Images/Misc/CatLove"
 import CatLaugh from "../Images/Misc/CatLaugh"
 import Comment from "../Images/Misc/Comment"
 import AwardBackground from "../Images/Svgs/Misc/AwardBackground"
+import clickSound from "../../audio/buttonClick2.mp3"
 import styles from "../../styles/components/post/postAction.module.css"
 
 export default function PostActions({ postData }) {
+    const [sound, setSound] = useState(null)
     const [love, setLove] = useState(`${styles.reactionLoveHover} ${styles.translateLoveStart} cursor-pointer`)
     const [laugh, setLaugh] = useState(`${styles.reactionLaughHover} ${styles.translateLaughStart} cursor-pointer`)
     const [awardBackgroundStyles, setAwardBackgroundStyles] = useState(`${styles.awardBackgroundStylesHidden}`)
     const [reactionContainer, setReactionContainer] = useState("height-100")
     const [afterReaction, setAfterReaction] = useState("opacity-0")
-
+    
     const [disableLove, setDisableLove] = useState(false)
     const [disableLaugh, setDisableLaugh] = useState(false)
+
+    useEffect(() => {
+        // set sound on client
+        setSound(new Audio(clickSound))
+    }, [])
 
     const sendReaction = (type) => {
         console.log(`This is a ${type} click`)
@@ -28,6 +35,7 @@ export default function PostActions({ postData }) {
 
     const handleLoveClick = (e) => {
         e.stopPropagation();
+        sound.play()
         setLove(`${styles.translateLoveEnd}`)
         setLaugh("opacity-0")
         setDisableLaugh(true)
@@ -36,6 +44,7 @@ export default function PostActions({ postData }) {
 
     const handleLaughClick = (e) => {
         e.stopPropagation()
+        sound.play()
         setLaugh(`${styles.translateLaughEnd}`)
         setLove("opacity-0")
         setDisableLove(true)
