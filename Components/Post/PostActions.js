@@ -56,7 +56,7 @@ export default function PostActions({ postData }) {
                 </button>
             </div>
             <div className={`${styles.afterReactionContainer} ${afterReaction} padding-left-right-5 width-100 absolute`}>
-                <p className="display-flex-row align-center gradient-text gradient-3 text-shadow-white-reverse weight-700"><Comment width={25} />&nbsp;Send {postData.animal.name} kind words</p>
+                <p className="display-flex-row align-center gradient-text gradient-3 text-shadow-white weight-700"><Comment width={25} />&nbsp;Send {postData.animal.name} kind words</p>
             </div>
         </div>
     )
