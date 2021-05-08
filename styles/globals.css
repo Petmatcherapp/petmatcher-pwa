@@ -248,6 +248,10 @@ small {
   color: var(--color-grey);
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 /* layouts */
 .display-none {
   display: none;

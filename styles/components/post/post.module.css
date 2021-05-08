@@ -3,6 +3,10 @@
   margin-bottom: 5em;
 }
 
+.postDescription {
+  font-size: 17px;
+}
+
 .postUiOverlay {
   position: absolute;
   transition: opacity 0.075s linear;

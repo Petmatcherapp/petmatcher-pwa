@@ -1,7 +1,11 @@
+.reactionContainerStyles {
+  transition: height 1s;
+}
+
 .catLaughContainer,
 .catLoveContainer {
-  transition: transform 0.25s cubic-bezier(0.5, -0.6, 0.5, 1.6), opacity 0.35s,
-    right 0.5s, left 0.5s;
+  transition: transform 0.65s cubic-bezier(0.29, -0.36, 0.38, 1.27),
+    opacity 0.15s;
   z-index: 2;
 }
 
@@ -22,18 +26,16 @@
 }
 
 .translateLoveEnd {
-  transform: translateX(50%) scale(1.5);
-  right: 50%;
+  transform: translateX(0%) scale(1.3);
 }
 
 .translateLaughEnd {
-  transform: translateX(-50%) scale(1.5);
-  left: 50%;
+  transform: translateX(0%) scale(1.3);
 }
 
 .awardBackgroundStylesHidden,
 .awardBackgroundStylesShow {
-  transition: opacity 0.75s;
+  transition: opacity 0.35s;
 }
 
 .awardBackgroundStylesHidden {
@@ -41,7 +43,14 @@
 }
 
 .awardBackgroundStylesShow {
-  animation: spin 3s infinite linear;
+  width: 120px;
+  height: 120px;
+  animation: spin 8s infinite linear;
+}
+
+.afterReactionContainer {
+  transition: opacity 0.35s;
+  bottom: 0;
 }
 
 @keyframes spin {
@@ -53,12 +62,3 @@
     transform: rotate(360deg);
   }
 }
-
-/* @keyframes scale {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
