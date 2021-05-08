@@ -2,6 +2,7 @@
 :root {
   --color-1: #1fffd6;
   --color-2: #37eeff;
+  --color-7: #009fff;
   --color-3: #557aff;
   --color-4: #583eff;
   --color-5: #d735ff;
@@ -15,6 +16,12 @@
 
   --color-red1: #ff3c11;
   --color-red2: #ff8660;
+
+  --color-male1: #100bff;
+  --color-male2: #4f5cff;
+
+  --color-female1: #ff352e;
+  --color-female2: #ed6661;
 
   --discord-color: #2d4dff;
   --insta-color: #d4407e;
@@ -163,6 +170,16 @@ small {
   );
 }
 
+.gradient-7 {
+  background: var(--color-7);
+  background: linear-gradient(
+    125deg,
+    rgba(31, 255, 214, 1) 0%,
+    rgba(55, 238, 255, 1) 37%,
+    rgba(0, 159, 255, 1) 100%
+  );
+}
+
 .gradient-success {
   background: var(--color-green2);
   background: linear-gradient(
@@ -178,6 +195,24 @@ small {
     125deg,
     rgba(255, 134, 96, 1) 0%,
     rgba(255, 60, 17, 1) 100%
+  );
+}
+
+.gradient-male {
+  background: var(--color-male2);
+  background: linear-gradient(
+    125deg,
+    rgba(16, 11, 255, 1) 0%,
+    rgba(79, 92, 255, 1) 81%
+  );
+}
+
+.gradient-female {
+  background: var(--color-female2);
+  background: linear-gradient(
+    125deg,
+    rgba(255, 53, 46, 1) 0%,
+    rgba(237, 102, 97, 1) 100%
   );
 }
 

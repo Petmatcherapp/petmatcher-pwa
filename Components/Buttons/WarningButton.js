@@ -18,7 +18,7 @@ export default function WarningButton({ buttonText, onClick, disabled }) {
     }
 
     return (
-        <button onClick={handleClick} disabled={disabled} className={`${styles.warningButton} clickable-shadow border-radius-12 gradient-warning padding-5 padding-left-right-10 weight-500 color-white cursor-pointer`}>
+        <button onClick={handleClick} disabled={disabled} className={`${styles.warningButton} clickable-shadow border-radius-12 gradient-warning padding-2 padding-left-right-10 weight-500 color-white cursor-pointer`}>
             {buttonText}
         </button>
     )

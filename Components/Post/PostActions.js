@@ -4,6 +4,9 @@ import CatLaugh from "../Images/Misc/CatLaugh"
 import Comment from "../Images/Misc/Comment"
 import AwardBackground from "../Images/Svgs/Misc/AwardBackground"
 import clickSound from "../../audio/buttonClick2.mp3"
+import AnimalTag from "../AnimalTag/AnimalTag"
+import VerticleLineBreak from "../Misc/VerticleLineBreak"
+import Button from "../Buttons/Button"
 import styles from "../../styles/components/post/postAction.module.css"
 
 export default function PostActions({ postData }) {
@@ -55,20 +58,35 @@ export default function PostActions({ postData }) {
         <div className="display-flex-column justify-between height-100 width-100 padding-5 padding-top-bottom-10">
             <div className={`${styles.reactionContainerStyles} ${reactionContainer} display-flex-row align-center justify-around text-shadow-black width-100 relative`}>
                 <div className={`${awardBackgroundStyles}`}>
-                    <AwardBackground height={120} />
+                    <AwardBackground height={100} />
                 </div>
                 <button disabled={disableLove} className={`${styles.catLoveContainer} ${love} absolute padding-0`} onClick={handleLoveClick}>
-                    <CatLove width={74} height={64} />
+                    <CatLove width={70} height={60} />
                 </button>
                 <button disabled={disableLaugh} className={`${styles.catLaughContainer} ${laugh} absolute padding-0`} onClick={handleLaughClick}>
-                    <CatLaugh width={74} height={64} />
+                    <CatLaugh width={70} height={60} />
                 </button>
             </div>
-            <div className={`${styles.afterReactionContainer} ${afterReaction} padding-left-right-5 width-100 display-flex-row align-start absolute`}>
-                <span className="margin-right-small">
-                    <Comment width={25} />
-                </span>
-                <p className="gradient-text gradient-3 text-shadow-white-reverse weight-700">Send {postData.animal.name} kind words</p>
+            <div className={`${styles.afterReactionContainer} ${afterReaction} padding-left-right-5 width-100 absolute`}>
+                <div className="display-flex-row bottom-margin-medium">
+                    <span className="margin-right-small">
+                        <Comment width={25} />
+                    </span>
+                    <p className="gradient-text gradient-3 text-shadow-white-reverse weight-700">Send {postData.animal.name} kind words</p>
+                </div>
+                <div className="display-flex-row bottom-margin-medium align-end">
+                    <div>
+                        <AnimalTag
+                            avatar={postData.animal.avatar}
+                            name={postData.animal.name}
+                            alias={postData.animal.alias}
+                            type={postData.animal.type}
+                            gender={postData.animal.gender}
+                        />
+                    </div>
+                    <VerticleLineBreak height="2em" />
+                    <Button buttonText="follow" gradientNum={2} />
+                </div>
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ export default function ConfirmButton({ buttonText, onClick, disabled }) {
     }
 
     return (
-        <button onClick={handleClick} disabled={disabled} className={`${styles.confirmButton} clickable-shadow border-radius-12 gradient-success padding-5 padding-left-right-10 weight-500 color-white cursor-pointer`}>
+        <button onClick={handleClick} disabled={disabled} className={`${styles.confirmButton} clickable-shadow border-radius-12 gradient-success padding-2 padding-left-right-10 weight-500 color-white cursor-pointer`}>
             {buttonText}
         </button>
     )
