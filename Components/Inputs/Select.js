@@ -4,11 +4,19 @@ import styles from "../../styles/components/inputs/Select.module.css"
 export default function Select({ value, id, onChange }) {
 
     const handleFocus = (e) => {
-
+        e.preventDefault()
+        e.stopPropagation();
     }
 
     const handleChange = (e) => {
+        e.preventDefault()
+        e.stopPropagation();
         onChange
+    }
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        e.stopPropagation();
     }
 
     return (
@@ -17,7 +25,7 @@ export default function Select({ value, id, onChange }) {
                 <label className="bottom-margin-extra-small" htmlFor={id}><small>{id}</small></label>
                 <div className="display-inline-flex align-center">
                     <div className="display-inline-flex gradient-2 padding-2 border-radius-12 clickable-shadow">
-                        <select value={value} onChange={handleChange} onFocus={handleFocus} id={id} className={`${styles.select} width-100 height-100 background-white border-radius-10 padding-2 padding-left-right-10`}>
+                        <select value={value} onClick={handleClick} onChange={handleChange} onFocus={handleFocus} id={id} className={`${styles.select} width-100 height-100 background-white border-radius-10 padding-2 padding-left-right-10`}>
                             <optgroup label="common pets">
                                 <option value="dog">Dog</option>
                                 <option value="cat">Cat</option>

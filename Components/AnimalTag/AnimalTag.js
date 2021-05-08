@@ -3,7 +3,7 @@ import Image from "next/image"
 import styles from "../../styles/components/animalTag/animalTag.module.css"
 import { randomNum } from "../../functions/appLogic"
 
-export default function AnimalTag({ avatar, name, type, alias, gender }) {
+export default function AnimalTag({ onClick, avatar, name, type, alias, gender }) {
     const [gradientNum, setGradientNum] = useState(1)
     const genderGradient = gender === "female" ? "gradient-female" : "gradient-male"
 
@@ -11,8 +11,14 @@ export default function AnimalTag({ avatar, name, type, alias, gender }) {
         setGradientNum(randomNum(1, 6))
     }, [])
 
+    const handleClick = (e) => {
+        e.preventDefault()
+        e.stopPropagation();
+        () => onClick()
+    }
+
     return (
-        <div className="display-flex-row align-center">
+        <div onClick={handleClick} className="display-flex-row align-center">
             <div className={`${styles.animalAvatarContainer} margin-right-small`}>
                 <Image 
                     src={`${avatar}`}

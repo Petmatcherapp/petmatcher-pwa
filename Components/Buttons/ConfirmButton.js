@@ -13,8 +13,9 @@ export default function ConfirmButton({ buttonText, onClick, disabled }) {
     
     const handleClick = (e) => {
         e.preventDefault()
-        sound.play()
-        onClick
+        e.stopPropagation();
+        sound.play();
+        () => onClick()
     }
 
     return (

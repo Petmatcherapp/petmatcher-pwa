@@ -7,6 +7,7 @@ import clickSound from "../../audio/buttonClick2.mp3"
 import AnimalTag from "../AnimalTag/AnimalTag"
 import VerticleLineBreak from "../Misc/VerticleLineBreak"
 import Button from "../Buttons/Button"
+import Action from "../Buttons/Action"
 import styles from "../../styles/components/post/postAction.module.css"
 
 export default function PostActions({ postData }) {
@@ -72,7 +73,7 @@ export default function PostActions({ postData }) {
                     <span className="margin-right-small">
                         <Comment width={25} />
                     </span>
-                    <p className="gradient-text gradient-3 text-shadow-white-reverse weight-700">Send {postData.animal.name} kind words</p>
+                    <Action text={`Send ${postData.animal.name} kind words`} randomGradient={true} />
                 </div>
                 <div className="display-flex-row bottom-margin-medium align-end">
                     <div>
