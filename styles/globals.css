@@ -17,8 +17,8 @@
   --color-red1: #ff3c11;
   --color-red2: #ff8660;
 
-  --color-male1: #100bff;
-  --color-male2: #4f5cff;
+  --color-male1: #0099ff;
+  --color-male2: #0fd3ff;
 
   --color-female1: #ff352e;
   --color-female2: #ed6661;
@@ -202,8 +202,8 @@ small {
   background: var(--color-male2);
   background: linear-gradient(
     125deg,
-    rgba(16, 11, 255, 1) 0%,
-    rgba(79, 92, 255, 1) 81%
+    rgba(0, 153, 255, 1) 0%,
+    rgba(15, 211, 255, 1) 90%
   );
 }
 

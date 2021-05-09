@@ -53,6 +53,34 @@
   bottom: 0;
 }
 
+.buttonContainer {
+  overflow: hidden;
+  padding: 0.5em 0;
+  top: 0.5em;
+  height: 3.65em;
+}
+
+.buttonContainerMovable {
+  transition: transform 0.65s cubic-bezier(0.29, -0.36, 0.38, 1.27);
+}
+
+.showFollow {
+  transform: translateY(-3.7em);
+}
+
+.showSub {
+  transform: translateY(0);
+}
+
+.checkmark {
+  transition: transform 0.5s cubic-bezier(0.29, -0.36, 0.38, 1.27);
+  transform: scale(0);
+}
+
+.checkmarkScaleUp {
+  transform: scale(1);
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0);

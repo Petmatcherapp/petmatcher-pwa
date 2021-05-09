@@ -15,7 +15,7 @@ export default function Button({ buttonText, gradientNum, onClick, disabled }) {
         e.preventDefault()
         e.stopPropagation();
         sound.play();
-        () => onClick()
+        onClick()
     }
 
     return (

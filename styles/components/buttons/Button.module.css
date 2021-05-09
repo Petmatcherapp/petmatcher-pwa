@@ -14,5 +14,6 @@
 
 .button {
   height: fit-content;
+  width: fit-content;
   color: var(--color-3a);
 }

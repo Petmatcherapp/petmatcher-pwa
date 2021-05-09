@@ -18,7 +18,7 @@ export default function AnimalTag({ onClick, avatar, name, type, alias, gender }
     }
 
     return (
-        <div onClick={handleClick} className="display-flex-row align-center">
+        <div onClick={handleClick} className="display-flex-row align-center cursor-pointer">
             <div className={`${styles.animalAvatarContainer} margin-right-small`}>
                 <Image 
                     src={`${avatar}`}
