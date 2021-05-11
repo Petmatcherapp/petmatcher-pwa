@@ -6,6 +6,7 @@ export default function CatLaugh({ height, width }) {
             src="/images/pm-laugh-reaction.png"
             width={width}
             height={height}
+            priority={true}
             alt="cat laughing"
         />
     )

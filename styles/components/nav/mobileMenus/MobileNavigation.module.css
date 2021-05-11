@@ -1,0 +1,21 @@
+.imageContainer {
+  width: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navUl {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+#postIcon {
+  width: 1.6em;
+}
+
+.settingsImageContainer img {
+  border-radius: 55px;
+}

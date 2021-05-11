@@ -14,7 +14,7 @@ export default function AnimalTag({ onClick, avatar, name, type, alias, gender }
     const handleClick = (e) => {
         e.preventDefault()
         e.stopPropagation();
-        () => onClick()
+        onClick()
     }
 
     return (

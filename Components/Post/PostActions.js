@@ -81,20 +81,20 @@ export default function PostActions({ postData }) {
     }
 
     const handlePokeClick = () => {
-        console.log("i run handle sub")
-        setButtonContainerMovable(`${styles.showPoke}`)
+        resetCheckmark()
+        setCheckmark(`${styles.checkmarkScaleUp}`)
     }
 
     return (
-        <div className="display-flex-column justify-between height-100 width-100 padding-2 padding-top-bottom-10">
+        <div className="display-flex-column justify-between height-100 width-100 padding-top-bottom-10">
             <div className={`${styles.reactionContainerStyles} ${reactionContainer} display-flex-row align-center justify-around text-shadow-black width-100 relative`}>
                 <div className={`${awardBackgroundStyles}`}>
                     <AwardBackground height={100} />
                 </div>
-                <button disabled={disableLove} className={`${styles.catLoveContainer} ${love} absolute padding-0`} onClick={handleLoveClick}>
+                <button disabled={disableLove} className={`${styles.catLoveContainer} ${love} absolute`} onClick={handleLoveClick}>
                     <CatLove width={70} height={60} />
                 </button>
-                <button disabled={disableLaugh} className={`${styles.catLaughContainer} ${laugh} absolute padding-0`} onClick={handleLaughClick}>
+                <button disabled={disableLaugh} className={`${styles.catLaughContainer} ${laugh} absolute`} onClick={handleLaughClick}>
                     <CatLaugh width={70} height={60} />
                 </button>
             </div>
@@ -118,6 +118,16 @@ export default function PostActions({ postData }) {
                     <VerticleLineBreak height="2em" />
                     <div className={`${styles.buttonContainer} display-flex-column relative`}>
                         <div className={`${styles.buttonContainerMovable} ${buttonContainerMovable} relative`}>
+                            <div className="padding-top-bottom-10 bottom-margin-medium">
+                                <div className="display-flex-row">
+                                    <div className="margin-right-small">
+                                        <Button buttonText="Poke" gradientNum={7} onClick={handlePokeClick} />
+                                    </div>
+                                    <div className={`${styles.checkmark} ${checkmark}`}>
+                                        <Check height={30} />
+                                    </div>
+                                </div>
+                            </div>
                             <div className="padding-top-bottom-10 bottom-margin-medium">
                                 <div className="display-flex-row">
                                     <div className="margin-right-small">

@@ -15,7 +15,7 @@ export default function WarningButton({ buttonText, onClick, disabled }) {
         e.preventDefault()
         e.stopPropagation();
         sound.play();
-        () => onClick()
+        onClick()
     }
 
     return (

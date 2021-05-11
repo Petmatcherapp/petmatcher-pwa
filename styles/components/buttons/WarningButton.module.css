@@ -11,3 +11,8 @@
   -webkit-box-shadow: 0 0 0 4px #ff2f008c;
   -moz-box-shadow: 0 0 0 4px #ff2f008c;
 }
+
+.warningButton {
+  height: fit-content;
+  width: fit-content;
+}

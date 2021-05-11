@@ -61,15 +61,19 @@
 }
 
 .buttonContainerMovable {
-  transition: transform 0.65s cubic-bezier(0.29, -0.36, 0.38, 1.27);
+  transition: transform 0.65s cubic-bezier(0.29, -0.36, 0.38, 1.27) !important;
 }
 
 .showFollow {
-  transform: translateY(-3.7em);
+  transform: translateY(-8em) !important;
 }
 
 .showSub {
-  transform: translateY(0);
+  transform: translateY(-4.25em) !important;
+}
+
+.showPoke {
+  transform: translateY(0) !important;
 }
 
 .checkmark {

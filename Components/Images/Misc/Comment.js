@@ -6,6 +6,7 @@ export default function Comment({ width }) {
             src="/images/pm-comment.png"
             width={width}
             height={width}
+            priority={true}
             alt="comment bubble"
         />
     )

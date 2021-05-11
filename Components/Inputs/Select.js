@@ -11,7 +11,7 @@ export default function Select({ value, id, onChange }) {
     const handleChange = (e) => {
         e.preventDefault()
         e.stopPropagation();
-        onChange
+        onChange()
     }
 
     const handleClick = (e) => {

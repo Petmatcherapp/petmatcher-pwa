@@ -11,7 +11,7 @@ export default function TextField({ value, id, type, onChange }) {
     const handleChange = (e) => {
         e.preventDefault()
         e.stopPropagation();
-        onChange
+        onChange()
     }
 
     const handleClick = () => {
