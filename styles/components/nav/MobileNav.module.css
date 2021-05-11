@@ -3,8 +3,8 @@
   border: 1px solid #ededed62;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
   background: rgba(255, 255, 255, 0.774);
   z-index: 2;
   transition: transform 0.3s cubic-bezier(0.51, -0.22, 0.54, 1.18);
@@ -16,7 +16,7 @@
   cursor: pointer;
   width: 100%;
   padding-top: 0.5em;
-  padding-bottom: 2.5em;
+  padding-bottom: 3em;
 }
 
 #menuBar {
@@ -28,7 +28,7 @@
 
 .mobileContents {
   transition: opacity 0.4s linear;
-  padding-bottom: 5em;
+  padding-bottom: 6em;
 }
 
 .dropMenu {
