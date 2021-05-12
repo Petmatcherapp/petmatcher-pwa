@@ -5,9 +5,9 @@
   border-top-left-radius: 15px;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
-  background: rgba(187, 187, 187, 0.774);
+  background: rgba(165, 165, 165, 0.774);
   z-index: 2;
-  transition: transform 0.3s cubic-bezier(0.51, -0.22, 0.54, 1.18);
+  transition: transform 0.3s cubic-bezier(0.44, -0.16, 0.57, 1.2);
   height: auto;
   bottom: 0;
 }
