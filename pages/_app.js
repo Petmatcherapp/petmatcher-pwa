@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import loadAudioContext from "../audio/AudioContext"
 import MetaData from "../Components/Misc/MetaData"
 import DesktopNav from "../Components/Nav/DesktopNav"
@@ -6,6 +6,11 @@ import MobileNav from "../Components/Nav/MobileNav"
 import "../styles/globals.css"
 
 function PetmatcherApp({ Component, pageProps }) {
+  const [OptionComponent, setOptionComponent] = useState(null)
+
+  const handleOptionRender = (Component) => {
+    setOptionComponent(Component)
+  }
 
   useEffect(() => {
     loadAudioContext()
@@ -15,8 +20,8 @@ function PetmatcherApp({ Component, pageProps }) {
     <>
     <MetaData />
     <DesktopNav {...pageProps} />
-    <MobileNav {...pageProps} />
-    <Component {...pageProps} />
+    <MobileNav OptionComponent={OptionComponent} {...pageProps} />
+    <Component handleOptionRender={handleOptionRender} {...pageProps} />
     </>
   )
 }

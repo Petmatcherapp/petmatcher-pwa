@@ -3,7 +3,7 @@ import postData from "../Components/Post/tempPostData.json"
 import { getTestData } from "../lib/firebase"
 import styles from "../styles/pages/index.module.css"
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const testDoc = await getTestData()
 
   // JSON serializable data
@@ -21,13 +21,13 @@ export async function getServerSideProps() {
   }
 }
 
-export default function Home({ doc }) {
+export default function Home({ doc, handleOptionRender }) {
   return (
     <main className="padding-0 padding-top-bottom-10">
       <section className={`${styles.feedContainer}`}>
         {
           postData.map(post => 
-            <Post postData={post} key={post.id} />
+            <Post handleOptionRender={handleOptionRender} postData={post} key={post.id} />
           )
         }
       </section>

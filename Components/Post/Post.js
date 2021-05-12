@@ -3,7 +3,7 @@ import PostHeader from "./PostHeader"
 import PostActions from "./PostActions"
 import styles from "../../styles/components/post/post.module.css"
 
-export default function Post({ postData }) {
+export default function Post({ postData, handleOptionRender }) {
     const [actionsVisibility, setActionsVisibility] = useState("display-none opacity-0")
     const [overlayVisibility, setOverlayVisibility] = useState("display-flex-column opacity-100")
 
@@ -36,7 +36,7 @@ export default function Post({ postData }) {
                 <p className={`${styles.postDescription} color-white weight-700 text-shadow-black-reverse margin-0 padding-left-right-10`}>{postData.description}</p>
             </div>
             <div onClick={() => handlePostClick("actions")} className={`${styles.postActionsContainer} ${actionsVisibility} height-100 width-100 border-radius-10`}>
-                <PostActions postData={postData} />
+                <PostActions handleOptionRender={handleOptionRender} postData={postData} />
             </div>
         </div>
     )

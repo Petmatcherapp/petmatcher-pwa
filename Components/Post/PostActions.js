@@ -11,7 +11,7 @@ import Button from "../Buttons/Button"
 import Action from "../Buttons/Action"
 import styles from "../../styles/components/post/postAction.module.css"
 
-export default function PostActions({ postData }) {
+export default function PostActions({ postData, handleOptionRender }) {
     const [sound, setSound] = useState(null)
     const [love, setLove] = useState(`${styles.reactionLoveHover} ${styles.translateLoveStart} cursor-pointer`)
     const [laugh, setLaugh] = useState(`${styles.reactionLaughHover} ${styles.translateLaughStart} cursor-pointer`)
@@ -30,7 +30,6 @@ export default function PostActions({ postData }) {
     }, [])
 
     const sendReaction = (type) => {
-        console.log(`This is a ${type} click`)
         setTimeout(() => {
             setAwardBackgroundStyles(`${styles.awardBackgroundStylesShow}`)
         }, 300)
@@ -73,6 +72,7 @@ export default function PostActions({ postData }) {
     }
 
     const handleSubClick = () => {
+        handleOptionRender("SubOption")
         setTimeout(() => {
             setButtonContainerMovable(`${styles.showPoke}`)
         }, 800)
@@ -116,36 +116,32 @@ export default function PostActions({ postData }) {
                         />
                     </div>
                     <VerticleLineBreak height="2em" />
-                    <div className={`${styles.buttonContainer} display-flex-column relative`}>
-                        <div className={`${styles.buttonContainerMovable} ${buttonContainerMovable} relative`}>
-                            <div className="padding-top-bottom-10 bottom-margin-medium">
+                    <div className="display-flex-row align-end">
+                        <div className={`${styles.buttonContainer} display-flex-column relative`}>
+                            <div className={`${styles.buttonContainerMovable} ${buttonContainerMovable} relative`}>
+                                <div className="padding-top-bottom-10 bottom-margin-medium">
+                                    <div className="display-flex-row">
+                                        <div className="margin-right-small">
+                                            <Button buttonText="Poke" gradientNum={7} onClick={handlePokeClick} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="padding-top-bottom-10 bottom-margin-medium">
+                                    <div className="display-flex-row">
+                                        <div className="margin-right-small">
+                                            <Button buttonText="Sub" gradientNum={1} onClick={handleSubClick} />
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className="display-flex-row">
                                     <div className="margin-right-small">
-                                        <Button buttonText="Poke" gradientNum={7} onClick={handlePokeClick} />
-                                    </div>
-                                    <div className={`${styles.checkmark} ${checkmark}`}>
-                                        <Check height={30} />
+                                        <Button buttonText="Follow" gradientNum={2} onClick={handleFollowClick} />
                                     </div>
                                 </div>
                             </div>
-                            <div className="padding-top-bottom-10 bottom-margin-medium">
-                                <div className="display-flex-row">
-                                    <div className="margin-right-small">
-                                        <Button buttonText="Sub" gradientNum={1} onClick={handleSubClick} />
-                                    </div>
-                                    <div className={`${styles.checkmark} ${checkmark}`}>
-                                        <Check height={30} />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="display-flex-row">
-                                <div className="margin-right-small">
-                                    <Button buttonText="Follow" gradientNum={2} onClick={handleFollowClick} />
-                                </div>
-                                <div className={`${styles.checkmark} ${checkmark}`}>
-                                    <Check height={30} />
-                                </div>
-                            </div>
+                        </div>
+                        <div className={`${styles.checkmark} ${checkmark}`}>
+                            <Check height={30} />
                         </div>
                     </div>
                 </div>

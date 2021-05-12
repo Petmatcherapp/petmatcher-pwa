@@ -10,19 +10,19 @@
 }
 
 .translateLoveStart {
-  transform: translateX(-125%);
+  transform: translateX(-100%);
 }
 
 .translateLaughStart {
-  transform: translateX(125%);
+  transform: translateX(100%);
 }
 
 .reactionLoveHover:hover {
-  transform: translateX(-125%) scale(1.2);
+  transform: translateX(-100%) scale(1.2);
 }
 
 .reactionLaughHover:hover {
-  transform: translateX(125%) scale(1.2);
+  transform: translateX(100%) scale(1.2);
 }
 
 .translateLoveEnd {
