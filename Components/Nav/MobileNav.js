@@ -28,14 +28,16 @@ function MobileNav({ OptionComponent, activeRoute }) {
     }, [OptionComponent])
 
     return (
-        <div onClick={handleMobileNavClick} className={`${styles.mobileNav} ${dynamicClasses} width-100`}>
-            <div className={`${styles.mobileNavMenuBar} cursor-pointer`}>
-                <div id={`${styles.menuBar}`} className="border-radius-10"></div>
+        <>
+            <div id={`${styles.menuBarContainer}`} className="display-flex-row justify-center width-100">
+                <div onClick={handleMobileNavClick} id={`${styles.menuBar}`} className="border-radius-10 text-align-center clickable-shadow">
+                    <small>Menu</small>
+                </div>
             </div>
-            <div className={`${styles.mobileContents} width-100`}>
+            <div className={`${styles.mobileNav} ${dynamicClasses} width-100`}>
                 {activeComponent}
             </div>
-        </div>
+        </>
     )
 }
 

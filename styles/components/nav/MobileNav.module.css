@@ -1,41 +1,39 @@
 .mobileNav {
   position: fixed;
-  border: 1px solid #c7c7c762;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
-  background: rgba(165, 165, 165, 0.774);
-  z-index: 2;
-  transition: transform 0.3s cubic-bezier(0.44, -0.16, 0.57, 1.2);
+  background: rgba(218, 218, 218, 0.774);
+  z-index: 9;
+  transition: transform 0.35s ease-in-out;
   height: auto;
   bottom: 0;
+  padding: 1em 0.25em 5em 0.25em;
 }
 
-.mobileNavMenuBar {
-  cursor: pointer;
-  width: 100%;
-  padding: 0.5em 1em 3em 1em;
+#menuBarContainer {
+  padding: 1.75em;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
 }
 
 #menuBar {
-  height: 0.35em;
-  width: 10%;
   margin: 0 auto;
-  background: #ffffffe5;
-}
-
-.mobileContents {
-  transition: opacity 0.4s linear;
-  padding-bottom: 6em;
+  padding: 0.25em 0;
+  width: 90%;
+  background: #ffffffde;
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
 }
 
 .dropMenu {
-  transform: translateY(340px);
+  transform: translateY(85vh);
 }
 
 .raiseNav {
-  transform: translateY(3em);
+  transform: translateY(0);
 }
 
 @media screen and (min-width: 768px) {
