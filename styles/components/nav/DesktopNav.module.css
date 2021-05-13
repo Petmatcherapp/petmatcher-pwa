@@ -5,17 +5,12 @@
   left: 0;
   height: 100vh;
   border: 1px solid #ededed62;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  background: rgb(252, 239, 255);
-  background: linear-gradient(
-    163deg,
-    rgba(252, 239, 255, 0.45281862745098034) 0%,
-    rgba(237, 250, 255, 0.4472163865546218) 85%
-  );
-  z-index: 10;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  background: rgba(245, 245, 245, 0.924);
+  z-index: 9;
   padding: 1em 0 0.5em 0;
 }
 

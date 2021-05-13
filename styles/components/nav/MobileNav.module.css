@@ -1,15 +1,16 @@
 .mobileNav {
   position: fixed;
-  border-top-right-radius: 40px;
-  border-top-left-radius: 40px;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
-  background: rgba(218, 218, 218, 0.774);
+  border: 1px solid #ededed62;
+  background: rgba(245, 245, 245, 0.924);
   z-index: 9;
   transition: transform 0.35s ease-in-out;
   height: auto;
   bottom: 0;
-  padding: 1em 0.25em 5em 0.25em;
+  padding: 1.5em 0.75em 5em 0.75em;
 }
 
 #menuBarContainer {
@@ -37,7 +38,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .mobileNav {
+  .mobileNav,
+  #menuBarContainer {
     display: none;
   }
 }

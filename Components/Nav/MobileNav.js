@@ -31,7 +31,7 @@ function MobileNav({ OptionComponent, activeRoute }) {
         <>
             <div id={`${styles.menuBarContainer}`} className="display-flex-row justify-center width-100">
                 <div onClick={handleMobileNavClick} id={`${styles.menuBar}`} className="border-radius-10 text-align-center clickable-shadow">
-                    <small>Menu</small>
+                    <p className="margin-0">{openMenu ? "Close" : "Menu"}</p>
                 </div>
             </div>
             <div className={`${styles.mobileNav} ${dynamicClasses} width-100`}>
