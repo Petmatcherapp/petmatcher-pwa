@@ -2,7 +2,7 @@ export default function Action({ text, onClick }) {
     const handleClick = (e) => {
         e.preventDefault()
         e.stopPropagation();
-        () => onClick()
+        onClick()
     }
 
     return (

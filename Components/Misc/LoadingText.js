@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react"
+import {randomNum} from "../../lib/functions"
 
 export default function LoadingText() {
-    const phraseList = ["overhauling", "getting coffee", "setting codes", "oh no... wait nvm : )", "fetching cuteness", "getting more coffee", "more overhauling", "overhauling", "more overhauling", "more cuteness", "new buttons", "new backend", "removing shadows", "farting... excuse me", "game-ifying", "more content"]
+    const phraseList = ["getting coffee", "oh no. wait nvm : )", "fetching cuteness", "getting more coffee", "more cuteness", "farting... excuse me", "traversing galaxies"]
     const [dynamicText, setDynamicText] = useState(phraseList[0])
 
     useEffect(() => {
-        const randomPhraseIndex = Math.floor(Math.random() * phraseList.length)
         const timer = setInterval(() => {
-            setDynamicText(phraseList[randomPhraseIndex])
-        }, 7500)
+            setDynamicText(phraseList[randomNum(0, phraseList.length)])
+        }, 5500)
 
         return () => clearInterval(timer);
     });

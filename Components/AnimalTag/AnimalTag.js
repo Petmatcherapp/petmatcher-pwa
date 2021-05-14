@@ -1,16 +1,8 @@
-import { useEffect, useState } from "react"
 import Image from "next/image"
 import styles from "../../styles/components/animalTag/animalTag.module.css"
-import { randomNum } from "../../functions/appLogic"
+import { randomNum } from "../../lib/functions"
 
 export default function AnimalTag({ onClick, avatar, name, type, alias, gender }) {
-    const [gradientNum, setGradientNum] = useState(1)
-    const genderGradient = gender === "female" ? "gradient-female" : "gradient-male"
-
-    useEffect(() => {
-        setGradientNum(randomNum(1, 6))
-    }, [])
-
     const handleClick = (e) => {
         e.preventDefault()
         e.stopPropagation();
@@ -28,9 +20,9 @@ export default function AnimalTag({ onClick, avatar, name, type, alias, gender }
                 />
             </div>
             <div className="display-flex-column">
-                <small className={`bottom-margin-none gradient-text ${genderGradient} weight-700 text-shadow-white`}>@{alias}</small>
+                <small className={`bottom-margin-none gradient-text ${gender === "female" ? "gradient-female" : "gradient-male"} weight-700 text-shadow-white`}>@{alias}</small>
                 <div className="display-flex-row align-center">
-                    <p className={`weight-700 display-inline gradient-text gradient-${gradientNum} text-shadow-white margin-0`}>{name} the {type}</p>
+                    <p className={`weight-700 display-inline gradient-text gradient-${randomNum(1, 7)} text-shadow-white margin-0`}>{name} the {type}</p>
                 </div>
             </div>
         </div>

@@ -11,6 +11,9 @@ import Button from "../Components/Buttons/Button"
 import Action from "../Components/Buttons/Action"
 import Select from "../Components/Inputs/Select"
 import GoldAmount from "../Components/Misc/GoldAmount"
+import Loading from "../Components/Misc/Loading"
+import LoadingText from "../Components/Misc/LoadingText"
+import LineBreak from "../Components/Misc/LineBreak"
 
 export async function getStaticProps() {
   return {
@@ -68,6 +71,9 @@ export default function Create() {
         <GoldAmount amount={42069} />
         <Action text={"Copy Link"} />
         <Select id={"Animal"} />
+        <LineBreak />
+        <LoadingText />
+        <Loading />
     </main>
   )
 }

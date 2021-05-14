@@ -44,7 +44,7 @@ body {
 }
 
 main {
-  padding: 0.5em 0.25em 6em 0.25em;
+  padding: 0.5em 0.5em 6em 0.5em;
   min-width: 320px;
   max-width: 1920px;
 }
@@ -443,6 +443,10 @@ small {
 }
 
 /* border-radius */
+.border-radius-8 {
+  border-radius: 8px;
+}
+
 .border-radius-10 {
   border-radius: 10px;
 }
@@ -539,6 +543,14 @@ small {
 
 .scale-150 {
   transform: scale(1.5);
+}
+
+.hideOption {
+  transform: translateY(85vh);
+}
+
+.showOption {
+  transform: translateY(0);
 }
 
 /* global media queries */

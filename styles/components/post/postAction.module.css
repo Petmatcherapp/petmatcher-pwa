@@ -65,24 +65,11 @@
 }
 
 .showFollow {
-  transform: translateY(-8em) !important;
+  transform: translateY(-3.6em) !important;
 }
 
 .showSub {
-  transform: translateY(-4.25em) !important;
-}
-
-.showPoke {
   transform: translateY(0) !important;
-}
-
-.checkmark {
-  transition: transform 0.5s cubic-bezier(0.29, -0.36, 0.38, 1.27);
-  transform: scale(0);
-}
-
-.checkmarkScaleUp {
-  transform: scale(1);
 }
 
 @keyframes spin {

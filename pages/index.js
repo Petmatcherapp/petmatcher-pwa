@@ -21,13 +21,13 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ doc, handleOptionRender }) {
+export default function Home({ doc }) {
   return (
     <main className="padding-0 padding-top-bottom-10">
       <section className={`${styles.feedContainer}`}>
         {
           postData.map(post => 
-            <Post handleOptionRender={handleOptionRender} postData={post} key={post.id} />
+            <Post postData={post} key={post.id} />
           )
         }
       </section>

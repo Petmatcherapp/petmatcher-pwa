@@ -1,44 +1,27 @@
-import { useState, useEffect } from "react"
-import MobileNavigation from "./OptionMenus/MobileNavigation"
+import { useContext } from "react"
+import {OptionContext} from "../../lib/context"
 import styles from "../../styles/components/nav/MobileNav.module.css"
-import SubOption from "./OptionMenus/SubOption"
 
-function MobileNav({ OptionComponent, activeRoute }) {
-    const [openMenu, setOpenMenu] = useState(false)
-    const [dynamicClasses, setDynamicClasses] = useState(`${styles.dropMenu}`)
-    const [activeComponent, setActiveComponent] = useState(<MobileNavigation activeRoute={activeRoute} />)
+export default function MobileNav() {
+    const {option, handleOptionChange} = useContext(OptionContext)
 
     const handleMobileNavClick = () => {
-        if (!openMenu) {
-            setDynamicClasses(`${styles.raiseNav}`)
-        } else {
-            setDynamicClasses(`${styles.dropMenu}`)
-        }
-        setOpenMenu(!openMenu)
+        option.optionStatus === "showOption" ?
+        handleOptionChange({...option, optionStatus: "hideOption"})
+        :
+        handleOptionChange({...option, optionStatus: "showOption"})
     }
-
-    useEffect(() => {
-        switch(OptionComponent) {
-            case "SubOption":
-                setActiveComponent(<SubOption />)
-                break;
-            default:
-                setActiveComponent(<MobileNavigation activeRoute={activeRoute} />)
-        }
-    }, [OptionComponent])
 
     return (
         <>
             <div id={`${styles.menuBarContainer}`} className="display-flex-row justify-center width-100">
                 <div onClick={handleMobileNavClick} id={`${styles.menuBar}`} className="border-radius-10 text-align-center clickable-shadow">
-                    <p className="margin-0">{openMenu ? "Close" : "Menu"}</p>
+                    <p className="margin-0">{option.optionStatus === "showOption" ? "Close" : "Menu"}</p>
                 </div>
             </div>
-            <div className={`${styles.mobileNav} ${dynamicClasses} width-100`}>
-                {activeComponent}
+            <div className={`${styles.mobileNav} ${option.optionStatus} width-100`}>
+                {option.OptionComponent}
             </div>
         </>
     )
 }
-
-export default MobileNav

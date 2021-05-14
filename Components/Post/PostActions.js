@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import CatLove from "../Images/Misc/CatLove"
 import CatLaugh from "../Images/Misc/CatLaugh"
 import Comment from "../Images/Misc/Comment"
-import Check from "../Images/Svgs/Icons/Check"
 import AwardBackground from "../Images/Svgs/Misc/AwardBackground"
 import clickSound from "../../audio/buttonClick2.mp3"
 import AnimalTag from "../AnimalTag/AnimalTag"
@@ -19,7 +18,6 @@ export default function PostActions({ postData, handleOptionRender }) {
     const [reactionContainer, setReactionContainer] = useState("height-100")
     const [afterReaction, setAfterReaction] = useState("opacity-0")
     const [buttonContainerMovable, setButtonContainerMovable] = useState(`${styles.showFollow}`)
-    const [checkmark, setCheckmark] = useState("")
     
     const [disableLove, setDisableLove] = useState(false)
     const [disableLaugh, setDisableLaugh] = useState(false)
@@ -80,11 +78,6 @@ export default function PostActions({ postData, handleOptionRender }) {
         setCheckmark(`${styles.checkmarkScaleUp}`)
     }
 
-    const handlePokeClick = () => {
-        resetCheckmark()
-        setCheckmark(`${styles.checkmarkScaleUp}`)
-    }
-
     return (
         <div className="display-flex-column justify-between height-100 width-100 padding-top-bottom-10">
             <div className={`${styles.reactionContainerStyles} ${reactionContainer} display-flex-row align-center justify-around text-shadow-black width-100 relative`}>
@@ -122,13 +115,6 @@ export default function PostActions({ postData, handleOptionRender }) {
                                 <div className="padding-top-bottom-10 bottom-margin-medium">
                                     <div className="display-flex-row">
                                         <div className="margin-right-small">
-                                            <Button buttonText="Poke" gradientNum={7} onClick={handlePokeClick} />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="padding-top-bottom-10 bottom-margin-medium">
-                                    <div className="display-flex-row">
-                                        <div className="margin-right-small">
                                             <Button buttonText="Sub" gradientNum={1} onClick={handleSubClick} />
                                         </div>
                                     </div>
@@ -139,9 +125,6 @@ export default function PostActions({ postData, handleOptionRender }) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className={`${styles.checkmark} ${checkmark}`}>
-                            <Check height={30} />
                         </div>
                     </div>
                 </div>

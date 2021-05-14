@@ -1,25 +1,19 @@
-import { useState, useEffect } from "react"
-import clickSound from "../../audio/buttonClick1.mp3"
+import {useContext} from "react"
 import Link from "next/link"
+import {AudioContext} from "../../lib/context"
 import styles from "../../styles/components/pageSpecific/CreateNewDiv.module.css"
 
 export default function CreateNewDiv({ icon, type, description, link, gradientNum}) {
-    // set sound on server
-    const [sound, setSound] = useState(null)
-    
-    useEffect(() => {
-        // set sound on client
-        setSound(new Audio(clickSound))
-    }, [])
+    const {playAudio} = useContext(AudioContext)
 
     const handleClick = (e) => {
         e.preventDefault()
-        sound.play()
+        playAudio.buttonNormal();
     }
 
     return (
         <Link href={link}>
-            <div onClick={() => handleClick} className={`${styles.outerCreateNewDiv} gradient-${gradientNum} border-radius-20 bottom-margin-large clickable-shadow padding-2 cursor-pointer`}>
+            <div onClick={handleClick} className={`${styles.outerCreateNewDiv} gradient-${gradientNum} border-radius-20 bottom-margin-large clickable-shadow padding-2 cursor-pointer`}>
                     <div className={`${styles.innerCreateNewDiv} display-flex-row border-radius-18`}>
                         <div className={`${styles.typeContainer} display-flex-column align-center justify-center`}>
                             <div className={`${styles.iconContainer} bottom-margin-small`}>
