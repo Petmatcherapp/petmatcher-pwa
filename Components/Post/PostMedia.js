@@ -30,7 +30,7 @@ export default function PostMedia({ postData, visibility }) {
                     <Pause height={40} />
                 </div>
             </div>
-            <video ref={videoPlayer} disablePictureInPicture={true} playsinline={true} preload="metadata" loop={true} className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
+            <video ref={videoPlayer} disablePictureInPicture={true} playsinline={true} preload="none" loop={true} className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
             </>
             }
             {
