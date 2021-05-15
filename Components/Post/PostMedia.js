@@ -54,7 +54,7 @@ export default function PostMedia({ postData, visibility }) {
             {
             postData.srcType === "video" &&
             <>
-            <div className={`${visibility} display-flex-column align-end justify-end absolute width-100 height-100`}>
+            <div className={`${styles.postMediaContainer} ${visibility} display-flex-column align-end justify-end absolute width-100 height-100`}>
                 <div onClick={handleRestart} className={`${styles.controls} padding-10`}>
                     <Replay height={40} />
                 </div>
