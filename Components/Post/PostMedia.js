@@ -8,7 +8,11 @@ export default function PostMedia({ postData, visibility }) {
     const [playing, setPlaying] = useState(false)
 
     const handleLoad = () => {
-        videoPlayer.current.play()
+        // This is needed because of autoPLay, and 
+        // autoPlay is needed to show the poster on
+        // IOS (or else its just a white screen)
+        // This is a temp solution: see Jira ticket
+        // #--- for the better solution
         videoPlayer.current.pause()
     }
 
@@ -35,7 +39,7 @@ export default function PostMedia({ postData, visibility }) {
                     <Pause height={40} />
                 </div>
             </div>
-            <video onLoad={() => handleLoad()} ref={videoPlayer} disablePictureInPicture playsInline preload="metadata" loop className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
+            <video onLoad={() => handleLoad()} ref={videoPlayer} autoPlay loop playsInline preload="metadata" disablePictureInPicture className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
             </>
             }
             {
