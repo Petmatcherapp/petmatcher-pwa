@@ -1,11 +1,14 @@
 import {useRef, useState, useEffect} from "react"
 import Play from "../Images/Svgs/Icons/Play"
 import Pause from "../Images/Svgs/Icons/Pause"
+import VolumeOn from "../Images/Svgs/Icons/VolumeOn"
+import VolumeMute from "../Images/Svgs/Icons/VolumeMute"
 import styles from "./PostMedia.module.css"
 
 export default function PostMedia({ postData, visibility }) {
     const videoPlayer = useRef(null)
     const [playing, setPlaying] = useState(false)
+    const [mute, setMute] = useState(false)
 
     const handleLoad = () => {
         // This is needed because of autoPLay, and 
@@ -26,16 +29,32 @@ export default function PostMedia({ postData, visibility }) {
         }
     }
 
+    const handleVolume = () => {
+        if (mute) {
+            setMute(false)
+            videoPlayer.current.muted = false
+        } else {
+            setMute(true)
+            videoPlayer.current.muted = true
+        }
+    }
+
     return (
         <>
             {
             postData.srcType === "video" &&
             <>
             <div className={`${visibility} display-flex-column align-end justify-end absolute width-100 height-100`}>
-                <div onClick={handlePlay} className={`${!playing ? "display-block" : "display-none"} ${styles.controls} absolute padding-10`}>
+                <div onClick={handleVolume} className={`${!mute ? "display-block" : "display-none"} ${styles.controls} padding-10`}>
+                    <VolumeOn height={40} />
+                </div>
+                <div onClick={handleVolume} className={`${mute ? "display-block" : "display-none"} ${styles.controls} padding-10`}>
+                    <VolumeMute height={40} />
+                </div>
+                <div onClick={handlePlay} className={`${!playing ? "display-block" : "display-none"} ${styles.controls} padding-10`}>
                     <Play height={40} />
                 </div>
-                <div onClick={handlePlay} className={`${playing ? "display-block" : "display-none"} ${styles.controls} absolute padding-10`}>
+                <div onClick={handlePlay} className={`${playing ? "display-block" : "display-none"} ${styles.controls} padding-10`}>
                     <Pause height={40} />
                 </div>
             </div>
