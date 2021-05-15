@@ -5,6 +5,7 @@ import styles from "./PostMedia.module.css"
 
 export default function PostMedia({ postData, visibility }) {
     const videoPlayer = useRef()
+    videoPlayer.current.disableVideoControls()
     const [playing, setPlaying] = useState(false)
 
     const handlePlay = () => {
@@ -30,7 +31,7 @@ export default function PostMedia({ postData, visibility }) {
                     <Pause height={40} />
                 </div>
             </div>
-            <video ref={videoPlayer} disablePictureInPicture playsInline preload="none" loop className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
+            <video ref={videoPlayer} disablePictureInPicture playsInline preload loop className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
             </>
             }
             {
