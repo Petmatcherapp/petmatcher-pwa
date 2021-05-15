@@ -7,6 +7,11 @@ export default function PostMedia({ postData, visibility }) {
     const videoPlayer = useRef(null)
     const [playing, setPlaying] = useState(false)
 
+    const handleLoad = () => {
+        videoPlayer.current.play()
+        videoPlayer.current.pause()
+    }
+
     const handlePlay = () => {
         if (playing){
             setPlaying(false)
@@ -30,7 +35,7 @@ export default function PostMedia({ postData, visibility }) {
                     <Pause height={40} />
                 </div>
             </div>
-            <video onLoad={() => videoPlayer.current.load()} ref={videoPlayer} disablePictureInPicture playsInline preload="metadata" loop className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
+            <video onLoad={() => handleLoad()} ref={videoPlayer} disablePictureInPicture playsInline preload="metadata" loop className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
             </>
             }
             {
