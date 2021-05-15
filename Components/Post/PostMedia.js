@@ -5,7 +5,7 @@ import styles from "./PostMedia.module.css"
 
 export default function PostMedia({ postData, visibility }) {
     const videoPlayer = useRef()
-    videoPlayer.current.disableVideoControls()
+    // videoPlayer.current.disableVideoControls()
     const [playing, setPlaying] = useState(false)
 
     const handlePlay = () => {
