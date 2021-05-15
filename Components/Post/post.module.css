@@ -1,6 +1,7 @@
 .postContainer {
   position: relative;
   margin-bottom: 5em;
+  background: whitesmoke;
 }
 
 .postDescription {
