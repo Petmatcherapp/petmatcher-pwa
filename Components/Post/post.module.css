@@ -5,6 +5,8 @@
 
 .postDescription {
   font-size: 18px;
+  width: 85%;
+  padding-left: 10px;
 }
 
 .postUiOverlay {

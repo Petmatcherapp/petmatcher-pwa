@@ -1,26 +1,32 @@
-import {useRef} from "react"
+import {useRef, useState} from "react"
 import Play from "../Images/Svgs/Icons/Play"
 import Pause from "../Images/Svgs/Icons/Pause"
 import styles from "./PostMedia.module.css"
 
-export default function PostMedia({ postData }) {
-    console.log(postData)
+export default function PostMedia({ postData, visibility }) {
     const videoPlayer = useRef()
+    const [playing, setPlaying] = useState(false)
 
-    // const handlePlay = () => {
-    //     videoPlayer.current.play()
-    // }
+    const handlePlay = () => {
+        if (playing){
+            setPlaying(false)
+            videoPlayer.current.pause()
+        } else {
+            setPlaying(true)
+            videoPlayer.current.play()
+        }
+    }
 
     return (
         <>
             {
             postData.srcType === "video" &&
             <>
-            <div className="display-flex-column align-end justify-end absolute width-100 height-100">
-                <div className="absolute padding-5 padding-left-right-10">
+            <div className={`${visibility} display-flex-column align-end justify-end absolute width-100 height-100`}>
+                <div onClick={handlePlay} className={`${!playing ? "display-block" : "display-none"} ${styles.controls} absolute padding-10`}>
                     <Play height={40} />
                 </div>
-                <div className="absolute padding-5 padding-left-right-10">
+                <div onClick={handlePlay} className={`${playing ? "display-block" : "display-none"} ${styles.controls} absolute padding-10`}>
                     <Pause height={40} />
                 </div>
             </div>
