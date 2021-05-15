@@ -1,11 +1,10 @@
-import {useRef, useState} from "react"
+import {useRef, useState, useEffect} from "react"
 import Play from "../Images/Svgs/Icons/Play"
 import Pause from "../Images/Svgs/Icons/Pause"
 import styles from "./PostMedia.module.css"
 
 export default function PostMedia({ postData, visibility }) {
-    const videoPlayer = useRef()
-    // videoPlayer.current.disableVideoControls()
+    const videoPlayer = useRef(null)
     const [playing, setPlaying] = useState(false)
 
     const handlePlay = () => {
@@ -31,7 +30,7 @@ export default function PostMedia({ postData, visibility }) {
                     <Pause height={40} />
                 </div>
             </div>
-            <video ref={videoPlayer} autoPlay disablePictureInPicture playsInline preload="metadata" loop className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
+            <video onLoad={() => videoPlayer.current.load()} ref={videoPlayer} disablePictureInPicture playsInline preload="metadata" loop className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
             </>
             }
             {
