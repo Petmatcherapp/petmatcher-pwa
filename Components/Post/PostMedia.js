@@ -31,7 +31,7 @@ export default function PostMedia({ postData, visibility }) {
                     <Pause height={40} />
                 </div>
             </div>
-            <video ref={videoPlayer} poster="/postMocImages/62984394924__7441EE1F-0857-4B25-B303-38D0F3D19C02.jpeg" disablePictureInPicture playsInline preload="metadata" loop className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
+            <video ref={videoPlayer} autoPlay disablePictureInPicture playsInline preload="metadata" loop className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
             </>
             }
             {
