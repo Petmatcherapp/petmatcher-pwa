@@ -2,7 +2,7 @@
   position: relative;
   margin-bottom: 5em;
   background: whitesmoke;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .postDescription {

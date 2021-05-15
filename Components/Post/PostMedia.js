@@ -70,7 +70,7 @@ export default function PostMedia({ postData, visibility }) {
                 <div onClick={handlePlay} className={`${playing ? "display-block" : "display-none"} ${styles.controls} padding-10`}>
                     <Pause height={40} />
                 </div>
-                {/* <div style={{width: `${videoProgress}%`}} className={`${styles.progressBar} gradient-success absolute`}></div> */}
+                <div style={{width: `${videoProgress}%`}} className={`${styles.progressBar} gradient-success absolute`}></div>
             </div>
             <video onLoad={() => handleLoad()} onTimeUpdate={handleTimeUpdate} ref={videoPlayer} autoPlay loop playsInline preload="metadata" disablePictureInPicture className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
             </>
