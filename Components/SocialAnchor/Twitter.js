@@ -1,4 +1,4 @@
-import styles from "../../styles/components/socialanchor/Twitter.module.css"
+import styles from "./Twitter.module.css"
 
 export default function Twitter() {
     return (

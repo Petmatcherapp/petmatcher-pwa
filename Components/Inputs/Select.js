@@ -1,5 +1,5 @@
 import DownArrow from "../Images/Svgs/Icons/DownArrow"
-import styles from "../../styles/components/inputs/Select.module.css"
+import styles from "./Select.module.css"
 
 export default function Select({ value, id, onChange }) {
 

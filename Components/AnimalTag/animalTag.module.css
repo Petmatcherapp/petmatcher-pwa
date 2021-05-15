@@ -1,0 +1,19 @@
+.animalAvatarContainer {
+  border-radius: 55px;
+  position: relative;
+  width: 3em;
+  height: 3em;
+}
+
+.animalAvatarContainer img {
+  border-radius: 55px;
+}
+
+.genderBubble {
+  height: 0.4em;
+  width: 0.4em;
+  border-radius: 55px;
+  box-shadow: 1px 1px 1px 0px rgba(78, 78, 78, 0.2);
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(51, 51, 51, 0.2);
+  -moz-box-shadow: 1px 1px 1px 0px rgba(51, 51, 51, 0.2);
+}

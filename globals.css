@@ -17,11 +17,9 @@
   --color-red1: #ff3c11;
   --color-red2: #ff8660;
 
-  --color-male1: #0099ff;
-  --color-male2: #0fd3ff;
+  --color-male: #6176ed;
 
-  --color-female1: #ff352e;
-  --color-female2: #ed6661;
+  --color-female: #ed6661;
 
   --discord-color: #2d4dff;
   --insta-color: #d4407e;
@@ -199,20 +197,20 @@ small {
 }
 
 .gradient-male {
-  background: var(--color-male2);
+  background: var(--color-male);
   background: linear-gradient(
-    125deg,
-    rgba(0, 153, 255, 1) 0%,
-    rgba(15, 211, 255, 1) 90%
+    0deg,
+    var(--color-male) 0%,
+    var(--color-male) 100%
   );
 }
 
 .gradient-female {
-  background: var(--color-female2);
+  background: var(--color-female);
   background: linear-gradient(
-    125deg,
-    rgba(255, 53, 46, 1) 0%,
-    rgba(237, 102, 97, 1) 100%
+    0deg,
+    var(--color-female) 0%,
+    var(--color-female) 100%
   );
 }
 
@@ -252,19 +250,19 @@ small {
 }
 
 .text-shadow-black {
-  text-shadow: 1.75px 1px 0px var(--color-3a);
+  text-shadow: 0px 1px 0px var(--color-3a), 0px 2px 0px var(--color-3a);
 }
 
 .text-shadow-white {
-  text-shadow: 1.75px 1px 0px var(--color-white);
+  text-shadow: 2px 2px 0px var(--color-white), 0px 2px 0px var(--color-white);
 }
 
 .text-shadow-black-reverse {
-  text-shadow: -1.75px -1px 0px var(--color-3a);
+  text-shadow: 0px -1px 0px var(--color-3a), 0px -2px 0px var(--color-3a);
 }
 
 .text-shadow-white-reverse {
-  text-shadow: -1.75px -1px 0px var(--color-white);
+  text-shadow: 0px -1px 0px var(--color-white), 0px -2px 0px var(--color-white);
 }
 
 .gradient-text {
@@ -551,6 +549,17 @@ small {
 
 .showOption {
   transform: translateY(0);
+}
+
+/* pages */
+.feed-container {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feed-container {
+    width: 30em;
+  }
 }
 
 /* global media queries */

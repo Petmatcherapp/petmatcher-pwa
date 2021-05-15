@@ -1,4 +1,4 @@
-import styles from "../../styles/components/socialanchor/Discord.module.css"
+import styles from "./Discord.module.css"
 
 export default function Discord() {
     return (

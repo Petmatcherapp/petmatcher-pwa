@@ -7,7 +7,7 @@ import clickSoundButton from "../audio/buttonClick1.mp3"
 import clickSoundConfirm from "../audio/buttonClick2.mp3"
 import clickSoundWarning from "../audio/buttonClick3.mp3"
 import MobileNavigation from "../Components/Nav/OptionMenus/MobileNavigation"
-import "../styles/globals.css"
+import "../globals.css"
 
 function PetmatcherApp({ Component, pageProps }) {
   const [option, setOption] = useState({

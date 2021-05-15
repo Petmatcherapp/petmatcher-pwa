@@ -1,4 +1,4 @@
-import styles from "../../styles/components/misc/Loading.module.css"
+import styles from "./Loading.module.css"
 import {randomNum} from "../../lib/functions"
 
 export default function Loading() {

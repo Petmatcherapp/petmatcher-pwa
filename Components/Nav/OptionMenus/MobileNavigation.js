@@ -6,7 +6,7 @@ import PostIcon from "../../Images/Svgs/Nav/PostIcon"
 import StoryIcon from "../../Images/Svgs/Nav/StoryIcon"
 import GroupIcon from "../../Images/Svgs/Nav/GroupIcon"
 import StoreIcon from "../../Images/Svgs/Nav/StoreIcon"
-import styles from "../../../styles/components/nav/mobileMenus/MobileNavigation.module.css"
+import styles from "./MobileNavigation.module.css"
 
 export default function MobileNavigation({ activeRoute }) {
     return (

@@ -1,7 +1,7 @@
 import AnimalTag from "../AnimalTag/AnimalTag"
 import AwardBackground from "../Images/Svgs/Misc/AwardBackground"
 import Treat from "../Images/Svgs/Treats/Treat"
-import styles from "../../styles/components/post/postHeader.module.css"
+import styles from "./postHeader.module.css"
 
 export default function PostHeader({ animal }) {
     return (

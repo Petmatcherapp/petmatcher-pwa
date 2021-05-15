@@ -1,4 +1,4 @@
-import styles from "../../styles/components/misc/LineBreak.module.css"
+import styles from "./LineBreak.module.css"
 
 export default function LineBreak({ gradient }) {
     return (

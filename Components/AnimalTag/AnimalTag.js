@@ -1,6 +1,5 @@
 import Image from "next/image"
-import styles from "../../styles/components/animalTag/animalTag.module.css"
-import { randomNum } from "../../lib/functions"
+import styles from "./animalTag.module.css"
 
 export default function AnimalTag({ onClick, avatar, name, type, alias, gender }) {
     const handleClick = (e) => {
@@ -20,10 +19,12 @@ export default function AnimalTag({ onClick, avatar, name, type, alias, gender }
                 />
             </div>
             <div className="display-flex-column">
-                <small className={`bottom-margin-none gradient-text ${gender === "female" ? "gradient-female" : "gradient-male"} weight-700 text-shadow-white`}>@{alias}</small>
                 <div className="display-flex-row align-center">
-                    <p className={`weight-700 display-inline gradient-text gradient-${randomNum(1, 7)} text-shadow-white margin-0`}>{name} the {type}</p>
+                    <small className={`bottom-margin-none weight-700 text-shadow-black color-white`}>@{alias}</small>
+                    &nbsp;
+                    <div className={`${styles.genderBubble} ${gender === "female" ? "gradient-female" : "gradient-male"}`}></div>
                 </div>
+                <p className={`${styles.animalName} weight-700 display-inline text-shadow-black color-white margin-0`}>{name} the {type}</p>
             </div>
         </div>
     )

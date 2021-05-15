@@ -1,4 +1,4 @@
-import styles from "../../styles/components/inputs/TextField.module.css"
+import styles from "./TextField.module.css"
 
 export default function TextField({ value, id, type, onChange }) {
     // valid types: text, email, url, & password

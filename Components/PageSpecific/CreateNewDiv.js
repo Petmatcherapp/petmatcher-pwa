@@ -1,7 +1,7 @@
 import {useContext} from "react"
 import Link from "next/link"
 import {AudioContext} from "../../lib/context"
-import styles from "../../styles/components/pageSpecific/CreateNewDiv.module.css"
+import styles from "./CreateNewDiv.module.css"
 
 export default function CreateNewDiv({ icon, type, description, link, gradientNum}) {
     const {playAudio} = useContext(AudioContext)

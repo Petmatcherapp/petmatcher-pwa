@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import {OptionContext} from "../../lib/context"
-import styles from "../../styles/components/nav/MobileNav.module.css"
+import styles from "./MobileNav.module.css"
 
 export default function MobileNav() {
     const {option, handleOptionChange} = useContext(OptionContext)

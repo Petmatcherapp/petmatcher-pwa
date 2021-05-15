@@ -7,7 +7,7 @@
   border: 1px solid #ededed62;
   background: rgba(245, 245, 245, 0.924);
   z-index: 9;
-  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease;
   height: auto;
   bottom: 0;
   padding: 1.5em 0.75em 5em 0.75em;

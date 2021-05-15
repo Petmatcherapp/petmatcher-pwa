@@ -1,4 +1,4 @@
-import styles from "../../styles/components/misc/VerticleLineBreak.module.css"
+import styles from "./VerticleLineBreak.module.css"
 
 export default function VerticleLineBreak({ gradient, height }) {
     return (

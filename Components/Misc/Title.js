@@ -1,5 +1,5 @@
 import Logo from "../Images/Svgs/Misc/Logo"
-import styles from "../../styles/components/misc/Title.module.css"
+import styles from "./Title.module.css"
 
 export default function Title() {
     return (

@@ -1,4 +1,4 @@
-import styles from "../../styles/components/socialanchor/Twitch.module.css"
+import styles from "./Twitch.module.css"
 
 export default function Twitch() {
     return (

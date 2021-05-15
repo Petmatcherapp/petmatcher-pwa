@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { AudioContext } from "../../lib/context"
-import styles from "../../styles/components/buttons/ConfirmButton.module.css"
+import styles from "./ConfirmButton.module.css"
 
 export default function ConfirmButton({ buttonText, onClick, disabled }) {
     const {playAudio} = useContext(AudioContext)

@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { AudioContext } from "../../lib/context"
-import styles from "../../styles/components/buttons/WarningButton.module.css"
+import styles from "./WarningButton.module.css"
 
 export default function WarningButton({ buttonText, onClick, disabled }) {
     const {playAudio} = useContext(AudioContext)

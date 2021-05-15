@@ -7,7 +7,7 @@ import PostIcon from "../Images/Svgs/Nav/PostIcon"
 import StoryIcon from "../Images/Svgs/Nav/StoryIcon"
 import GroupIcon from "../Images/Svgs/Nav/GroupIcon"
 import StoreIcon from "../Images/Svgs/Nav/StoreIcon"
-import styles from "../../styles/components/nav/DesktopNav.module.css"
+import styles from "./DesktopNav.module.css"
 
 function DesktopNav({ activeRoute }) {
     const [createAnimation, setCreateAnimation] = useState("")

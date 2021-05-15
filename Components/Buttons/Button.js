@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { AudioContext } from "../../lib/context"
-import styles from "../../styles/components/buttons/Button.module.css"
+import styles from "./Button.module.css"
 
 export default function Button({ buttonText, gradientNum, onClick, disabled }) {
     const {playAudio} = useContext(AudioContext)

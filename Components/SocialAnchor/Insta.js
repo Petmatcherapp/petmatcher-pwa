@@ -1,4 +1,4 @@
-import styles from "../../styles/components/socialanchor/Insta.module.css"
+import styles from "./Insta.module.css"
 
 export default function Insta() {
     return (

@@ -1,4 +1,4 @@
-import styles from "../../../../styles/components/images/svgs/Gold.module.css"
+import styles from "./Gold.module.css"
 
 export default function Gold({ width }) {
     return (

@@ -1,4 +1,4 @@
-import styles from "../../styles/components/socialanchor/Reddit.module.css"
+import styles from "./Reddit.module.css"
 
 export default function Reddit() {
     return (

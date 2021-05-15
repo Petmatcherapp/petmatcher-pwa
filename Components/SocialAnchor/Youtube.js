@@ -1,4 +1,4 @@
-import styles from "../../styles/components/socialanchor/Youtube.module.css"
+import styles from "./Youtube.module.css"
 
 export default function Youtube() {
     return (

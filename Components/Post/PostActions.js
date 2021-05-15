@@ -8,7 +8,7 @@ import AnimalTag from "../AnimalTag/AnimalTag"
 import VerticleLineBreak from "../Misc/VerticleLineBreak"
 import Button from "../Buttons/Button"
 import Action from "../Buttons/Action"
-import styles from "../../styles/components/post/postAction.module.css"
+import styles from "./postAction.module.css"
 
 export default function PostActions({ postData, handleOptionRender }) {
     const [sound, setSound] = useState(null)
