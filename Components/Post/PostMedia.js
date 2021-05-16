@@ -5,7 +5,6 @@ import VolumeOn from "../Images/Svgs/Icons/VolumeOn"
 import VolumeMute from "../Images/Svgs/Icons/VolumeMute"
 import Replay from "../Images/Svgs/Icons/Replay"
 import Loading from "../Misc/Loading"
-import LoadingText from "../Misc/LoadingText"
 import styles from "./PostMedia.module.css"
 
 export default function PostMedia({ postData, visibility, observing }) {
