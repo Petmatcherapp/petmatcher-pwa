@@ -4,12 +4,15 @@ import Pause from "../Images/Svgs/Icons/Pause"
 import VolumeOn from "../Images/Svgs/Icons/VolumeOn"
 import VolumeMute from "../Images/Svgs/Icons/VolumeMute"
 import Replay from "../Images/Svgs/Icons/Replay"
+import Loading from "../Misc/Loading"
+import LoadingText from "../Misc/LoadingText"
 import styles from "./PostMedia.module.css"
 
 export default function PostMedia({ postData, visibility, observing }) {
     const videoPlayer = useRef(null)
     const [playing, setPlaying] = useState(false)
     const [mute, setMute] = useState(false)
+    const [buffering, setBuffering] = useState("display-none")
     const [videoProgress, setVideoProgress] = useState(0)
 
     // Do something when post is within the intersection observer
@@ -55,12 +58,20 @@ export default function PostMedia({ postData, visibility, observing }) {
         videoPlayer.current.currentTime = 0
     }
 
+    const handleWaiting = () => {
+        console.log("i am buffering")
+        setBuffering("display-block")
+    }
+
     return (
         <>
             {
             postData.srcType === "video" &&
             <>
             <div className={`${styles.postMediaContainer} ${visibility} display-flex-column align-end justify-end absolute width-100 height-100`}>
+                <div className={`${buffering} ${styles.controls} padding-10`}>
+                    <Loading />
+                </div>
                 <div onClick={handleRestart} className={`${styles.controls} padding-10`}>
                     <Replay height={40} />
                 </div>
@@ -78,7 +89,7 @@ export default function PostMedia({ postData, visibility, observing }) {
                 </div>
                 <div style={{width: `${videoProgress}%`}} className={`${styles.progressBar} gradient-success absolute`}></div>
             </div>
-            <video onTimeUpdate={handleTimeUpdate} ref={videoPlayer} autoPlay loop playsInline preload="metadata" disablePictureInPicture className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
+            <video onWaiting={handleWaiting} onTimeUpdate={handleTimeUpdate} ref={videoPlayer} autoPlay loop playsInline preload="metadata" disablePictureInPicture className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
             </>
             }
             {
