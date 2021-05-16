@@ -6,11 +6,15 @@ import VolumeMute from "../Images/Svgs/Icons/VolumeMute"
 import Replay from "../Images/Svgs/Icons/Replay"
 import styles from "./PostMedia.module.css"
 
-export default function PostMedia({ postData, visibility }) {
+export default function PostMedia({ postData, visibility, observing }) {
     const videoPlayer = useRef(null)
     const [playing, setPlaying] = useState(false)
     const [mute, setMute] = useState(false)
     const [videoProgress, setVideoProgress] = useState(0)
+
+    useEffect(() => {
+        if (videoPlayer.current && observing) videoPlayer.current.play()
+    }, [observing])
 
     const handleLoad = () => {
         // This is needed because of autoplay, and 
