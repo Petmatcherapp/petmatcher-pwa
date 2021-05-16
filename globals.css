@@ -470,10 +470,6 @@ small {
   border-radius: 20px;
 }
 
-.border-circle {
-  border-radius: 55px;
-}
-
 /* shadows */
 .normal-shadow {
   box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.24);

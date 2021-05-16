@@ -59,8 +59,11 @@ export default function PostMedia({ postData, visibility, observing }) {
     }
 
     const handleWaiting = () => {
-        console.log("i am buffering")
         setBuffering("display-block")
+    }
+
+    const handlePlaying = () => {
+        setBuffering("display-none")
     }
 
     return (
@@ -68,10 +71,10 @@ export default function PostMedia({ postData, visibility, observing }) {
             {
             postData.srcType === "video" &&
             <>
+            <div className={`${buffering} ${styles.buffering} ${styles.controls} padding-10 absolute`}>
+                <Loading whiteSpinner={true} />
+            </div>
             <div className={`${styles.postMediaContainer} ${visibility} display-flex-column align-end justify-end absolute width-100 height-100`}>
-                <div className={`${buffering} ${styles.controls} padding-10`}>
-                    <Loading />
-                </div>
                 <div onClick={handleRestart} className={`${styles.controls} padding-10`}>
                     <Replay height={40} />
                 </div>
@@ -89,7 +92,7 @@ export default function PostMedia({ postData, visibility, observing }) {
                 </div>
                 <div style={{width: `${videoProgress}%`}} className={`${styles.progressBar} gradient-success absolute`}></div>
             </div>
-            <video onWaiting={handleWaiting} onTimeUpdate={handleTimeUpdate} ref={videoPlayer} autoPlay loop playsInline preload="metadata" disablePictureInPicture className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
+            <video ref={videoPlayer} onWaiting={handleWaiting} onPlaying={handlePlaying} onTimeUpdate={handleTimeUpdate} autoPlay loop playsInline preload="metadata" disablePictureInPicture className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
             </>
             }
             {
