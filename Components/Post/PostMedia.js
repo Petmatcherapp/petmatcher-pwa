@@ -12,18 +12,20 @@ export default function PostMedia({ postData, visibility, observing }) {
     const [mute, setMute] = useState(false)
     const [videoProgress, setVideoProgress] = useState(0)
 
-    useEffect(() => {
-        if (videoPlayer.current && observing) videoPlayer.current.play()
-    }, [observing])
+    // Do something when post is within the intersection observer
+    // useEffect(() => {
+    //     if (videoPlayer.current && observing) videoPlayer.current.play()
+    // }, [observing])
 
-    const handleLoad = () => {
+    useEffect(() => {
         // This is needed because of autoplay, and 
         // autoPlay is needed to show the poster on
         // IOS (or else it's just a white screen)
         // This is a temp solution: see Jira ticket
         // #--- for the better solution
-        videoPlayer.current.pause()
-    }
+        if (videoPlayer.current)
+            videoPlayer.current.pause()
+    }, [])
 
     const handlePlay = () => {
         if (playing){
@@ -76,7 +78,7 @@ export default function PostMedia({ postData, visibility, observing }) {
                 </div>
                 <div style={{width: `${videoProgress}%`}} className={`${styles.progressBar} gradient-success absolute`}></div>
             </div>
-            <video onLoad={() => handleLoad()} onTimeUpdate={handleTimeUpdate} ref={videoPlayer} autoPlay loop playsInline preload="metadata" disablePictureInPicture className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
+            <video onTimeUpdate={handleTimeUpdate} ref={videoPlayer} autoPlay loop playsInline preload="metadata" disablePictureInPicture className="border-radius-10 width-100" src={postData.src} alt={postData.description}></video>
             </>
             }
             {
