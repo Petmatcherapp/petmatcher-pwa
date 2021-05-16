@@ -15,9 +15,12 @@ export default function PostMedia({ postData, visibility, observing }) {
     const [videoProgress, setVideoProgress] = useState(0)
 
     // Do something when post is within the intersection observer
-    // useEffect(() => {
-    //     if (videoPlayer.current && observing) videoPlayer.current.play()
-    // }, [observing])
+    useEffect(() => {
+        if (videoPlayer.current && !observing){
+            videoPlayer.current.pause()
+            setPlaying(false)
+        }
+    }, [observing])
 
     useEffect(() => {
         // This is needed because of autoplay, and 
