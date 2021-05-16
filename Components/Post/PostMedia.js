@@ -63,7 +63,9 @@ export default function PostMedia({ postData, visibility, observing }) {
     }
 
     const handlePlaying = () => {
-        setBuffering("display-none")
+        setTimeout(() => {
+            setBuffering("display-none")
+        }, 2000)
     }
 
     return (
