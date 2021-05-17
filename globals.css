@@ -227,6 +227,10 @@ small {
   position: relative;
 }
 
+.disableScroll {
+  overflow: hidden;
+}
+
 /* backgrounds */
 .background-white {
   background-color: var(--color-white);

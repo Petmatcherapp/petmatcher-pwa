@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import {OptionContext} from "../../lib/context"
 import MobileNavigation from "./OptionMenus/MobileNavigation"
 import styles from "./MobileNav.module.css"
@@ -12,6 +12,13 @@ export default function MobileNav() {
         :
         handleOptionChange({...option, OptionComponent: <MobileNavigation />,  optionStatus: "showOption"})
     }
+
+    useEffect(() => {
+        option.optionStatus === "showOption" ?
+        document.querySelector("body").classList.add("disableScroll")
+        :
+        document.querySelector("body").classList.remove("disableScroll")
+    }, [option])
 
     return (
         <>
