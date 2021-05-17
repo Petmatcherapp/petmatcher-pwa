@@ -46,41 +46,65 @@ export default function SubOption() {
                         <Question height={25} />
                     </span>
                 </div>
-                <p className="bottom-margin-medium">Subscribe to unlock...</p>
-                <div className="display-flex-row bottom-margin-large">
-                    <div className="margin-right-extra-large">
-                        <h4>Emote:</h4>
-                        <div className="display-flex-row">
-                            <div className="text-align-center">
-                                <div className="img-large">
-                                    <Image 
-                                        src={`${option.optionData.animal.emotes[0].src}`}
-                                        layout="fill"
-                                        objectFit="cover"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <small className="color-grey">{option.optionData.animal.emotes[0].name}</small>
+                {option.optionData.animal.emotes.length === 0 && option.optionData.animal.treats.length === 0 ?
+                <div className="bottom-margin-large">
+                    <small className="display-block bottom-margin-medium">{option.optionData.animal.name} does not have any treats or emotes available yet.</small>
+                    <small className="display-block bottom-margin-medium">You can still subsribe if you would like to support.</small>
+                    <small className="display-block bottom-margin-medium">When they do create a treat or emote, you will have first dibs 😺</small>
+                </div>
+                :
+                <div>
+                    <p className="bottom-margin-medium">Subscribe to unlock...</p>
+                    <div className="display-flex-row bottom-margin-large">
+                        <div className="margin-right-extra-large">
+                            <h4>Emote:</h4>
+                            <div className="display-flex-row">
+                                {
+                                    option.optionData.animal.emotes.length > 0 ?
+                                    option.optionData.animal.emotes.map(() =>
+                                        <div className="text-align-center">
+                                            <div className="img-large">
+                                                <Image 
+                                                    src={`${option.optionData.animal.emotes[0].src}`}
+                                                    layout="fill"
+                                                    objectFit="cover"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                            <small className="color-grey">{option.optionData.animal.emotes[0].name}</small>
+                                        </div>
+                                    )
+                                    :
+                                    null
+                                }
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <h4>Treat:</h4>
-                        <div className="display-flex-row">
-                            <div className="text-align-center">
-                                <div className="img-large">
-                                    <Image 
-                                        src={`${option.optionData.animal.treats[0].src}`}
-                                        layout="fill"
-                                        objectFit="cover"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <small className="color-grey">{option.optionData.animal.treats[0].name}</small>
+                        <div>
+                            <h4>Treat:</h4>
+                            <div className="display-flex-row">
+                                {
+                                    option.optionData.animal.treats.length > 0 ?
+                                    option.optionData.animal.treats.map(() =>
+                                        <div className="text-align-center">
+                                            <div className="img-large">
+                                                <Image 
+                                                    src={`${option.optionData.animal.treats[0].src}`}
+                                                    layout="fill"
+                                                    objectFit="cover"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                            <small className="color-grey">{option.optionData.animal.treats[0].name}</small>
+                                        </div>
+                                    )
+                                    :
+                                    null
+                                }
                             </div>
                         </div>
                     </div>
                 </div>
+                }
                 <div>
                     <Button buttonText={"Subscribe"} gradientNum={6} />
                 </div>
