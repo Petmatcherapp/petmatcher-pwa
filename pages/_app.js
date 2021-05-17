@@ -32,7 +32,7 @@ function PetmatcherApp({ Component, pageProps }) {
   return (
     <AudioContext.Provider value={{playAudio}}>
       <OptionContext.Provider value={{option, handleOptionChange}}>
-        <MetaData />
+        <MetaData {...pageProps} />
         <DesktopNav {...pageProps} />
         <MobileNav {...pageProps} />
         <Component {...pageProps} />

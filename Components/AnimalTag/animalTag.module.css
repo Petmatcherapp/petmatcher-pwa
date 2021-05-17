@@ -10,16 +10,10 @@
 }
 
 .genderBubble {
-  position: relative;
-  bottom: 1.25em;
-  height: 0.48em;
-  width: 0.48em;
+  height: 0.43em;
+  width: 0.43em;
   border-radius: 55px;
   box-shadow: 1px 1px 1px 1px rgba(78, 78, 78, 0.2);
   -webkit-box-shadow: 1px 1px 1px 1px rgba(51, 51, 51, 0.2);
   -moz-box-shadow: 1px 1px 1px 1px rgba(51, 51, 51, 0.2);
-}
-
-.genderColor {
-  color: var(--color-male);
 }

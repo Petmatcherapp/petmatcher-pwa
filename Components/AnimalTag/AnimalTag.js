@@ -1,7 +1,7 @@
 import Image from "next/image"
 import styles from "./animalTag.module.css"
 
-export default function AnimalTag({ onClick, avatar, name, type, alias, gender }) {
+export default function AnimalTag({ onClick, avatar, name, type, alias, gender, blackText }) {
     const handleClick = (e) => {
         e.preventDefault()
         e.stopPropagation();
@@ -9,8 +9,7 @@ export default function AnimalTag({ onClick, avatar, name, type, alias, gender }
     }
 
     return (
-        <div onClick={handleClick} className="display-flex-row align-center cursor-pointer">
-            <span className={`${styles.genderBubble} ${gender === "female" ? "gradient-female" : "gradient-male"}`}></span>
+        <div onClick={onClick ? handleClick : null} className="display-flex-row align-center cursor-pointer">
             <div className={`${styles.animalAvatarContainer} margin-right-small`}>
                 <Image 
                     src={`${avatar}`}
@@ -21,11 +20,12 @@ export default function AnimalTag({ onClick, avatar, name, type, alias, gender }
             </div>
             <div className="display-flex-column">
                 <div className="display-flex-row align-center">
-                    <small className={`bottom-margin-none weight-700 text-shadow-black color-white`}>@{alias}</small>
+                    <small className={`bottom-margin-none weight-700 ${blackText ? "text-shadow-white" : "text-shadow-black color-white"}`}>@{alias}</small>
+                    &nbsp;
+                    <span className={`${styles.genderBubble} ${gender === "female" ? "gradient-female" : "gradient-male"}`}></span>
                 </div>
-                <p className={`${styles.animalName} weight-700 display-inline text-shadow-black color-white margin-0 display-inline`}>{name} the {type}</p>
+                <p className={`${styles.animalName} weight-700 display-inline ${blackText ? "text-shadow-white" : "text-shadow-black color-white"} margin-0 display-inline`}>{name} the {type}</p>
             </div>
         </div>
     )
-
 }

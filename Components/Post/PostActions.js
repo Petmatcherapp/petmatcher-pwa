@@ -1,19 +1,23 @@
-import { useState, useEffect } from "react"
+import { useState, useContext } from "react"
+import { AudioContext } from "../../lib/context"
+import { OptionContext } from "../../lib/context"
 import CatLove from "../Images/Misc/CatLove"
 import CatLaugh from "../Images/Misc/CatLaugh"
 import Comment from "../Images/Misc/Comment"
 import AwardBackground from "../Images/Svgs/Misc/AwardBackground"
-import clickSound from "../../audio/buttonClick2.mp3"
 import AnimalTag from "../AnimalTag/AnimalTag"
 import VerticleLineBreak from "../Misc/VerticleLineBreak"
 import Button from "../Buttons/Button"
 import Action from "../Buttons/Action"
+import SubOption from "../Nav/OptionMenus/SubOption"
 import styles from "./postAction.module.css"
 
 export default function PostActions({ postData, handleOptionRender }) {
-    const [sound, setSound] = useState(null)
+    const {playAudio} = useContext(AudioContext)
+    const {handleOptionChange} = useContext(OptionContext)
     const [love, setLove] = useState(`${styles.reactionLoveHover} ${styles.translateLoveStart} cursor-pointer`)
     const [laugh, setLaugh] = useState(`${styles.reactionLaughHover} ${styles.translateLaughStart} cursor-pointer`)
+
     const [awardBackgroundStyles, setAwardBackgroundStyles] = useState(`${styles.awardBackgroundStylesHidden}`)
     const [reactionContainer, setReactionContainer] = useState("height-100")
     const [afterReaction, setAfterReaction] = useState("opacity-0")
@@ -22,10 +26,8 @@ export default function PostActions({ postData, handleOptionRender }) {
     const [disableLove, setDisableLove] = useState(false)
     const [disableLaugh, setDisableLaugh] = useState(false)
 
-    useEffect(() => {
-        // set sound on client
-        setSound(new Audio(clickSound))
-    }, [])
+    const [followButton, setFollowButton] = useState({buttonText: "Follow", disabled: false})
+    const [subButton, setSubButton] = useState({buttonText: "Sub", disabled: false})
 
     const sendReaction = (type) => {
         setTimeout(() => {
@@ -39,7 +41,7 @@ export default function PostActions({ postData, handleOptionRender }) {
 
     const handleLoveClick = (e) => {
         e.stopPropagation();
-        sound.play()
+        playAudio.buttonNormal();
         setLove(`${styles.translateLoveEnd}`)
         setLaugh("opacity-0")
         setDisableLaugh(true)
@@ -48,34 +50,27 @@ export default function PostActions({ postData, handleOptionRender }) {
 
     const handleLaughClick = (e) => {
         e.stopPropagation()
-        sound.play()
+        playAudio.buttonNormal();
         setLaugh(`${styles.translateLaughEnd}`)
         setLove("opacity-0")
         setDisableLove(true)
         sendReaction("laugh")
     }
 
-    const resetCheckmark = () => {
-        setTimeout(() => {
-            setCheckmark("")
-        }, 600)
-    }
-
     const handleFollowClick = () => {
+        setFollowButton({buttonText: "Follow'd", disabled: true})
         setTimeout(() => {
             setButtonContainerMovable(`${styles.showSub}`)
         }, 800)
-        resetCheckmark()
-        setCheckmark(`${styles.checkmarkScaleUp}`)
     }
 
     const handleSubClick = () => {
-        handleOptionRender("SubOption")
-        setTimeout(() => {
-            setButtonContainerMovable(`${styles.showPoke}`)
-        }, 800)
-        resetCheckmark()
-        setCheckmark(`${styles.checkmarkScaleUp}`)
+        handleOptionChange({
+            OptionComponent: <SubOption />,
+            optionData: {animal: postData.animal},
+            optionStatus: "showOption"
+        })
+        // setSubButton({buttonText: "sub'd", disabled: true})
     }
 
     return (
@@ -92,7 +87,7 @@ export default function PostActions({ postData, handleOptionRender }) {
                 </button>
             </div>
             <div className={`${styles.afterReactionContainer} ${afterReaction} padding-left-right-5 width-100 absolute`}>
-                <div className="display-flex-row bottom-margin-small">
+                <div className="display-flex-row bottom-margin-medium">
                     <span className="margin-right-small">
                         <Comment width={25} />
                     </span>
@@ -115,13 +110,13 @@ export default function PostActions({ postData, handleOptionRender }) {
                                 <div className="padding-top-bottom-10 bottom-margin-medium">
                                     <div className="display-flex-row">
                                         <div className="margin-right-small">
-                                            <Button buttonText="Sub" gradientNum={1} onClick={handleSubClick} />
+                                            <Button buttonText={`${subButton.buttonText}`} gradientNum={1} onClick={handleSubClick} disabled={subButton.disabled} />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="display-flex-row">
                                     <div className="margin-right-small">
-                                        <Button buttonText="Follow" gradientNum={2} onClick={handleFollowClick} />
+                                        <Button buttonText={`${followButton.buttonText}`} gradientNum={2} onClick={handleFollowClick} disabled={followButton.disabled} />
                                     </div>
                                 </div>
                             </div>

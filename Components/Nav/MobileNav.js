@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import {OptionContext} from "../../lib/context"
+import MobileNavigation from "./OptionMenus/MobileNavigation"
 import styles from "./MobileNav.module.css"
 
 export default function MobileNav() {
@@ -9,7 +10,7 @@ export default function MobileNav() {
         option.optionStatus === "showOption" ?
         handleOptionChange({...option, optionStatus: "hideOption"})
         :
-        handleOptionChange({...option, optionStatus: "showOption"})
+        handleOptionChange({...option, OptionComponent: <MobileNavigation />,  optionStatus: "showOption"})
     }
 
     return (
