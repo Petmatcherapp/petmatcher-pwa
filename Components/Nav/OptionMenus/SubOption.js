@@ -27,8 +27,8 @@ export default function SubOption() {
       >
         <h3 className="bottom-margin-small">What is 'Subscribing'?</h3>
         <small className="bottom-margin-small display-block">
-          It is a way of showing love to creators, animal charities and keeping
-          PM running.
+          It is a way to support {animal.name} the {animal.type}, donate to
+          animal charities and keep PM running.
         </small>
         <small>
           Out of your Subscription, here is how the funds are divided:
@@ -84,8 +84,8 @@ export default function SubOption() {
             <div className="display-flex-column bottom-margin-medium">
               <div className="display-flex-column bottom-margin-medium">
                 <h4 className="bottom-margin-small">
-                  {animal.treats.length} emote
-                  {animal.treats.length > 1 ? "s" : ""}
+                  {animal.emotes.length} emote
+                  {animal.emotes.length > 1 ? "s" : ""}
                 </h4>
                 <div className="display-flex-row">
                   {animal.emotes.length > 0
@@ -113,9 +113,6 @@ export default function SubOption() {
                   {animal.treats.length > 0
                     ? animal.treats.map(() => (
                         <div className="margin-right-extra-large">
-                          {/* <h5 className="color-grey display-block margin-0">
-                            {animal.treats[0].name}
-                          </h5> */}
                           <div className="img-medium">
                             <Image
                               src={`${animal.treats[0].src}`}

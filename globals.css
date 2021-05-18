@@ -476,6 +476,10 @@ small {
   height: 50%;
 }
 
+.width-85 {
+  width: 85%;
+}
+
 /* border-radius */
 .border-radius-8 {
   border-radius: 8px;

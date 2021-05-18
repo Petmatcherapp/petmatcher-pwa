@@ -10,6 +10,7 @@ import VerticleLineBreak from "../Misc/VerticleLineBreak";
 import Button from "../Buttons/Button";
 import Action from "../Buttons/Action";
 import SubOption from "../Nav/OptionMenus/SubOption";
+import KindWords from "../Nav/OptionMenus/KindWords";
 import styles from "./postAction.module.css";
 
 export default function PostActions({ postData, handleOptionRender }) {
@@ -71,6 +72,14 @@ export default function PostActions({ postData, handleOptionRender }) {
     sendReaction("laugh");
   };
 
+  const handleKindWordsClick = () => {
+    handleOptionChange({
+      OptionComponent: <KindWords />,
+      optionData: { animal: postData.animal },
+      optionStatus: "showOption",
+    });
+  };
+
   const handleFollowClick = () => {
     setFollowButton({ buttonText: "Follow'd", disabled: true });
     setTimeout(() => {
@@ -120,6 +129,7 @@ export default function PostActions({ postData, handleOptionRender }) {
           <Action
             text={`Send ${postData.animal.name} kind words`}
             randomGradient={true}
+            onClick={handleKindWordsClick}
           />
         </div>
         <div className="display-flex-row bottom-margin-medium align-end">

@@ -1,0 +1,6 @@
+.textArea:focus {
+  box-shadow: 0 0 0 4px rgba(60, 62, 93, 0.39);
+  -moz-box-shadow: 0 0 0 4px rgba(60, 62, 93, 0.39);
+  -webkit-box-shadow: 0 0 0 4px rgba(60, 62, 93, 0.39);
+  outline: none;
+}

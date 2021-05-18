@@ -1,9 +1,7 @@
-import styles from "./TextField.module.css";
+import styles from "./TextArea.module.css";
 
-export default function TextField({ value, id, type, onChange }) {
-  // valid types: text, email, url, & password
-
-  const handleFocus = () => {
+export default function TextField({ value, id, onChange, rows, resize }) {
+  const handleFocus = (e) => {
     e.preventDefault();
     e.stopPropagation();
   };
@@ -26,16 +24,17 @@ export default function TextField({ value, id, type, onChange }) {
       </label>
       <label
         htmlFor={id}
-        className="gradient-2 padding-2 border-radius-10 display-inline-flex align-center clickable-shadow"
+        className={`width-85 gradient-2 padding-2 border-radius-10 display-inline-flex align-center clickable-shadow `}
       >
-        <input
+        <textarea
           onClick={handleClick}
           onChange={handleChange}
           onFocus={handleFocus}
           id={id}
           value={value}
-          type={type}
-          className={`${styles.textField} width-100 height-100 background-white border-radius-8 padding-2 padding-left-right-10`}
+          className={`${styles.textArea} width-100 height-100 background-white border-radius-8 padding-2 padding-left-right-10`}
+          rows={rows}
+          style={{ resize: `${resize ? "vertical" : "none"}` }}
         />
       </label>
     </div>
