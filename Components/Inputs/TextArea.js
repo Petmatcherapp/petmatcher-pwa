@@ -9,7 +9,7 @@ export default function TextField({ value, id, onChange, rows, resize }) {
   const handleChange = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    if (onChange) onChange();
+    if (onChange) onChange(e);
   };
 
   const handleClick = (e) => {
