@@ -5,5 +5,9 @@
 }
 
 .normal {
+  background-color: var(--color-3a);
+}
+
+.darkMode {
   background-color: #e6e6e6;
 }
