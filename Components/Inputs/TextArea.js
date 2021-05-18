@@ -18,13 +18,13 @@ export default function TextField({ value, id, onChange, rows, resize }) {
   };
 
   return (
-    <div className="display-inline-flex-column">
+    <div className="display-inline-flex-column width-90">
       <label className="bottom-margin-extra-small" htmlFor={id}>
         <small>{id}</small>
       </label>
       <label
         htmlFor={id}
-        className={`width-85 gradient-2 padding-2 border-radius-10 display-inline-flex align-center clickable-shadow `}
+        className={`width-100 gradient-2 padding-2 border-radius-10 display-inline-flex align-center clickable-shadow `}
       >
         <textarea
           onClick={handleClick}

@@ -42,7 +42,7 @@ export default function SubOption() {
         </ul>
         <p
           onClick={handleShowQuestion}
-          className="gradient-text gradient-5 display-inline"
+          className="gradient-text gradient-5 display-inline cursor-pointer"
         >
           {"< back"}
         </p>
@@ -132,7 +132,7 @@ export default function SubOption() {
         <div>
           <p
             onClick={handleShowQuestion}
-            className="gradient-text gradient-5 text-align-center margin-0"
+            className="gradient-text gradient-5 text-align-center margin-0 cursor-pointer"
           >
             {"continue >"}
           </p>
