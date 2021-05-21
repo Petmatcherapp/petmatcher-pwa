@@ -17,7 +17,6 @@ export default function KindWords() {
   return (
     <div>
       <div className="bottom-margin-medium">
-        <h4 className="bottom-margin-small">To:</h4>
         <AnimalTag
           avatar={animal.avatar}
           name={animal.name}
@@ -30,10 +29,10 @@ export default function KindWords() {
       </div>
       <h4 className="bottom-margin-small"></h4>
       <div className="display-flex-row align-end">
-        <div className="width-90">
+        <div className="width-90 margin-right-small">
           <TextArea
             onChange={(e) => handleTextAreaChange(e)}
-            id={"message:"}
+            id={`Remarks for ${animal.name} 💛`}
             rows={3}
           />
         </div>
@@ -43,7 +42,7 @@ export default function KindWords() {
             disabled ? "opacity-50" : "opacity-100"
           } display-flex-column align-center cursor-pointer`}
         >
-          <Send height={20} />
+          <Send height={25} />
           <h6>Send</h6>
         </button>
       </div>

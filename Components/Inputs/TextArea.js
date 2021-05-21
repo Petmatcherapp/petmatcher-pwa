@@ -18,7 +18,7 @@ export default function TextField({ value, id, onChange, rows, resize }) {
   };
 
   return (
-    <div className="display-inline-flex-column width-90">
+    <div className="display-inline-flex-column width-100">
       <label className="bottom-margin-extra-small" htmlFor={id}>
         <small>{id}</small>
       </label>

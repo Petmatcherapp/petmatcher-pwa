@@ -27,7 +27,7 @@ export default function PostActions({ postData, handleOptionRender }) {
     `${styles.awardBackgroundStylesHidden}`
   );
   const [reactionContainer, setReactionContainer] = useState("height-100");
-  const [afterReaction, setAfterReaction] = useState("opacity-0");
+  const [afterReaction, setAfterReaction] = useState("opacity-0 display-none");
   const [buttonContainerMovable, setButtonContainerMovable] = useState(
     `${styles.showFollow}`
   );
