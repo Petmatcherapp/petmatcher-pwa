@@ -113,6 +113,10 @@ small {
     sans-serif;
 }
 
+li {
+  margin-bottom: 8px;
+}
+
 /* Gradients */
 .gradient-1 {
   background: var(--color-4);

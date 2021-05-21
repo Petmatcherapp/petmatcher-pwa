@@ -62,7 +62,10 @@ export default function SubOption() {
             blackText={true}
             onClick={false}
           />
-          <span onClick={handleShowQuestion} className="normal-drop-shadow">
+          <span
+            onClick={handleShowQuestion}
+            className="normal-drop-shadow cursor-pointer"
+          >
             <Question height={25} />
           </span>
         </div>

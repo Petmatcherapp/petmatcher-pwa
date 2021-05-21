@@ -3,7 +3,7 @@ import styles from "./TextField.module.css";
 export default function TextField({ value, id, type, onChange }) {
   // valid types: text, email, url, & password
 
-  const handleFocus = () => {
+  const handleFocus = (e) => {
     e.preventDefault();
     e.stopPropagation();
   };
