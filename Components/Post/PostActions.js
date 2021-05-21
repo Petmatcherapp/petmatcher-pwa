@@ -127,7 +127,7 @@ export default function PostActions({ postData, handleOptionRender }) {
             <Comment width={25} />
           </span>
           <Action
-            text={`Send ${postData.animal.name} kind words`}
+            text={`Send ${postData.animal.name} your love`}
             randomGradient={true}
             onClick={handleKindWordsClick}
           />

@@ -8,6 +8,9 @@ import Image from "next/image";
 export default function SubOption() {
   const { option } = useContext(OptionContext);
   const [showQuestion, setShowQuestion] = useState(false);
+  const [questionClasses, setQuestionClasses] = useState(
+    "opacity-0 display-none"
+  );
   const animal = option.optionData.animal;
 
   const handleShowQuestion = () => {
@@ -23,12 +26,12 @@ export default function SubOption() {
       <div
         className={`${
           showQuestion ? "opacity-100 display-block" : "opacity-0 display-none"
-        } transition-all absolute margin-right-large z-index-4`}
+        } transition-opacity absolute margin-right-large z-index-4`}
       >
         <h3 className="bottom-margin-small">What is 'Subscribing'?</h3>
         <small className="bottom-margin-small display-block">
           It is a way to support {animal.name} the {animal.type}, donate to
-          animal charities and keep PM running.
+          animal charities and keep PM running, all in one bundle.
         </small>
         <small>
           Out of your Subscription, here is how the funds are divided:
@@ -50,7 +53,7 @@ export default function SubOption() {
       <div
         className={`${
           !showQuestion ? "opacity-100" : "opacity-0"
-        } transition-all`}
+        } transition-opacity`}
       >
         <div className="display-flex-row align-center justify-between bottom-margin-medium">
           <AnimalTag
@@ -132,10 +135,10 @@ export default function SubOption() {
             </div>
           </div>
         )}
-        <div>
+        <div className="text-align-center">
           <p
             onClick={handleShowQuestion}
-            className="gradient-text gradient-5 text-align-center margin-0 cursor-pointer"
+            className="gradient-text gradient-5 text-align-center margin-0 cursor-pointer display-inline"
           >
             {"continue >"}
           </p>

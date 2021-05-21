@@ -58,7 +58,7 @@ export default function Create() {
         gradientNum={5}
       />
       <CreateNewDiv
-        icon={<Gold width={60} />}
+        icon={<Gold height={60} />}
         type={"Emote's & Treat's"}
         description={
           "P.M.P user? Upload your own Emote's & Treat's for your subs"

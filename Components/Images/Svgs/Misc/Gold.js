@@ -1,8 +1,8 @@
-export default function Gold({ width }) {
+export default function Gold({ height }) {
   return (
     <svg
-      width={width}
-      height={width}
+      width={height}
+      height={height}
       viewBox="0 0 150 150"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
