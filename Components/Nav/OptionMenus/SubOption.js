@@ -83,10 +83,10 @@ export default function SubOption() {
             <h3 className="bottom-margin-medium">Subscribe to unlock</h3>
             <div className="display-flex-column bottom-margin-medium">
               <div className="display-flex-column bottom-margin-medium">
-                <h4 className="bottom-margin-small">
+                <small className="bottom-margin-small">
                   {animal.emotes.length} emote
                   {animal.emotes.length > 1 ? "s" : ""}
-                </h4>
+                </small>
                 <div className="display-flex-row">
                   {animal.emotes.length > 0
                     ? animal.emotes.map(() => (
@@ -105,10 +105,10 @@ export default function SubOption() {
                 </div>
               </div>
               <div className="display-flex-column">
-                <h4 className="bottom-margin-small">
+                <small className="bottom-margin-small">
                   {animal.treats.length} treat
                   {animal.treats.length > 1 ? "s" : ""}
-                </h4>
+                </small>
                 <div className="display-flex-row">
                   {animal.treats.length > 0
                     ? animal.treats.map(() => (

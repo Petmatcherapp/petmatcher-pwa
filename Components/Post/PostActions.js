@@ -142,7 +142,7 @@ export default function PostActions({ postData, handleOptionRender }) {
               gender={postData.animal.gender}
             />
           </div>
-          <VerticleLineBreak height="2em" />
+          <VerticleLineBreak darkMode={true} height="2em" />
           <div className="display-flex-row align-end">
             <div
               className={`${styles.buttonContainer} display-flex-column relative`}

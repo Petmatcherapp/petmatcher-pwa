@@ -1,3 +1,14 @@
+/* font-face */
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("./fonts/Gilroy-Light.otf");
+}
+
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: url("./fonts/Gilroy-ExtraBold.otf");
+}
+
 /* Color Variables */
 :root {
   --color-1: #1fffd6;
@@ -38,7 +49,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Gilroy-ExtraBold", sans-serif, "Quicksand", "Segoe UI", Tahoma,
+    Geneva, Verdana, sans-serif;
 }
 
 main {
@@ -90,12 +102,15 @@ button,
 textarea,
 select {
   font-size: 20px;
-  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Gilroy-ExtraBold", sans-serif, "Segoe UI", Tahoma, Geneva,
+    Verdana, sans-serif;
 }
 
 small {
   font-size: 16px;
   color: var(--color-3a);
+  font-family: "Gilroy-Light", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
 }
 
 /* Gradients */
