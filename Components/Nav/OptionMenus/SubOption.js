@@ -1,24 +1,23 @@
 import { useContext, useState } from "react";
 import { OptionContext } from "../../../lib/context";
 import AnimalTag from "../../AnimalTag/AnimalTag";
-import Button from "../../Buttons/Button";
+import ConfirmButton from "../../Buttons/ConfirmButton";
 import Question from "../../Images/Svgs/Icons/Question";
 import Image from "next/image";
+import styles from "./SubOption.module.css";
 
 export default function SubOption() {
   const { option } = useContext(OptionContext);
   const [showQuestion, setShowQuestion] = useState(false);
-  const [questionClasses, setQuestionClasses] = useState(
-    "opacity-0 display-none"
-  );
+  const [showSub, setShowSub] = useState(false);
   const animal = option.optionData.animal;
 
   const handleShowQuestion = () => {
-    if (showQuestion) {
-      setShowQuestion(false);
-    } else {
-      setShowQuestion(true);
-    }
+    showQuestion ? setShowQuestion(false) : setShowQuestion(true);
+  };
+
+  const handleShowMonths = () => {
+    showSub ? setShowSub(false) : setShowSub(true);
   };
 
   return (
@@ -52,7 +51,7 @@ export default function SubOption() {
       </div>
       <div
         className={`${
-          !showQuestion ? "opacity-100" : "opacity-0"
+          !showQuestion && !showSub ? "opacity-100" : "opacity-0"
         } transition-opacity`}
       >
         <div className="display-flex-row align-center justify-between bottom-margin-medium">
@@ -137,12 +136,88 @@ export default function SubOption() {
         )}
         <div className="text-align-center">
           <p
-            onClick={handleShowQuestion}
+            onClick={handleShowMonths}
             className="gradient-text gradient-5 text-align-center margin-0 cursor-pointer display-inline"
           >
             {"continue >"}
           </p>
-          {/* <Button buttonText={"Subscribe"} gradientNum={6} /> */}
+        </div>
+      </div>
+      <div
+        className={`${
+          showSub ? "opacity-100 display-flex-column" : "opacity-0 display-none"
+        } absolute margin-right-large`}
+      >
+        <p>How many months would you like to subscribe to {animal.name}?</p>
+        <div className="display-flex-row flex-wrap relative bottom-margin-medium">
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
+          >
+            <p className="absolute">1</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
+          >
+            <p className="absolute">2</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
+          >
+            <p className="absolute">3</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
+          >
+            <p className="absolute">4</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
+          >
+            <p className="absolute">5</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
+          >
+            <p className="absolute">6</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
+          >
+            <p className="absolute">7</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
+          >
+            <p className="absolute">8</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
+          >
+            <p className="absolute">9</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center`}
+          >
+            <p className="absolute">10</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center`}
+          >
+            <p className="absolute">11</p>
+          </div>
+          <div
+            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center`}
+          >
+            <p className="absolute">12</p>
+          </div>
+        </div>
+        <div className="diaplay-flex-row justify-center">
+          <p
+            onClick={handleShowQuestion}
+            className="gradient-text gradient-5 display-inline cursor-pointer"
+          >
+            {"continue >"}
+          </p>
         </div>
       </div>
     </div>

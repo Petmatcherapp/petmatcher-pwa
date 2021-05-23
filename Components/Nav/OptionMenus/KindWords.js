@@ -9,23 +9,26 @@ export default function KindWords() {
   const { option } = useContext(OptionContext);
   const animal = option.optionData.animal;
   const [disabled, setDisabled] = useState(true);
-  const [showSuccess, setShowSuccess] = useState(false);
+  const [showKindWords, setShowKindWords] = useState(
+    "opacity-100 display-block"
+  );
+  const [showSuccess, setShowSuccess] = useState("opacity-0 display-none");
 
   const handleTextAreaChange = (e) => {
     setDisabled(checkOnlyWhiteSpace(e.target.value));
   };
 
   const handleSend = () => {
-    showSuccess === false ? setShowSuccess(true) : setShowSuccess(false);
+    setShowSuccess("display-flex-column opacity-0");
+    setTimeout(() => {
+      setShowSuccess("opacity-100");
+    }, 100);
+    setShowKindWords("opacity-0");
   };
 
   return (
-    <div className="display-flex-column align-center justify-center">
-      <div
-        className={`${
-          !showSuccess ? "opacity-100" : "opacity-0"
-        } transition-opacity`}
-      >
+    <div className="display-flex-column">
+      <div className={`${showKindWords} transition-opacity`}>
         <div className="bottom-margin-medium">
           <AnimalTag
             avatar={animal.avatar}
@@ -39,10 +42,10 @@ export default function KindWords() {
         </div>
         <h4 className="bottom-margin-small"></h4>
         <div className="display-flex-row align-end">
-          <div className="width-90 margin-right-small">
+          <div className="margin-right-small">
             <TextArea
               onChange={(e) => handleTextAreaChange(e)}
-              id={`Remarks for ${animal.name} 💛`}
+              id={`Your remarks to ${animal.name} ❤️`}
               rows={3}
             />
           </div>
@@ -58,12 +61,8 @@ export default function KindWords() {
           </button>
         </div>
       </div>
-      <div className={`${showSuccess ? "opacity-100" : "opacity-0"} absolute`}>
-        {/* <p>Test</p> */}
-        <p>{animal.name} got your love 💛</p>
-        <p>
-          {animal.gender === "female" ? "She" : "He"} really appreciates it 😽
-        </p>
+      <div className={`${showSuccess} absolute transition-opacity`}>
+        <p className="text-align-center">{animal.name} got your love 💚</p>
       </div>
     </div>
   );

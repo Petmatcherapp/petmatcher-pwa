@@ -57,7 +57,7 @@ export default function Post({ postData, handleOptionRender }) {
   return (
     <div
       ref={observee}
-      className={`${styles.postContainer} border-radius-10 display-flex-column normal-shadow`}
+      className={`${styles.postContainer} display-flex-column normal-shadow`}
     >
       <PostMedia
         postData={{
@@ -87,7 +87,7 @@ export default function Post({ postData, handleOptionRender }) {
       </div>
       <div
         onClick={() => handlePostClick("actions")}
-        className={`${styles.postActionsContainer} ${actionsVisibility} height-100 width-100 border-radius-10`}
+        className={`${styles.postActionsContainer} ${actionsVisibility} height-100 width-100`}
       >
         <PostActions
           handleOptionRender={handleOptionRender}

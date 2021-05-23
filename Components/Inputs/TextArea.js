@@ -24,7 +24,7 @@ export default function TextField({ value, id, onChange, rows, resize }) {
       </label>
       <label
         htmlFor={id}
-        className={`width-100 gradient-2 padding-2 border-radius-10 display-inline-flex align-center clickable-shadow `}
+        className={`gradient-2 padding-2 border-radius-10 display-inline-flex align-center clickable-shadow `}
       >
         <textarea
           onClick={handleClick}
@@ -32,7 +32,7 @@ export default function TextField({ value, id, onChange, rows, resize }) {
           onFocus={handleFocus}
           id={id}
           value={value}
-          className={`${styles.textArea} width-100 height-100 background-white border-radius-8 padding-2 padding-left-right-10`}
+          className={`${styles.textArea} height-100 background-white border-radius-8 padding-2 padding-left-right-10 width-100`}
           rows={rows}
           style={{ resize: `${resize ? "vertical" : "none"}` }}
         />

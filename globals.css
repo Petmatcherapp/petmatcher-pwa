@@ -391,6 +391,26 @@ button:disabled {
   align-items: flex-end;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.horizontal-flex-overflow-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.horizontal-flex-overflow-hidden-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.horizontal-flex-overflow-item {
+  width: fit-content;
+  min-width: max-content;
+}
+
 /* padding */
 .padding-0 {
   padding: 0;
@@ -621,6 +641,10 @@ button:disabled {
 
 .showOption {
   transform: translateY(0);
+}
+
+.offScreen-horizontal {
+  transform: translateX(85vw);
 }
 
 /* z-index */
