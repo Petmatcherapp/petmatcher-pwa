@@ -74,70 +74,105 @@ export default function SubOption() {
             </span>
           </div>
           <h3 className="bottom-margin-medium">Subscribe to unlock...</h3>
-          {animal.emotes.length === 0 && animal.treats.length === 0 ? (
-            <small className="display-block bottom-margin-medium">
-              {animal.name} doesn't have any treats or emotes.
-            </small>
-          ) : (
-            <div className="display-flex-column bottom-margin-large">
-              <div className="display-flex-column bottom-margin-medium">
-                <small className="bottom-margin-small">
-                  {animal.emotes.length} emote
-                  {animal.emotes.length > 1 ? "s" : ""}
-                </small>
-                <div className="display-flex-row align-center">
-                  {animal.emotes.length > 0
-                    ? animal.emotes.map(() => (
-                        <div className="margin-right-extra-large">
-                          <div className="img-medium">
-                            <Image
-                              src={`${animal.emotes[0].src}`}
-                              layout="fill"
-                              objectFit="cover"
-                              loading="lazy"
-                            />
+          {animal.emotes.length === 0 && animal.treats.length === 0 ? null : (
+            <div className="display-flex-column">
+              <div className="bottom-margin-medium">
+                <div className="display-flex-column bottom-margin-medium">
+                  <small className="bottom-margin-small">
+                    {animal.emotes.length} emote
+                    {animal.emotes.length > 1 ? "s" : ""}
+                  </small>
+                  <div className="display-flex-row align-center">
+                    {animal.emotes.length > 0
+                      ? animal.emotes.map(() => (
+                          <div className="margin-right-extra-large">
+                            <div className="img-medium">
+                              <Image
+                                src={`${animal.emotes[0].src}`}
+                                layout="fill"
+                                objectFit="cover"
+                                loading="lazy"
+                              />
+                            </div>
                           </div>
-                        </div>
-                      ))
-                    : null}
+                        ))
+                      : null}
+                  </div>
+                </div>
+                <div className="display-flex-column">
+                  <small className="bottom-margin-small">
+                    {animal.treats.length} treat
+                    {animal.treats.length > 1 ? "s" : ""}
+                  </small>
+                  <div className="display-flex-row">
+                    {animal.treats.length > 0
+                      ? animal.treats.map(() => (
+                          <div className="margin-right-extra-large">
+                            <div className="img-medium">
+                              <Image
+                                src={`${animal.treats[0].src}`}
+                                layout="fill"
+                                objectFit="cover"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        ))
+                      : null}
+                  </div>
                 </div>
               </div>
-              <div className="display-flex-column">
-                <small className="bottom-margin-small">
-                  {animal.treats.length} treat
-                  {animal.treats.length > 1 ? "s" : ""}
-                </small>
-                <div className="display-flex-row">
-                  {animal.treats.length > 0
-                    ? animal.treats.map(() => (
-                        <div className="margin-right-extra-large">
-                          <div className="img-medium">
-                            <Image
-                              src={`${animal.treats[0].src}`}
-                              layout="fill"
-                              objectFit="cover"
-                              loading="lazy"
-                            />
-                          </div>
-                        </div>
-                      ))
-                    : null}
-                </div>
-              </div>
+              <p className="bottom-margin-medium">&</p>
             </div>
           )}
           <div>
-            <p>
-              {animal.name}'s super awesome exclusive subscriber's content 😻
-            </p>
+            <ul class={styles.cRainbow}>
+              <li
+                class={`${styles.cRainbowLayer} ${styles.cRainbowLayerWhite}`}
+              >
+                {animal.name}'s super awesome subsriber content
+              </li>
+              <li
+                class={`${styles.cRainbowLayer} ${styles.cRainbowLayerViolet}`}
+              >
+                {animal.name}'s super awesome subsriber content
+              </li>
+              <li class={`${styles.cRainbowLayer} ${styles.cRainbowLayerBlue}`}>
+                {animal.name}'s super awesome subsriber content
+              </li>
+              <li
+                class={`${styles.cRainbowLayer} ${styles.cRainbowLayerGreen}`}
+              >
+                {animal.name}'s super awesome subsriber content
+              </li>
+              <li class={`${styles.cRainbowLayer} ${styles.cRainbowLayerRed}`}>
+                {animal.name}'s super awesome subsriber content
+              </li>
+            </ul>
           </div>
         </div>
         <div className="display-flex-row justify-around">
           <div className="padding-5">
-            <Button buttonText={<div>Sub for me 🎉</div>} gradientNum={6} />
+            <Button
+              buttonText={
+                <div>
+                  Sub for me
+                  <span className={`${styles.wiggle}`}>🎉</span>
+                </div>
+              }
+              gradientNum={6}
+            />
           </div>
           <div className="padding-5">
-            <Button buttonText={<div>Gift a sub(s) 🎁</div>} gradientNum={1} />
+            <Button
+              buttonText={
+                <div>
+                  Gift a sub(s)
+                  <span className={`${styles.wiggle}`}>🎁</span>
+                </div>
+              }
+              gradientNum={1}
+            />
           </div>
         </div>
       </div>

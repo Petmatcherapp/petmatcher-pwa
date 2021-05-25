@@ -1,8 +1,118 @@
-.SubOptionContainer {
-}
-
 .SubOptionMonth {
   border: 1px solid red;
   width: 4em;
   height: 4em;
+}
+
+.cRainbow {
+  counter-reset: rainbow;
+  position: relative;
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 320px;
+}
+.cRainbowLayer {
+  --text-color: white;
+  counter-increment: rainbow;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black, 4px 4px 0 rgba(0, 0, 0, 0.2);
+  animation: rainbow 1.5s ease-in-out infinite;
+}
+.cRainbowLayer:nth-child(1) {
+  animation-delay: calc(1 / 10 * 1s);
+  left: calc(1px * 1);
+  z-index: -10;
+}
+.cRainbowLayer:nth-child(2) {
+  animation-delay: calc(2 / 10 * 1s);
+  left: calc(1px * 2);
+  z-index: -20;
+}
+.cRainbowLayer:nth-child(3) {
+  animation-delay: calc(3 / 10 * 1s);
+  left: calc(1px * 3);
+  z-index: -30;
+}
+.cRainbowLayer:nth-child(4) {
+  animation-delay: calc(4 / 10 * 1s);
+  left: calc(1px * 4);
+  z-index: -40;
+}
+.cRainbowLayer:nth-child(5) {
+  animation-delay: calc(5 / 10 * 1s);
+  left: calc(1px * 5);
+  z-index: -50;
+}
+.cRainbowLayer:nth-child(6) {
+  animation-delay: calc(6 / 10 * 1s);
+  left: calc(1px * 6);
+  z-index: -60;
+}
+.cRainbowLayer:nth-child(7) {
+  animation-delay: calc(7 / 10 * 1s);
+  left: calc(1px * 7);
+  z-index: -70;
+}
+.cRainbowLayer:not(:first-child) {
+  position: absolute;
+  top: 0;
+}
+.cRainbowLayerWhite {
+  --text-color: white;
+}
+.cRainbowLayerOrange {
+  --text-color: #d49c3d;
+}
+.cRainbowLayerRed {
+  --text-color: #d14b3d;
+}
+.cRainbowLayerViolet {
+  --text-color: #cf52eb;
+}
+.cRainbowLayerBlue {
+  --text-color: #44a3f7;
+}
+.cRainbowLayerGreen {
+  --text-color: #5acb3c;
+}
+.cRainbowLayerYellow {
+  --text-color: #debf40;
+}
+
+.wiggle {
+  position: relative;
+  display: block;
+  animation: wiggle 3s infinite;
+}
+
+@keyframes rainbow {
+  0%,
+  100% {
+    transform: translatey(0.5rem);
+  }
+  50% {
+    transform: translatey(calc(0.5rem * -1));
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(7deg);
+  }
+  95% {
+    transform: rotate(-7deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
