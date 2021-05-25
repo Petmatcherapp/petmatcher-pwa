@@ -23,7 +23,7 @@ export default function KindWords() {
     setTimeout(() => {
       setShowSuccess("opacity-100");
     }, 100);
-    setShowKindWords("opacity-0");
+    setShowKindWords("display-block opacity-0");
   };
 
   return (

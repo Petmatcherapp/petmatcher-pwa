@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import { OptionContext } from "../../../lib/context";
-import AnimalTag from "../../AnimalTag/AnimalTag";
-import ConfirmButton from "../../Buttons/ConfirmButton";
-import Question from "../../Images/Svgs/Icons/Question";
+import { OptionContext } from "../../../../lib/context";
+import AnimalTag from "../../../AnimalTag/AnimalTag";
+import Button from "../../../Buttons/Button";
+import Question from "../../../Images/Svgs/Icons/Question";
 import Image from "next/image";
 import styles from "./SubOption.module.css";
 
@@ -21,7 +21,7 @@ export default function SubOption() {
   };
 
   return (
-    <div className="display-flex-column">
+    <div className={`${styles.SubOptionContainer} display-flex-column`}>
       <div
         className={`${
           showQuestion ? "opacity-100 display-block" : "opacity-0 display-none"
@@ -29,8 +29,9 @@ export default function SubOption() {
       >
         <h3 className="bottom-margin-small">What is 'Subscribing'?</h3>
         <small className="bottom-margin-small display-block">
-          It is a way to support {animal.name} the {animal.type}, donate to
-          animal charities and keep PM running, all in one bundle.
+          Subscribing is a way to support {animal.name} the {animal.type},
+          donate to animal charities and keep Petmatcher afloat, all in one
+          bundle.
         </small>
         <small>
           Out of your Subscription, here is how the funds are divided:
@@ -54,45 +55,37 @@ export default function SubOption() {
           !showQuestion && !showSub ? "opacity-100" : "opacity-0"
         } transition-opacity`}
       >
-        <div className="display-flex-row align-center justify-between bottom-margin-medium">
-          <AnimalTag
-            avatar={animal.avatar}
-            name={animal.name}
-            alias={animal.alias}
-            type={animal.type}
-            gender={animal.gender}
-            blackText={true}
-            onClick={false}
-          />
-          <span
-            onClick={handleShowQuestion}
-            className="normal-drop-shadow cursor-pointer"
-          >
-            <Question height={25} />
-          </span>
-        </div>
-        {animal.emotes.length === 0 && animal.treats.length === 0 ? (
-          <div className="bottom-margin-large">
-            <small className="display-block bottom-margin-medium">
-              {animal.name} does not have any treats or emotes available yet.
-            </small>
-            <small className="display-block bottom-margin-medium">
-              You can still subsribe if you would like to support.
-            </small>
-            <small className="display-block bottom-margin-medium">
-              When they do create a treat or emote, you will have first dibs 😺
-            </small>
+        <div className="bottom-margin-large">
+          <div className="display-flex-row align-center justify-between bottom-margin-medium">
+            <AnimalTag
+              avatar={animal.avatar}
+              name={animal.name}
+              alias={animal.alias}
+              type={animal.type}
+              gender={animal.gender}
+              blackText={true}
+              onClick={false}
+            />
+            <span
+              onClick={handleShowQuestion}
+              className="normal-drop-shadow cursor-pointer"
+            >
+              <Question height={25} />
+            </span>
           </div>
-        ) : (
-          <div className="bottom-margin-large">
-            <h3 className="bottom-margin-medium">Subscribe to unlock</h3>
-            <div className="display-flex-column bottom-margin-medium">
+          <h3 className="bottom-margin-medium">Subscribe to unlock...</h3>
+          {animal.emotes.length === 0 && animal.treats.length === 0 ? (
+            <small className="display-block bottom-margin-medium">
+              {animal.name} doesn't have any treats or emotes.
+            </small>
+          ) : (
+            <div className="display-flex-column bottom-margin-large">
               <div className="display-flex-column bottom-margin-medium">
                 <small className="bottom-margin-small">
                   {animal.emotes.length} emote
                   {animal.emotes.length > 1 ? "s" : ""}
                 </small>
-                <div className="display-flex-row">
+                <div className="display-flex-row align-center">
                   {animal.emotes.length > 0
                     ? animal.emotes.map(() => (
                         <div className="margin-right-extra-large">
@@ -132,15 +125,20 @@ export default function SubOption() {
                 </div>
               </div>
             </div>
+          )}
+          <div>
+            <p>
+              {animal.name}'s super awesome exclusive subscriber's content 😻
+            </p>
           </div>
-        )}
-        <div className="text-align-center">
-          <p
-            onClick={handleShowMonths}
-            className="gradient-text gradient-5 text-align-center margin-0 cursor-pointer display-inline"
-          >
-            {"continue >"}
-          </p>
+        </div>
+        <div className="display-flex-row justify-around">
+          <div className="padding-5">
+            <Button buttonText={<div>Sub for me 🎉</div>} gradientNum={6} />
+          </div>
+          <div className="padding-5">
+            <Button buttonText={<div>Gift a sub(s) 🎁</div>} gradientNum={1} />
+          </div>
         </div>
       </div>
       <div

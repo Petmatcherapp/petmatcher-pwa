@@ -9,7 +9,7 @@ import AnimalTag from "../AnimalTag/AnimalTag";
 import VerticleLineBreak from "../Misc/VerticleLineBreak";
 import Button from "../Buttons/Button";
 import Action from "../Buttons/Action";
-import SubOption from "../Nav/OptionMenus/SubOption";
+import SubOption from "../Nav/OptionMenus/SubOption/SubOption";
 import KindWords from "../Nav/OptionMenus/KindWords";
 import styles from "./postAction.module.css";
 
