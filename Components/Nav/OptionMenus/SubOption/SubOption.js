@@ -75,54 +75,50 @@ export default function SubOption() {
           </div>
           <h3 className="bottom-margin-medium">Subscribe to unlock...</h3>
           {animal.emotes.length === 0 && animal.treats.length === 0 ? null : (
-            <div className="display-flex-column">
-              <div className="bottom-margin-medium">
+            <div>
+              <div className="bottom-margin-medium display-flex-row justify-between">
                 <div className="display-flex-column bottom-margin-medium">
-                  <small className="bottom-margin-small">
-                    {animal.emotes.length} emote
-                    {animal.emotes.length > 1 ? "s" : ""}
-                  </small>
+                  <small className="bottom-margin-small">emotes</small>
                   <div className="display-flex-row align-center">
                     {animal.emotes.length > 0
-                      ? animal.emotes.map(() => (
-                          <div className="margin-right-extra-large">
+                      ? animal.emotes.map((emote) => (
+                          <div className="margin-right-small">
                             <div className="img-medium">
                               <Image
-                                src={`${animal.emotes[0].src}`}
+                                src={`${emote.src}`}
                                 layout="fill"
                                 objectFit="cover"
                                 loading="lazy"
                               />
                             </div>
+                            <small>{emote.name}</small>
                           </div>
                         ))
                       : null}
                   </div>
                 </div>
                 <div className="display-flex-column">
-                  <small className="bottom-margin-small">
-                    {animal.treats.length} treat
-                    {animal.treats.length > 1 ? "s" : ""}
-                  </small>
+                  <small className="bottom-margin-small">treats</small>
                   <div className="display-flex-row">
                     {animal.treats.length > 0
-                      ? animal.treats.map(() => (
-                          <div className="margin-right-extra-large">
+                      ? animal.treats.map((treat) => (
+                          <div className="margin-right-small">
                             <div className="img-medium">
                               <Image
-                                src={`${animal.treats[0].src}`}
+                                src={`${treat.src}`}
                                 layout="fill"
                                 objectFit="cover"
                                 loading="lazy"
                               />
                             </div>
+                            <small>{treat.name}</small>
                           </div>
                         ))
                       : null}
                   </div>
                 </div>
               </div>
-              <p className="bottom-margin-medium">&</p>
+              <p className="bottom-margin-medium">along with...</p>
             </div>
           )}
           <div>

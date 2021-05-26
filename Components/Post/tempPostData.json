@@ -57,7 +57,10 @@
       "alias": "SissyLaLa",
       "gender": "female",
       "avatar": "/postMocImages/Screenshot 2021-02-11 at 5.12.16 PM.png",
-      "emotes": [{ "name": "buttcat", "src": "/postMocImages/sissy-sub.png" }],
+      "emotes": [
+        { "name": "buttcat", "src": "/postMocImages/sissy-sub.png" },
+        { "name": "buttcat", "src": "/postMocImages/sissy-sub.png" }
+      ],
       "treats": [
         {
           "name": "pikawut",

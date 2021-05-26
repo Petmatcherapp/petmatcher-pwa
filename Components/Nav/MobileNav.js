@@ -32,8 +32,8 @@ export default function MobileNav() {
 
   useEffect(() => {
     option.optionStatus === "showOption"
-      ? document.querySelector("body").classList.add("disableScroll")
-      : document.querySelector("body").classList.remove("disableScroll");
+      ? document.querySelector("html").classList.add("disableScroll")
+      : document.querySelector("html").classList.remove("disableScroll");
   }, [option]);
 
   return (
