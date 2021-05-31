@@ -1,7 +1,9 @@
+import { useRef } from "react";
 import DownArrow from "../Images/Svgs/Icons/DownArrow";
 import styles from "./Select.module.css";
 
 export default function Select({ value, id, onChange, name }) {
+  const selectRef = useRef();
   const handleFocus = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -14,6 +16,8 @@ export default function Select({ value, id, onChange, name }) {
   };
 
   const handleClick = (e) => {
+    selectRef.current.focus();
+    console.log(selectRef);
     e.preventDefault();
     e.stopPropagation();
   };
@@ -33,6 +37,7 @@ export default function Select({ value, id, onChange, name }) {
               onFocus={handleFocus}
               id={id}
               name={name}
+              ref={selectRef}
               className={`${styles.select} width-100 height-100 background-white border-radius-8 padding-2 padding-left-right-10`}
             >
               <optgroup label="common pets">
@@ -49,7 +54,7 @@ export default function Select({ value, id, onChange, name }) {
           <span
             className={`${styles.downArrowContainer} display-flex-row align-center`}
           >
-            <DownArrow height={10} />
+            <DownArrow onClick={handleClick} height={13} />
           </span>
         </div>
       </div>
