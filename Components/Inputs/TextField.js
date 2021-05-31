@@ -1,6 +1,6 @@
 import styles from "./TextField.module.css";
 
-export default function TextField({ value, id, type, onChange }) {
+export default function TextField({ value, id, type, onChange, name }) {
   // valid types: text, email, url, & password
 
   const handleFocus = (e) => {

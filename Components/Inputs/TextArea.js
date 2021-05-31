@@ -1,6 +1,6 @@
 import styles from "./TextArea.module.css";
 
-export default function TextField({ value, id, onChange, rows, resize, name }) {
+export default function TextArea({ value, id, onChange, rows, resize, name }) {
   const handleFocus = (e) => {
     e.preventDefault();
     e.stopPropagation();
