@@ -31,10 +31,19 @@ export default function MobileNav() {
   };
 
   useEffect(() => {
-    option.optionStatus === "showOption"
-      ? (document.querySelector("#body-wrapper").style.cssText =
-          "overflow: hidden; position: relative; height: 100%;")
-      : (document.querySelector("#body-wrapper").style.cssText = "");
+    if (option.optionStatus === "showOption") {
+      document.body.style.cssText =
+        "overflow: hidden !important; position: relative; height: 100%;";
+      if (document.html) {
+        document.html.style.cssText =
+          "overflow: hidden !important; position: relative; height: 100%;";
+      }
+    } else {
+      document.body.style.cssText = "";
+      if (document.html) {
+        document.html.style.cssText = "";
+      }
+    }
   }, [option]);
 
   return (
