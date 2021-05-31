@@ -32,8 +32,9 @@ export default function MobileNav() {
 
   useEffect(() => {
     option.optionStatus === "showOption"
-      ? (document.getElementsByTagName("body")[0].style.overflow = "hidden")
-      : (document.getElementsByTagName("body")[0].style.overflow = "");
+      ? (document.getElementsByTagName("body")[0].style.cssText =
+          "overflow: hidden; touch-action: none; -ms-touch-action: none; position: relative")
+      : (document.getElementsByTagName("body")[0].style.cssText = "");
   }, [option]);
 
   return (
