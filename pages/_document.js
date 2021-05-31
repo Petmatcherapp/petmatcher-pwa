@@ -77,7 +77,7 @@ class MyDocument extends Document {
             rel="apple-touch-startup-image"
           />
         </Head>
-        <body>
+        <body id="body-wrapper">
           <Main />
           <NextScript />
         </body>
