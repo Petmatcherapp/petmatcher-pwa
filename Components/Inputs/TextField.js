@@ -35,6 +35,7 @@ export default function TextField({ value, id, type, onChange }) {
           id={id}
           value={value}
           type={type}
+          name={name}
           className={`${styles.textField} width-100 height-100 background-white border-radius-8 padding-2 padding-left-right-10`}
         />
       </label>

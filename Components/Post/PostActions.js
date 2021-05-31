@@ -10,7 +10,7 @@ import VerticleLineBreak from "../Misc/VerticleLineBreak";
 import Button from "../Buttons/Button";
 import Action from "../Buttons/Action";
 import SubOption from "../Nav/OptionMenus/SubOption/SubOption";
-import KindWords from "../Nav/OptionMenus/KindWords";
+import KindWords from "../Nav/OptionMenus/KindWords/KindWords";
 import styles from "./postAction.module.css";
 
 export default function PostActions({ postData, handleOptionRender }) {

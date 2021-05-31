@@ -1,7 +1,7 @@
 import DownArrow from "../Images/Svgs/Icons/DownArrow";
 import styles from "./Select.module.css";
 
-export default function Select({ value, id, onChange }) {
+export default function Select({ value, id, onChange, name }) {
   const handleFocus = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -32,6 +32,7 @@ export default function Select({ value, id, onChange }) {
               onChange={handleChange}
               onFocus={handleFocus}
               id={id}
+              name={name}
               className={`${styles.select} width-100 height-100 background-white border-radius-8 padding-2 padding-left-right-10`}
             >
               <optgroup label="common pets">

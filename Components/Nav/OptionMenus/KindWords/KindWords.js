@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
-import { OptionContext } from "../../../lib/context";
-import TextArea from "../../Inputs/TextArea";
-import AnimalTag from "../../AnimalTag/AnimalTag";
-import Send from "../../Images/Svgs/Icons/Send";
-import { checkOnlyWhiteSpace } from "../../../lib/functions";
+import { OptionContext } from "../../../../lib/context";
+import TextArea from "../../../Inputs/TextArea";
+import AnimalTag from "../../../AnimalTag/AnimalTag";
+import Send from "../../../Images/Svgs/Icons/Send";
+import { checkOnlyWhiteSpace } from "../../../../lib/functions";
 
 export default function KindWords() {
   const { option } = useContext(OptionContext);

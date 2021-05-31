@@ -1,0 +1,15 @@
+.subOptionMonth {
+  background: rgb(195, 195, 195);
+  margin: 0 0.25em 0 0;
+  padding: 0 1em;
+  border: 3px solid grey;
+}
+
+.extraRightMargin {
+  padding-right: 1em;
+}
+
+.activeMonth {
+  background: white;
+  border: 3px solid var(--color-green2);
+}

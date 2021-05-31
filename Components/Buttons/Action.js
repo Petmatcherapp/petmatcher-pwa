@@ -10,7 +10,7 @@ export default function Action({ text, onClick }) {
   return (
     <p
       onClick={handleClick}
-      className={`${styles.action} display-inline gradient-text gradient-3 cursor-pointer weight-700`}
+      className={`${styles.action} display-inline gradient-text gradient-3 cursor-pointer weight-600`}
     >
       {text}
     </p>

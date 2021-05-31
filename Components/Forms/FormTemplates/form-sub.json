@@ -1,0 +1,18 @@
+{
+  "formId": "sub",
+  "type": "basic",
+  "masterBody": {},
+  "header": {
+    "jsx": ""
+  },
+  "Components": [
+    {
+      "name": "selectMonths",
+      "containerClass": "display-inline-flex margin-right-extra-large",
+      "props": {
+        "key": "name",
+        "id": "name"
+      }
+    }
+  ]
+}

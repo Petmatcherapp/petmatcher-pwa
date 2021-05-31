@@ -80,7 +80,7 @@ export default function Post({ postData, handleOptionRender }) {
           alias={postData.animal.alias}
         />
         <p
-          className={`${styles.postDescription} color-white weight-700 text-shadow-black margin-0`}
+          className={`${styles.postDescription} color-white weight-600 text-shadow-black margin-0`}
         >
           {postData.description}
         </p>

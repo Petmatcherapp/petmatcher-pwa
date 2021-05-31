@@ -260,20 +260,12 @@ button:disabled {
 }
 
 /* text */
-.weight-400 {
-  font-weight: 400;
-}
-
 .weight-500 {
   font-weight: 500;
 }
 
 .weight-600 {
   font-weight: 500;
-}
-
-.weight-700 {
-  font-weight: 600;
 }
 
 .text-shadow-black {
@@ -313,11 +305,16 @@ button:disabled {
   text-align: center;
 }
 
+.extra-small-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
 /* image sizes */
 .img-small {
   position: relative;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
 }
 
 .img-medium {

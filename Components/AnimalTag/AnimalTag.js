@@ -32,7 +32,7 @@ export default function AnimalTag({
       <div className="display-flex-column">
         <div className="display-flex-row align-center">
           <small
-            className={`bottom-margin-none weight-300 ${
+            className={`bottom-margin-none ${
               blackText ? "text-shadow-white" : "text-shadow-black color-white"
             }`}
           >
@@ -46,7 +46,7 @@ export default function AnimalTag({
           ></span>
         </div>
         <p
-          className={`${styles.animalName} weight-300 display-inline ${
+          className={`${styles.animalName} display-inline ${
             blackText ? "text-shadow-white" : "text-shadow-black color-white"
           } margin-0 display-inline`}
         >

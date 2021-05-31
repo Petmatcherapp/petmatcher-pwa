@@ -1,0 +1,18 @@
+{
+  "formId": "sub",
+  "type": "basic",
+  "masterBody": {},
+  "header": {
+    "jsx": ""
+  },
+  "Components": [
+    {
+      "name": "",
+      "containerClass": "",
+      "props": {
+        "key": "",
+        "id": ""
+      }
+    }
+  ]
+}

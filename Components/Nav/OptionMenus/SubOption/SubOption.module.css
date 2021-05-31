@@ -1,9 +1,3 @@
-.SubOptionMonth {
-  border: 1px solid red;
-  width: 4em;
-  height: 4em;
-}
-
 .cRainbow {
   counter-reset: rainbow;
   position: relative;
@@ -87,6 +81,13 @@
   position: relative;
   display: block;
   animation: wiggle 3s infinite;
+}
+
+.subForm {
+  position: absolute;
+  top: 0;
+  padding: 1.5em 0;
+  width: 100%;
 }
 
 @keyframes rainbow {

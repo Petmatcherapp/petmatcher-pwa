@@ -58,17 +58,27 @@
       "gender": "female",
       "avatar": "/postMocImages/Screenshot 2021-02-11 at 5.12.16 PM.png",
       "emotes": [
-        { "name": "buttcat", "src": "/postMocImages/sissy-sub.png" },
-        { "name": "buttcat", "src": "/postMocImages/sissy-sub.png" }
+        {
+          "name": "buttcat",
+          "src": "/postMocImages/sissy-sub.png",
+          "id": "123"
+        },
+        {
+          "name": "buttcat",
+          "src": "/postMocImages/sissy-sub.png",
+          "id": "124"
+        }
       ],
       "treats": [
         {
           "name": "pikawut",
-          "src": "/postMocImages/suprised-pika-emote.png"
+          "src": "/postMocImages/suprised-pika-emote.png",
+          "id": "125"
         },
         {
           "name": "pikawut",
-          "src": "/postMocImages/suprised-pika-emote.png"
+          "src": "/postMocImages/suprised-pika-emote.png",
+          "id": "126"
         }
       ]
     },

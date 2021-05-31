@@ -1,0 +1,9 @@
+.monthsContainer {
+  overflow: auto;
+  padding-bottom: 1.25em;
+  padding-top: 3px;
+}
+
+.month {
+  margin: 0.25em;
+}

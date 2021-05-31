@@ -4,24 +4,27 @@ import AnimalTag from "../../../AnimalTag/AnimalTag";
 import Button from "../../../Buttons/Button";
 import Question from "../../../Images/Svgs/Icons/Question";
 import Image from "next/image";
+import MasterForm from "../../../Forms/MasterForm";
 import styles from "./SubOption.module.css";
 
 export default function SubOption() {
   const { option } = useContext(OptionContext);
-  const [showQuestion, setShowQuestion] = useState(false);
-  const [showSub, setShowSub] = useState(false);
   const animal = option.optionData.animal;
+  const [showQuestion, setShowQuestion] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [giftSub, setGiftSub] = useState(false);
 
   const handleShowQuestion = () => {
     showQuestion ? setShowQuestion(false) : setShowQuestion(true);
   };
 
-  const handleShowMonths = () => {
-    showSub ? setShowSub(false) : setShowSub(true);
+  const handleShowForm = (giftSub) => {
+    showForm ? setShowForm(false) : setShowForm(true);
+    giftSub ? setGiftSub(true) : setGiftSub(false);
   };
 
   return (
-    <div className={`${styles.SubOptionContainer} display-flex-column`}>
+    <div>
       <div
         className={`${
           showQuestion ? "opacity-100 display-block" : "opacity-0 display-none"
@@ -52,7 +55,7 @@ export default function SubOption() {
       </div>
       <div
         className={`${
-          !showQuestion && !showSub ? "opacity-100" : "opacity-0"
+          !showQuestion && !showForm ? "opacity-100" : "opacity-0"
         } transition-opacity`}
       >
         <div className="bottom-margin-large">
@@ -77,33 +80,13 @@ export default function SubOption() {
           {animal.emotes.length === 0 && animal.treats.length === 0 ? null : (
             <div>
               <div className="bottom-margin-medium display-flex-row justify-between">
-                <div className="display-flex-column bottom-margin-medium">
-                  <small className="bottom-margin-small">emotes</small>
-                  <div className="display-flex-row align-center">
-                    {animal.emotes.length > 0
-                      ? animal.emotes.map((emote) => (
-                          <div className="margin-right-small">
-                            <div className="img-medium">
-                              <Image
-                                src={`${emote.src}`}
-                                layout="fill"
-                                objectFit="cover"
-                                loading="lazy"
-                              />
-                            </div>
-                            <small>{emote.name}</small>
-                          </div>
-                        ))
-                      : null}
-                  </div>
-                </div>
-                <div className="display-flex-column">
+                <div className="width-50 display-flex-column">
                   <small className="bottom-margin-small">treats</small>
                   <div className="display-flex-row">
                     {animal.treats.length > 0
                       ? animal.treats.map((treat) => (
-                          <div className="margin-right-small">
-                            <div className="img-medium">
+                          <div key={treat.id} className="margin-right-medium">
+                            <div className="img-small">
                               <Image
                                 src={`${treat.src}`}
                                 layout="fill"
@@ -111,7 +94,31 @@ export default function SubOption() {
                                 loading="lazy"
                               />
                             </div>
-                            <small>{treat.name}</small>
+                            <small className="extra-small-text">
+                              {treat.name}
+                            </small>
+                          </div>
+                        ))
+                      : null}
+                  </div>
+                </div>
+                <div className="width-50 display-flex-column">
+                  <small className="bottom-margin-small">emotes</small>
+                  <div className="display-flex-row align-center">
+                    {animal.emotes.length > 0
+                      ? animal.emotes.map((emote) => (
+                          <div key={emote.id} className="margin-right-medium">
+                            <div className="img-small">
+                              <Image
+                                src={`${emote.src}`}
+                                layout="fill"
+                                objectFit="cover"
+                                loading="lazy"
+                              />
+                            </div>
+                            <small className="extra-small-text">
+                              {emote.name}
+                            </small>
                           </div>
                         ))
                       : null}
@@ -122,26 +129,30 @@ export default function SubOption() {
             </div>
           )}
           <div>
-            <ul class={styles.cRainbow}>
+            <ul className={styles.cRainbow}>
               <li
-                class={`${styles.cRainbowLayer} ${styles.cRainbowLayerWhite}`}
+                className={`${styles.cRainbowLayer} ${styles.cRainbowLayerWhite}`}
               >
                 {animal.name}'s super awesome subsriber content
               </li>
               <li
-                class={`${styles.cRainbowLayer} ${styles.cRainbowLayerViolet}`}
+                className={`${styles.cRainbowLayer} ${styles.cRainbowLayerViolet}`}
               >
-                {animal.name}'s super awesome subsriber content
-              </li>
-              <li class={`${styles.cRainbowLayer} ${styles.cRainbowLayerBlue}`}>
                 {animal.name}'s super awesome subsriber content
               </li>
               <li
-                class={`${styles.cRainbowLayer} ${styles.cRainbowLayerGreen}`}
+                className={`${styles.cRainbowLayer} ${styles.cRainbowLayerBlue}`}
               >
                 {animal.name}'s super awesome subsriber content
               </li>
-              <li class={`${styles.cRainbowLayer} ${styles.cRainbowLayerRed}`}>
+              <li
+                className={`${styles.cRainbowLayer} ${styles.cRainbowLayerGreen}`}
+              >
+                {animal.name}'s super awesome subsriber content
+              </li>
+              <li
+                className={`${styles.cRainbowLayer} ${styles.cRainbowLayerRed}`}
+              >
                 {animal.name}'s super awesome subsriber content
               </li>
             </ul>
@@ -157,6 +168,7 @@ export default function SubOption() {
                 </div>
               }
               gradientNum={6}
+              onClick={() => handleShowForm(false)}
             />
           </div>
           <div className="padding-5">
@@ -168,86 +180,19 @@ export default function SubOption() {
                 </div>
               }
               gradientNum={1}
+              onClick={() => handleShowForm(true)}
             />
           </div>
         </div>
       </div>
       <div
         className={`${
-          showSub ? "opacity-100 display-flex-column" : "opacity-0 display-none"
-        } absolute margin-right-large`}
+          showForm
+            ? "opacity-100 display-flex-column"
+            : "opacity-0 display-none"
+        } margin-right-large ${styles.subForm}`}
       >
-        <p>How many months would you like to subscribe to {animal.name}?</p>
-        <div className="display-flex-row flex-wrap relative bottom-margin-medium">
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
-          >
-            <p className="absolute">1</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
-          >
-            <p className="absolute">2</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
-          >
-            <p className="absolute">3</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
-          >
-            <p className="absolute">4</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
-          >
-            <p className="absolute">5</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
-          >
-            <p className="absolute">6</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
-          >
-            <p className="absolute">7</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
-          >
-            <p className="absolute">8</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center bottom-margin-medium`}
-          >
-            <p className="absolute">9</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center`}
-          >
-            <p className="absolute">10</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center`}
-          >
-            <p className="absolute">11</p>
-          </div>
-          <div
-            className={`${styles.SubOptionMonth} padding-10 display-flex-column align-center`}
-          >
-            <p className="absolute">12</p>
-          </div>
-        </div>
-        <div className="diaplay-flex-row justify-center">
-          <p
-            onClick={handleShowQuestion}
-            className="gradient-text gradient-5 display-inline cursor-pointer"
-          >
-            {"continue >"}
-          </p>
-        </div>
+        <MasterForm miscData={{ giftSub: giftSub }} formId={"sub"} />
       </div>
     </div>
   );
